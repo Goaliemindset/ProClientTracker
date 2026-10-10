@@ -30,4 +30,24 @@ jobs:
           path: |
             cache.json
             logos
-          key:
+          key: tracker-${{ github.run_id }}
+          restore-keys: tracker-
+      - run: python goalie_tracker.py
+      - name: Collect site files
+        run: |
+          mkdir site
+          cp index.html logo.png data.json site/
+          if [ -d logos ]; then cp -r logos site/; fi
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deploy
+        uses: actions/deploy-pages@v4
+      - name: Keep the schedule running
+        run: |
+          if [ $(( $(date +%s) - $(git log -1 --format=%ct) )) -gt 4320000 ]; then
+            git config user.name "goalie-tracker-bot"
+            git config user.email "actions@users.noreply.github.com"
+            git commit --allow-empty -m "Keep scheduled updates running"
+            git push
+          fi
