@@ -1,0 +1,46 @@
+CHECK   Cal Petersen | listed: AHL Wild | found: AHL Hershey Bears (dressed 2, played 1); AHL Hershey Bears (on roster)
+CHECK   Tyriq Outen | listed: ECHL Wings | found: ECHL Florida Everblades (dressed 2, played 2)
+CHECK   Seth Ronan | listed: OHL Knights | found: QMJHL Charlottetown Islanders (dressed 9, played 2)
+CHECK   Ryley Budd | listed: WHL Blades | found: WHL Brandon Wheat Kings (dressed 7, played 3); WHL Brandon Wheat Kings (on roster)
+NO DATA Mads Sogaard | listed: AHL Crunch | found: nothing yet this season
+NO DATA Logan Terness | listed: AHL Firebirds | found: nothing yet this season
+NO DATA Owen Flores | listed: AHL Reign | found: nothing yet this season
+NO DATA Alex Aslanidis | listed: ECHL Mavericks | found: nothing yet this season
+NO DATA Evan Cormier | listed: ECHL Pirates | found: nothing yet this season
+NO DATA Jake Pilon | listed: WHL Royals | found: nothing yet this season
+NO DATA Taylor Tabashuik | listed: WHL Pats | found: nothing yet this season
+NO DATA Marek Schlenker | listed: WHL Pats | found: nothing yet this season
+NO DATA Nathan Kam | listed: WHL Rockets | found: nothing yet this season
+NO DATA Charlie Larocque | listed: QMJHL Olympiques | found: nothing yet this season
+NO DATA Dayton Kitchener | listed: QMJHL Oceanic | found: nothing yet this season
+NO DATA Joey Costanzo | listed: NCAA Michigan Tech | found: nothing yet this season
+NO DATA Easton Rye | listed: NCAA Bentley | found: nothing yet this season
+NO DATA Michael Polston | listed: NCAA Western Michigan | found: nothing yet this season
+NO DATA Cole Sheffield | listed: NCAA Minnesota Duluth | found: nothing yet this season
+OK      Jakub Dobes | listed: NHL Canadiens | found: NHL MTL (current roster)
+OK      Arvid Soderblom | listed: NHL Blackhawks | found: NHL CHI (current roster)
+OK      Carter George | listed: AHL Reign | found: AHL Ontario Reign (dressed 2, played 0); AHL Ontario Reign (on roster)
+OK      Damian Clara | listed: AHL Gulls | found: AHL San Diego Gulls (dressed 2, played 1); AHL San Diego Gulls (on roster)
+OK      Jiri Patera | listed: AHL Bruins | found: AHL Providence Bruins (dressed 3, played 2); AHL Providence Bruins (on roster)
+OK      Jackson Parsons | listed: AHL Senators | found: AHL Belleville Senators (dressed 2, played 0); AHL Belleville Senators (on roster)
+OK      Dom Divincentiis | listed: AHL Moose | found: AHL Manitoba Moose (dressed 3, played 2); AHL Manitoba Moose (on roster)
+OK      Carson Bjarnason | listed: AHL Phantoms | found: AHL Lehigh Valley Phantoms (dressed 1, played 0); AHL Lehigh Valley Phantoms (on roster)
+OK      Trenten Bennett | listed: OHL Firebirds | found: OHL Flint Firebirds (on roster)
+OK      Gavin Betts | listed: OHL Frontenacs | found: OHL Kingston Frontenacs (on roster)
+OK      Colin Ellsworth | listed: OHL Storm | found: OHL Guelph Storm (dressed 2, played 2)
+OK      Jayden Kraus | listed: WHL Silvertips | found: WHL Everett Silvertips (dressed 5, played 4); WHL Everett Silvertips (on roster)
+OK      Matthew Kondro | listed: WHL Rebels | found: WHL Red Deer Rebels (dressed 8, played 6); WHL Red Deer Rebels (on roster)
+OK      Koen Cleaver | listed: WHL Hurricanes | found: WHL Lethbridge Hurricanes (dressed 6, played 2); WHL Lethbridge Hurricanes (on roster)
+OK      Cash Christie | listed: WHL Tigers | found: WHL Medicine Hat Tigers (dressed 6, played 2); WHL Medicine Hat Tigers (on roster)
+OK      Carter Esler | listed: WHL Chiefs | found: WHL Spokane Chiefs (dressed 5, played 4); WHL Spokane Chiefs (on roster)
+OK      Grayson Malinoski | listed: WHL Thunderbirds | found: WHL Seattle Thunderbirds (dressed 3, played 2); WHL Seattle Thunderbirds (on roster)
+OK      Burke Hood | listed: WHL Giants | found: WHL Vancouver Giants (dressed 3, played 3); WHL Vancouver Giants (on roster)
+OK      Finn Moffett | listed: QMJHL Olympiques | found: QMJHL Gatineau Olympiques (dressed 8, played 3)
+OK      Rafael Courchesne | listed: QMJHL Sea Dogs | found: QMJHL Saint John Sea Dogs (dressed 7, played 2)
+OK      Arseni Radkov | listed: QMJHL Foreurs | found: QMJHL Val-d'Or Foreurs (dressed 5, played 4)
+OK      Christian Kirsch | listed: NCAA Quinnipiac | found: NCAA Quinnipiac (dressed 2, played 2)
+OK      Josh Ravensbergen | listed: NCAA Michigan State | found: NCAA Michigan St. (dressed 1, played 1)
+OK      Austin Elliott | listed: NCAA UMass Lowell | found: NCAA UMass Lowell (dressed 2, played 2)
+OK      Josh Fleming | listed: NCAA Penn State | found: NCAA Penn St. (dressed 1, played 1)
+OK      Kristoffer Eberly | listed: NCAA Ohio State | found: NCAA Ohio St. (dressed 1, played 1)
+OK      Kolby Hay | listed: NCAA Canisius | found: NCAA Canisius (dressed 1, played 1)

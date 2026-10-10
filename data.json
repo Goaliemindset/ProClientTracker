@@ -1,0 +1,4256 @@
+{
+ "updated": "2026-10-10T12:38:53",
+ "players": [
+  {
+   "name": "Jakub Dobes",
+   "league": "NHL",
+   "team": "Canadiens",
+   "logo": "https://assets.nhle.com/logos/nhl/svg/MTL_dark.svg",
+   "status": "scheduled",
+   "detail": "Game today: Detroit Red Wings @ Montr\u00e9al Canadiens",
+   "upcoming": [
+    {
+     "id": 2026020075,
+     "date": "2026-10-10",
+     "iso": "2026-10-10T23:00:00Z",
+     "status": "scheduled",
+     "home": "Montr\u00e9al Canadiens",
+     "away": "Detroit Red Wings",
+     "hs": null,
+     "as_": null,
+     "hl": "https://assets.nhle.com/logos/nhl/svg/MTL_dark.svg",
+     "al": "https://assets.nhle.com/logos/nhl/svg/DET_dark.svg"
+    },
+    {
+     "id": 2026020092,
+     "date": "2026-10-13",
+     "iso": "2026-10-13T22:30:00Z",
+     "status": "scheduled",
+     "home": "Montr\u00e9al Canadiens",
+     "away": "Buffalo Sabres",
+     "hs": null,
+     "as_": null,
+     "hl": "https://assets.nhle.com/logos/nhl/svg/MTL_dark.svg",
+     "al": "https://assets.nhle.com/logos/nhl/svg/BUF_dark.svg"
+    },
+    {
+     "id": 2026020106,
+     "date": "2026-10-14",
+     "iso": "2026-10-14T23:30:00Z",
+     "status": "scheduled",
+     "home": "Washington Capitals",
+     "away": "Montr\u00e9al Canadiens",
+     "hs": null,
+     "as_": null,
+     "hl": "https://assets.nhle.com/logos/nhl/svg/WSH_secondary_dark.svg",
+     "al": "https://assets.nhle.com/logos/nhl/svg/MTL_dark.svg"
+    },
+    {
+     "id": 2026020126,
+     "date": "2026-10-17",
+     "iso": "2026-10-17T23:00:00Z",
+     "status": "scheduled",
+     "home": "Montr\u00e9al Canadiens",
+     "away": "Buffalo Sabres",
+     "hs": null,
+     "as_": null,
+     "hl": "https://assets.nhle.com/logos/nhl/svg/MTL_dark.svg",
+     "al": "https://assets.nhle.com/logos/nhl/svg/BUF_dark.svg"
+    },
+    {
+     "id": 2026020141,
+     "date": "2026-10-20",
+     "iso": "2026-10-20T23:00:00Z",
+     "status": "scheduled",
+     "home": "Montr\u00e9al Canadiens",
+     "away": "San Jose Sharks",
+     "hs": null,
+     "as_": null,
+     "hl": "https://assets.nhle.com/logos/nhl/svg/MTL_dark.svg",
+     "al": "https://assets.nhle.com/logos/nhl/svg/SJS_dark.svg"
+    }
+   ],
+   "recent": [
+    {
+     "date": "2026-10-06",
+     "opp": "Carolina Hurricanes",
+     "ha": "vs",
+     "result": "L",
+     "score": "4-6",
+     "stats": {
+      "saves": 27,
+      "sa": 32,
+      "ga": 5,
+      "svpct": ".844",
+      "shutout": false
+     }
+    },
+    {
+     "date": "2026-10-03",
+     "opp": "Pittsburgh Penguins",
+     "ha": "@",
+     "result": "L",
+     "score": "5-6",
+     "stats": {
+      "saves": 24,
+      "sa": 30,
+      "ga": 6,
+      "svpct": ".800",
+      "shutout": false
+     }
+    },
+    {
+     "date": "2026-09-29",
+     "opp": "Toronto Maple Leafs",
+     "ha": "@",
+     "result": "W",
+     "score": "3-2",
+     "stats": {
+      "saves": 26,
+      "sa": 28,
+      "ga": 2,
+      "svpct": ".929",
+      "shutout": false
+     }
+    }
+   ]
+  },
+  {
+   "name": "Arvid Soderblom",
+   "league": "NHL",
+   "team": "Blackhawks",
+   "logo": "https://assets.nhle.com/logos/nhl/svg/CHI_dark.svg",
+   "status": "scheduled",
+   "detail": "Game today: Carolina Hurricanes @ Chicago Blackhawks",
+   "upcoming": [
+    {
+     "id": 2026020078,
+     "date": "2026-10-10",
+     "iso": "2026-10-10T23:00:00Z",
+     "status": "scheduled",
+     "home": "Chicago Blackhawks",
+     "away": "Carolina Hurricanes",
+     "hs": null,
+     "as_": null,
+     "hl": "https://assets.nhle.com/logos/nhl/svg/CHI_dark.svg",
+     "al": "https://assets.nhle.com/logos/nhl/svg/CAR_dark.svg"
+    },
+    {
+     "id": 2026020098,
+     "date": "2026-10-13",
+     "iso": "2026-10-14T00:00:00Z",
+     "status": "scheduled",
+     "home": "Chicago Blackhawks",
+     "away": "Pittsburgh Penguins",
+     "hs": null,
+     "as_": null,
+     "hl": "https://assets.nhle.com/logos/nhl/svg/CHI_dark.svg",
+     "al": "https://assets.nhle.com/logos/nhl/svg/PIT_dark.svg"
+    },
+    {
+     "id": 2026020114,
+     "date": "2026-10-15",
+     "iso": "2026-10-16T00:00:00Z",
+     "status": "scheduled",
+     "home": "Chicago Blackhawks",
+     "away": "Winnipeg Jets",
+     "hs": null,
+     "as_": null,
+     "hl": "https://assets.nhle.com/logos/nhl/svg/CHI_dark.svg",
+     "al": "https://assets.nhle.com/logos/nhl/svg/WPG_dark.svg"
+    },
+    {
+     "id": 2026020130,
+     "date": "2026-10-17",
+     "iso": "2026-10-17T23:00:00Z",
+     "status": "scheduled",
+     "home": "Chicago Blackhawks",
+     "away": "Dallas Stars",
+     "hs": null,
+     "as_": null,
+     "hl": "https://assets.nhle.com/logos/nhl/svg/CHI_dark.svg",
+     "al": "https://assets.nhle.com/logos/nhl/svg/DAL_dark.svg"
+    },
+    {
+     "id": 2026020166,
+     "date": "2026-10-23",
+     "iso": "2026-10-24T00:00:00Z",
+     "status": "scheduled",
+     "home": "Chicago Blackhawks",
+     "away": "Montr\u00e9al Canadiens",
+     "hs": null,
+     "as_": null,
+     "hl": "https://assets.nhle.com/logos/nhl/svg/CHI_dark.svg",
+     "al": "https://assets.nhle.com/logos/nhl/svg/MTL_dark.svg"
+    }
+   ],
+   "recent": [
+    {
+     "date": "2026-10-08",
+     "opp": "New York Islanders",
+     "ha": "@",
+     "result": "L",
+     "score": "1-4",
+     "stats": {
+      "saves": 15,
+      "sa": 18,
+      "ga": 3,
+      "svpct": ".833",
+      "shutout": false
+     }
+    },
+    {
+     "date": "2026-10-01",
+     "opp": "Utah Mammoth",
+     "ha": "@",
+     "result": "L",
+     "score": "0-6",
+     "stats": {
+      "saves": 26,
+      "sa": 32,
+      "ga": 6,
+      "svpct": ".812",
+      "shutout": false
+     }
+    }
+   ]
+  },
+  {
+   "name": "Carter George",
+   "league": "AHL",
+   "team": "Reign",
+   "logo": "logos/assets_leaguestat_com_ahl_logos_403_png.png",
+   "status": "no_game",
+   "detail": "No game today",
+   "upcoming": [
+    {
+     "id": "1029125",
+     "date": "2026-10-11",
+     "iso": "2026-10-11T15:00:00-07:00",
+     "status": "scheduled",
+     "home": "Coachella Valley Firebirds",
+     "away": "Ontario Reign",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/ahl/logos/445.png",
+     "al": "https://assets.leaguestat.com/ahl/logos/403.png"
+    },
+    {
+     "id": "1029135",
+     "date": "2026-10-14",
+     "iso": "2026-10-14T19:00:00-07:00",
+     "status": "scheduled",
+     "home": "San Diego Gulls",
+     "away": "Ontario Reign",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/ahl/logos/404.png",
+     "al": "https://assets.leaguestat.com/ahl/logos/403.png"
+    },
+    {
+     "id": "1029155",
+     "date": "2026-10-17",
+     "iso": "2026-10-17T18:00:00-07:00",
+     "status": "scheduled",
+     "home": "Ontario Reign",
+     "away": "Henderson Silver Knights",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/ahl/logos/403.png",
+     "al": "https://assets.leaguestat.com/ahl/logos/437.png"
+    },
+    {
+     "id": "1029168",
+     "date": "2026-10-20",
+     "iso": "2026-10-20T19:00:00-07:00",
+     "status": "scheduled",
+     "home": "Ontario Reign",
+     "away": "Calgary Wranglers",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/ahl/logos/403.png",
+     "al": "https://assets.leaguestat.com/ahl/logos/444.png"
+    },
+    {
+     "id": "1029185",
+     "date": "2026-10-23",
+     "iso": "2026-10-23T19:00:00-05:00",
+     "status": "scheduled",
+     "home": "Texas Stars",
+     "away": "Ontario Reign",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/ahl/logos/380.png",
+     "al": "https://assets.leaguestat.com/ahl/logos/403.png"
+    }
+   ],
+   "recent": []
+  },
+  {
+   "name": "Mads Sogaard",
+   "league": "AHL",
+   "team": "Crunch",
+   "logo": "logos/assets_leaguestat_com_ahl_logos_324_png.png",
+   "status": "scheduled",
+   "detail": "Game today: Belleville Senators @ Syracuse Crunch",
+   "upcoming": [
+    {
+     "id": "1029121",
+     "date": "2026-10-10",
+     "iso": "2026-10-10T19:00:00-04:00",
+     "status": "scheduled",
+     "home": "Syracuse Crunch",
+     "away": "Belleville Senators",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/ahl/logos/324.png",
+     "al": "https://assets.leaguestat.com/ahl/logos/413.png"
+    },
+    {
+     "id": "1029158",
+     "date": "2026-10-17",
+     "iso": "2026-10-17T17:00:00-04:00",
+     "status": "scheduled",
+     "home": "Syracuse Crunch",
+     "away": "Rochester Americans",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/ahl/logos/324.png",
+     "al": "https://assets.leaguestat.com/ahl/logos/323.png"
+    },
+    {
+     "id": "1029164",
+     "date": "2026-10-18",
+     "iso": "2026-10-18T15:00:00-04:00",
+     "status": "scheduled",
+     "home": "Hamilton Hammers",
+     "away": "Syracuse Crunch",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/ahl/logos/457.png",
+     "al": "https://assets.leaguestat.com/ahl/logos/324.png"
+    },
+    {
+     "id": "1029171",
+     "date": "2026-10-21",
+     "iso": "2026-10-21T19:00:00-04:00",
+     "status": "scheduled",
+     "home": "Laval Rocket",
+     "away": "Syracuse Crunch",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/ahl/logos/415.png",
+     "al": "https://assets.leaguestat.com/ahl/logos/324.png"
+    },
+    {
+     "id": "1029184",
+     "date": "2026-10-23",
+     "iso": "2026-10-23T19:00:00-04:00",
+     "status": "scheduled",
+     "home": "Syracuse Crunch",
+     "away": "Rochester Americans",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/ahl/logos/324.png",
+     "al": "https://assets.leaguestat.com/ahl/logos/323.png"
+    }
+   ],
+   "recent": []
+  },
+  {
+   "name": "Logan Terness",
+   "league": "AHL",
+   "team": "Firebirds",
+   "logo": "logos/assets_leaguestat_com_ahl_logos_445_png.png",
+   "status": "no_game",
+   "detail": "No game today",
+   "upcoming": [
+    {
+     "id": "1029125",
+     "date": "2026-10-11",
+     "iso": "2026-10-11T15:00:00-07:00",
+     "status": "scheduled",
+     "home": "Coachella Valley Firebirds",
+     "away": "Ontario Reign",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/ahl/logos/445.png",
+     "al": "https://assets.leaguestat.com/ahl/logos/403.png"
+    },
+    {
+     "id": "1029134",
+     "date": "2026-10-14",
+     "iso": "2026-10-14T19:00:00-07:00",
+     "status": "scheduled",
+     "home": "Henderson Silver Knights",
+     "away": "Coachella Valley Firebirds",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/ahl/logos/437.png",
+     "al": "https://assets.leaguestat.com/ahl/logos/445.png"
+    },
+    {
+     "id": "1029147",
+     "date": "2026-10-17",
+     "iso": "2026-10-17T19:00:00-07:00",
+     "status": "scheduled",
+     "home": "Abbotsford Canucks",
+     "away": "Coachella Valley Firebirds",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/ahl/logos/440.png",
+     "al": "https://assets.leaguestat.com/ahl/logos/445.png"
+    },
+    {
+     "id": "1029161",
+     "date": "2026-10-18",
+     "iso": "2026-10-18T16:00:00-07:00",
+     "status": "scheduled",
+     "home": "Abbotsford Canucks",
+     "away": "Coachella Valley Firebirds",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/ahl/logos/440.png",
+     "al": "https://assets.leaguestat.com/ahl/logos/445.png"
+    },
+    {
+     "id": "1029173",
+     "date": "2026-10-21",
+     "iso": "2026-10-21T19:00:00-07:00",
+     "status": "scheduled",
+     "home": "San Diego Gulls",
+     "away": "Coachella Valley Firebirds",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/ahl/logos/404.png",
+     "al": "https://assets.leaguestat.com/ahl/logos/445.png"
+    }
+   ],
+   "recent": []
+  },
+  {
+   "name": "Damian Clara",
+   "league": "AHL",
+   "team": "Gulls",
+   "logo": "logos/assets_leaguestat_com_ahl_logos_404_png.png",
+   "status": "scheduled",
+   "detail": "Game today: Henderson Silver Knights @ San Diego Gulls",
+   "upcoming": [
+    {
+     "id": "1029118",
+     "date": "2026-10-10",
+     "iso": "2026-10-10T18:00:00-07:00",
+     "status": "scheduled",
+     "home": "San Diego Gulls",
+     "away": "Henderson Silver Knights",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/ahl/logos/404.png",
+     "al": "https://assets.leaguestat.com/ahl/logos/437.png"
+    },
+    {
+     "id": "1029135",
+     "date": "2026-10-14",
+     "iso": "2026-10-14T19:00:00-07:00",
+     "status": "scheduled",
+     "home": "San Diego Gulls",
+     "away": "Ontario Reign",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/ahl/logos/404.png",
+     "al": "https://assets.leaguestat.com/ahl/logos/403.png"
+    },
+    {
+     "id": "1029146",
+     "date": "2026-10-16",
+     "iso": "2026-10-16T19:00:00-07:00",
+     "status": "scheduled",
+     "home": "Tucson Roadrunners",
+     "away": "San Diego Gulls",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/ahl/logos/412.png",
+     "al": "https://assets.leaguestat.com/ahl/logos/404.png"
+    },
+    {
+     "id": "1029159",
+     "date": "2026-10-17",
+     "iso": "2026-10-17T19:00:00-07:00",
+     "status": "scheduled",
+     "home": "Tucson Roadrunners",
+     "away": "San Diego Gulls",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/ahl/logos/412.png",
+     "al": "https://assets.leaguestat.com/ahl/logos/404.png"
+    },
+    {
+     "id": "1029173",
+     "date": "2026-10-21",
+     "iso": "2026-10-21T19:00:00-07:00",
+     "status": "scheduled",
+     "home": "San Diego Gulls",
+     "away": "Coachella Valley Firebirds",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/ahl/logos/404.png",
+     "al": "https://assets.leaguestat.com/ahl/logos/445.png"
+    }
+   ],
+   "recent": [
+    {
+     "date": "2026-10-04",
+     "opp": "San Jose Barracuda",
+     "ha": "@",
+     "result": "L",
+     "score": "4-5",
+     "stats": {
+      "saves": 28,
+      "sa": 33,
+      "ga": 5,
+      "svpct": ".848",
+      "shutout": false
+     }
+    }
+   ]
+  },
+  {
+   "name": "Owen Flores",
+   "league": "AHL",
+   "team": "Reign",
+   "logo": "logos/assets_leaguestat_com_ahl_logos_403_png.png",
+   "status": "no_game",
+   "detail": "No game today",
+   "upcoming": [
+    {
+     "id": "1029125",
+     "date": "2026-10-11",
+     "iso": "2026-10-11T15:00:00-07:00",
+     "status": "scheduled",
+     "home": "Coachella Valley Firebirds",
+     "away": "Ontario Reign",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/ahl/logos/445.png",
+     "al": "https://assets.leaguestat.com/ahl/logos/403.png"
+    },
+    {
+     "id": "1029135",
+     "date": "2026-10-14",
+     "iso": "2026-10-14T19:00:00-07:00",
+     "status": "scheduled",
+     "home": "San Diego Gulls",
+     "away": "Ontario Reign",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/ahl/logos/404.png",
+     "al": "https://assets.leaguestat.com/ahl/logos/403.png"
+    },
+    {
+     "id": "1029155",
+     "date": "2026-10-17",
+     "iso": "2026-10-17T18:00:00-07:00",
+     "status": "scheduled",
+     "home": "Ontario Reign",
+     "away": "Henderson Silver Knights",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/ahl/logos/403.png",
+     "al": "https://assets.leaguestat.com/ahl/logos/437.png"
+    },
+    {
+     "id": "1029168",
+     "date": "2026-10-20",
+     "iso": "2026-10-20T19:00:00-07:00",
+     "status": "scheduled",
+     "home": "Ontario Reign",
+     "away": "Calgary Wranglers",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/ahl/logos/403.png",
+     "al": "https://assets.leaguestat.com/ahl/logos/444.png"
+    },
+    {
+     "id": "1029185",
+     "date": "2026-10-23",
+     "iso": "2026-10-23T19:00:00-05:00",
+     "status": "scheduled",
+     "home": "Texas Stars",
+     "away": "Ontario Reign",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/ahl/logos/380.png",
+     "al": "https://assets.leaguestat.com/ahl/logos/403.png"
+    }
+   ],
+   "recent": []
+  },
+  {
+   "name": "Jiri Patera",
+   "league": "AHL",
+   "team": "Bruins",
+   "logo": "logos/assets_leaguestat_com_ahl_logos_309_png.png",
+   "status": "scheduled",
+   "detail": "Game today: Charlotte Checkers @ Providence Bruins",
+   "upcoming": [
+    {
+     "id": "1029117",
+     "date": "2026-10-10",
+     "iso": "2026-10-10T19:05:00-04:00",
+     "status": "scheduled",
+     "home": "Providence Bruins",
+     "away": "Charlotte Checkers",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/ahl/logos/309.png",
+     "al": "https://assets.leaguestat.com/ahl/logos/384.png"
+    },
+    {
+     "id": "1029131",
+     "date": "2026-10-11",
+     "iso": "2026-10-11T15:05:00-04:00",
+     "status": "scheduled",
+     "home": "Providence Bruins",
+     "away": "Wilkes-Barre/Scranton Penguins",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/ahl/logos/309.png",
+     "al": "https://assets.leaguestat.com/ahl/logos/316.png"
+    },
+    {
+     "id": "1029153",
+     "date": "2026-10-17",
+     "iso": "2026-10-17T18:00:00-04:00",
+     "status": "scheduled",
+     "home": "Hershey Bears",
+     "away": "Providence Bruins",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/ahl/logos/319.png",
+     "al": "https://assets.leaguestat.com/ahl/logos/309.png"
+    },
+    {
+     "id": "1029165",
+     "date": "2026-10-18",
+     "iso": "2026-10-18T15:00:00-04:00",
+     "status": "scheduled",
+     "home": "Hershey Bears",
+     "away": "Providence Bruins",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/ahl/logos/319.png",
+     "al": "https://assets.leaguestat.com/ahl/logos/309.png"
+    },
+    {
+     "id": "1029179",
+     "date": "2026-10-23",
+     "iso": "2026-10-23T19:00:00-04:00",
+     "status": "scheduled",
+     "home": "Hartford Wolf Pack",
+     "away": "Providence Bruins",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/ahl/logos/307.png",
+     "al": "https://assets.leaguestat.com/ahl/logos/309.png"
+    }
+   ],
+   "recent": [
+    {
+     "date": "2026-10-09",
+     "opp": "Hartford Wolf Pack",
+     "ha": "vs",
+     "result": "L",
+     "score": "0-2",
+     "stats": {
+      "saves": 23,
+      "sa": 24,
+      "ga": 1,
+      "svpct": ".958",
+      "shutout": false
+     }
+    },
+    {
+     "date": "2026-10-02",
+     "opp": "Utica Comets",
+     "ha": "vs",
+     "result": "L",
+     "score": "1-2",
+     "stats": {
+      "saves": 22,
+      "sa": 24,
+      "ga": 2,
+      "svpct": ".917",
+      "shutout": false
+     }
+    }
+   ]
+  },
+  {
+   "name": "Jackson Parsons",
+   "league": "AHL",
+   "team": "Senators",
+   "logo": "logos/assets_leaguestat_com_ahl_logos_413_png.png",
+   "status": "scheduled",
+   "detail": "Game today: Belleville Senators @ Syracuse Crunch",
+   "upcoming": [
+    {
+     "id": "1029121",
+     "date": "2026-10-10",
+     "iso": "2026-10-10T19:00:00-04:00",
+     "status": "scheduled",
+     "home": "Syracuse Crunch",
+     "away": "Belleville Senators",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/ahl/logos/324.png",
+     "al": "https://assets.leaguestat.com/ahl/logos/413.png"
+    },
+    {
+     "id": "1029123",
+     "date": "2026-10-11",
+     "iso": "2026-10-11T17:00:00-04:00",
+     "status": "scheduled",
+     "home": "Belleville Senators",
+     "away": "Utica Comets",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/ahl/logos/413.png",
+     "al": "https://assets.leaguestat.com/ahl/logos/390.png"
+    },
+    {
+     "id": "1029137",
+     "date": "2026-10-16",
+     "iso": "2026-10-16T19:00:00-04:00",
+     "status": "scheduled",
+     "home": "Belleville Senators",
+     "away": "Laval Rocket",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/ahl/logos/413.png",
+     "al": "https://assets.leaguestat.com/ahl/logos/415.png"
+    },
+    {
+     "id": "1029149",
+     "date": "2026-10-17",
+     "iso": "2026-10-17T16:00:00-04:00",
+     "status": "scheduled",
+     "home": "Belleville Senators",
+     "away": "Toronto Marlies",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/ahl/logos/413.png",
+     "al": "https://assets.leaguestat.com/ahl/logos/335.png"
+    },
+    {
+     "id": "1029167",
+     "date": "2026-10-18",
+     "iso": "2026-10-18T16:00:00-04:00",
+     "status": "scheduled",
+     "home": "Toronto Marlies",
+     "away": "Belleville Senators",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/ahl/logos/335.png",
+     "al": "https://assets.leaguestat.com/ahl/logos/413.png"
+    }
+   ],
+   "recent": []
+  },
+  {
+   "name": "Dom Divincentiis",
+   "league": "AHL",
+   "team": "Moose",
+   "logo": "logos/assets_leaguestat_com_ahl_logos_321_png.png",
+   "status": "scheduled",
+   "detail": "Game today: Manitoba Moose @ Chicago Wolves",
+   "upcoming": [
+    {
+     "id": "1029110",
+     "date": "2026-10-10",
+     "iso": "2026-10-10T19:00:00-05:00",
+     "status": "scheduled",
+     "home": "Chicago Wolves",
+     "away": "Manitoba Moose",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/ahl/logos/330.png",
+     "al": "https://assets.leaguestat.com/ahl/logos/321.png"
+    },
+    {
+     "id": "1029141",
+     "date": "2026-10-16",
+     "iso": "2026-10-16T19:00:00-05:00",
+     "status": "scheduled",
+     "home": "Manitoba Moose",
+     "away": "Texas Stars",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/ahl/logos/321.png",
+     "al": "https://assets.leaguestat.com/ahl/logos/380.png"
+    },
+    {
+     "id": "1029166",
+     "date": "2026-10-18",
+     "iso": "2026-10-18T14:00:00-05:00",
+     "status": "scheduled",
+     "home": "Manitoba Moose",
+     "away": "Texas Stars",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/ahl/logos/321.png",
+     "al": "https://assets.leaguestat.com/ahl/logos/380.png"
+    },
+    {
+     "id": "1029169",
+     "date": "2026-10-21",
+     "iso": "2026-10-21T19:00:00-04:00",
+     "status": "scheduled",
+     "home": "Grand Rapids Griffins",
+     "away": "Manitoba Moose",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/ahl/logos/328.png",
+     "al": "https://assets.leaguestat.com/ahl/logos/321.png"
+    },
+    {
+     "id": "1029181",
+     "date": "2026-10-23",
+     "iso": "2026-10-23T19:00:00-05:00",
+     "status": "scheduled",
+     "home": "Iowa Wild",
+     "away": "Manitoba Moose",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/ahl/logos/389.png",
+     "al": "https://assets.leaguestat.com/ahl/logos/321.png"
+    }
+   ],
+   "recent": [
+    {
+     "date": "2026-10-09",
+     "opp": "Grand Rapids Griffins",
+     "ha": "@",
+     "result": "L",
+     "score": "1-2",
+     "stats": {
+      "saves": 31,
+      "sa": 33,
+      "ga": 2,
+      "svpct": ".939",
+      "shutout": false
+     }
+    },
+    {
+     "date": "2026-10-03",
+     "opp": "Chicago Wolves",
+     "ha": "vs",
+     "result": "W",
+     "score": "3-0",
+     "stats": {
+      "saves": 36,
+      "sa": 36,
+      "ga": 0,
+      "svpct": "1.000",
+      "shutout": true
+     }
+    }
+   ]
+  },
+  {
+   "name": "Carson Bjarnason",
+   "league": "AHL",
+   "team": "Phantoms",
+   "logo": "logos/assets_leaguestat_com_ahl_logos_313_png.png",
+   "status": "scheduled",
+   "detail": "Game today: Cleveland Monsters @ Lehigh Valley Phantoms",
+   "upcoming": [
+    {
+     "id": "1029115",
+     "date": "2026-10-10",
+     "iso": "2026-10-10T19:05:00-04:00",
+     "status": "scheduled",
+     "home": "Lehigh Valley Phantoms",
+     "away": "Cleveland Monsters",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/ahl/logos/313.png",
+     "al": "https://assets.leaguestat.com/ahl/logos/373.png"
+    },
+    {
+     "id": "1029130",
+     "date": "2026-10-11",
+     "iso": "2026-10-11T13:05:00-04:00",
+     "status": "scheduled",
+     "home": "Lehigh Valley Phantoms",
+     "away": "Cleveland Monsters",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/ahl/logos/313.png",
+     "al": "https://assets.leaguestat.com/ahl/logos/373.png"
+    },
+    {
+     "id": "1029133",
+     "date": "2026-10-14",
+     "iso": "2026-10-14T18:30:00-04:00",
+     "status": "scheduled",
+     "home": "Hartford Wolf Pack",
+     "away": "Lehigh Valley Phantoms",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/ahl/logos/307.png",
+     "al": "https://assets.leaguestat.com/ahl/logos/313.png"
+    },
+    {
+     "id": "1029145",
+     "date": "2026-10-16",
+     "iso": "2026-10-16T19:05:00-04:00",
+     "status": "scheduled",
+     "home": "Springfield Thunderbirds",
+     "away": "Lehigh Valley Phantoms",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/ahl/logos/411.png",
+     "al": "https://assets.leaguestat.com/ahl/logos/313.png"
+    },
+    {
+     "id": "1029157",
+     "date": "2026-10-17",
+     "iso": "2026-10-17T18:05:00-04:00",
+     "status": "scheduled",
+     "home": "Springfield Thunderbirds",
+     "away": "Lehigh Valley Phantoms",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/ahl/logos/411.png",
+     "al": "https://assets.leaguestat.com/ahl/logos/313.png"
+    }
+   ],
+   "recent": []
+  },
+  {
+   "name": "Cal Petersen",
+   "league": "AHL",
+   "team": "Bears",
+   "logo": "logos/assets_leaguestat_com_ahl_logos_319_png.png",
+   "status": "scheduled",
+   "detail": "Game today: Texas Stars @ Hershey Bears",
+   "upcoming": [
+    {
+     "id": "1029113",
+     "date": "2026-10-10",
+     "iso": "2026-10-10T19:00:00-04:00",
+     "status": "scheduled",
+     "home": "Hershey Bears",
+     "away": "Texas Stars",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/ahl/logos/319.png",
+     "al": "https://assets.leaguestat.com/ahl/logos/380.png"
+    },
+    {
+     "id": "1029129",
+     "date": "2026-10-11",
+     "iso": "2026-10-11T17:00:00-04:00",
+     "status": "scheduled",
+     "home": "Hershey Bears",
+     "away": "Texas Stars",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/ahl/logos/319.png",
+     "al": "https://assets.leaguestat.com/ahl/logos/380.png"
+    },
+    {
+     "id": "1029153",
+     "date": "2026-10-17",
+     "iso": "2026-10-17T18:00:00-04:00",
+     "status": "scheduled",
+     "home": "Hershey Bears",
+     "away": "Providence Bruins",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/ahl/logos/319.png",
+     "al": "https://assets.leaguestat.com/ahl/logos/309.png"
+    },
+    {
+     "id": "1029165",
+     "date": "2026-10-18",
+     "iso": "2026-10-18T15:00:00-04:00",
+     "status": "scheduled",
+     "home": "Hershey Bears",
+     "away": "Providence Bruins",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/ahl/logos/319.png",
+     "al": "https://assets.leaguestat.com/ahl/logos/309.png"
+    },
+    {
+     "id": "1029193",
+     "date": "2026-10-24",
+     "iso": "2026-10-24T19:00:00-04:00",
+     "status": "scheduled",
+     "home": "Hershey Bears",
+     "away": "Belleville Senators",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/ahl/logos/319.png",
+     "al": "https://assets.leaguestat.com/ahl/logos/413.png"
+    }
+   ],
+   "recent": [
+    {
+     "date": "2026-10-03",
+     "opp": "Charlotte Checkers",
+     "ha": "vs",
+     "result": "L",
+     "score": "2-5",
+     "stats": {
+      "saves": 24,
+      "sa": 28,
+      "ga": 4,
+      "svpct": ".857",
+      "shutout": false
+     }
+    }
+   ]
+  },
+  {
+   "name": "Tyriq Outen",
+   "league": "ECHL",
+   "team": "Everblades",
+   "logo": "logos/assets_leaguestat_com_echl_logos_8_png.png",
+   "status": "no_game",
+   "detail": "No game today",
+   "upcoming": [
+    {
+     "id": "25497",
+     "date": "2026-10-17",
+     "iso": "2026-10-17T19:00:00-04:00",
+     "status": "scheduled",
+     "home": "Florida Everblades",
+     "away": "Orlando Solar Bears",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/echl/logos/8.png",
+     "al": "https://assets.leaguestat.com/echl/logos/61.png"
+    },
+    {
+     "id": "25510",
+     "date": "2026-10-18",
+     "iso": "2026-10-18T17:00:00-04:00",
+     "status": "scheduled",
+     "home": "Orlando Solar Bears",
+     "away": "Florida Everblades",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/echl/logos/61.png",
+     "al": "https://assets.leaguestat.com/echl/logos/8.png"
+    },
+    {
+     "id": "25514",
+     "date": "2026-10-23",
+     "iso": "2026-10-23T19:30:00-04:00",
+     "status": "scheduled",
+     "home": "Florida Everblades",
+     "away": "Atlanta Gladiators",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/echl/logos/8.png",
+     "al": "https://assets.leaguestat.com/echl/logos/10.png"
+    },
+    {
+     "id": "25524",
+     "date": "2026-10-24",
+     "iso": "2026-10-24T19:00:00-04:00",
+     "status": "scheduled",
+     "home": "Florida Everblades",
+     "away": "Atlanta Gladiators",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/echl/logos/8.png",
+     "al": "https://assets.leaguestat.com/echl/logos/10.png"
+    },
+    {
+     "id": "25541",
+     "date": "2026-10-28",
+     "iso": "2026-10-28T19:00:00-04:00",
+     "status": "scheduled",
+     "home": "Orlando Solar Bears",
+     "away": "Florida Everblades",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/echl/logos/61.png",
+     "al": "https://assets.leaguestat.com/echl/logos/8.png"
+    }
+   ],
+   "recent": [
+    {
+     "date": "2026-10-09",
+     "opp": "Orlando Solar Bears",
+     "ha": "vs",
+     "result": "L",
+     "score": "1-2",
+     "stats": {
+      "saves": 12,
+      "sa": 14,
+      "ga": 2,
+      "svpct": ".857",
+      "shutout": false
+     }
+    },
+    {
+     "date": "2026-10-08",
+     "opp": "Orlando Solar Bears",
+     "ha": "vs",
+     "result": "W",
+     "score": "7-0",
+     "stats": {
+      "saves": 11,
+      "sa": 11,
+      "ga": 0,
+      "svpct": "1.000",
+      "shutout": true
+     }
+    }
+   ]
+  },
+  {
+   "name": "Alex Aslanidis",
+   "league": "ECHL",
+   "team": "Mavericks",
+   "logo": "logos/assets_leaguestat_com_echl_logos_68_png.png",
+   "status": "no_game",
+   "detail": "No game today",
+   "upcoming": [
+    {
+     "id": "25490",
+     "date": "2026-10-16",
+     "iso": "2026-10-16T19:05:00-05:00",
+     "status": "scheduled",
+     "home": "Kansas City Mavericks",
+     "away": "Rapid City Rush",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/echl/logos/68.png",
+     "al": "https://assets.leaguestat.com/echl/logos/70.png"
+    },
+    {
+     "id": "25501",
+     "date": "2026-10-17",
+     "iso": "2026-10-17T18:05:00-05:00",
+     "status": "scheduled",
+     "home": "Kansas City Mavericks",
+     "away": "Rapid City Rush",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/echl/logos/68.png",
+     "al": "https://assets.leaguestat.com/echl/logos/70.png"
+    },
+    {
+     "id": "25519",
+     "date": "2026-10-23",
+     "iso": "2026-10-23T19:05:00-06:00",
+     "status": "scheduled",
+     "home": "Rapid City Rush",
+     "away": "Kansas City Mavericks",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/echl/logos/70.png",
+     "al": "https://assets.leaguestat.com/echl/logos/68.png"
+    },
+    {
+     "id": "25531",
+     "date": "2026-10-24",
+     "iso": "2026-10-24T19:05:00-06:00",
+     "status": "scheduled",
+     "home": "Rapid City Rush",
+     "away": "Kansas City Mavericks",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/echl/logos/70.png",
+     "al": "https://assets.leaguestat.com/echl/logos/68.png"
+    },
+    {
+     "id": "25542",
+     "date": "2026-10-25",
+     "iso": "2026-10-25T16:05:00-06:00",
+     "status": "scheduled",
+     "home": "Rapid City Rush",
+     "away": "Kansas City Mavericks",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/echl/logos/70.png",
+     "al": "https://assets.leaguestat.com/echl/logos/68.png"
+    }
+   ],
+   "recent": []
+  },
+  {
+   "name": "Evan Cormier",
+   "league": "ECHL",
+   "team": "Pirates",
+   "logo": "logos/assets_leaguestat_com_echl_logos_102_png.png",
+   "status": "no_game",
+   "detail": "No game today",
+   "upcoming": [
+    {
+     "id": "25492",
+     "date": "2026-10-16",
+     "iso": "2026-10-16T19:00:00-04:00",
+     "status": "scheduled",
+     "home": "Savannah Ghost Pirates",
+     "away": "Norfolk Admirals",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/echl/logos/102.png",
+     "al": "https://assets.leaguestat.com/echl/logos/76.png"
+    },
+    {
+     "id": "25503",
+     "date": "2026-10-17",
+     "iso": "2026-10-17T19:00:00-04:00",
+     "status": "scheduled",
+     "home": "Savannah Ghost Pirates",
+     "away": "Jacksonville Icemen",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/echl/logos/102.png",
+     "al": "https://assets.leaguestat.com/echl/logos/79.png"
+    },
+    {
+     "id": "25520",
+     "date": "2026-10-23",
+     "iso": "2026-10-23T19:00:00-04:00",
+     "status": "scheduled",
+     "home": "Savannah Ghost Pirates",
+     "away": "South Carolina Stingrays",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/echl/logos/102.png",
+     "al": "https://assets.leaguestat.com/echl/logos/18.png"
+    },
+    {
+     "id": "25533",
+     "date": "2026-10-24",
+     "iso": "2026-10-24T19:00:00-04:00",
+     "status": "scheduled",
+     "home": "Savannah Ghost Pirates",
+     "away": "Jacksonville Icemen",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/echl/logos/102.png",
+     "al": "https://assets.leaguestat.com/echl/logos/79.png"
+    },
+    {
+     "id": "25561",
+     "date": "2026-10-30",
+     "iso": "2026-10-30T19:05:00-04:00",
+     "status": "scheduled",
+     "home": "South Carolina Stingrays",
+     "away": "Savannah Ghost Pirates",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/echl/logos/18.png",
+     "al": "https://assets.leaguestat.com/echl/logos/102.png"
+    }
+   ],
+   "recent": []
+  },
+  {
+   "name": "Trenten Bennett",
+   "league": "OHL",
+   "team": "Firebirds",
+   "logo": "logos/assets_leaguestat_com_ohl_logos_13_png.png",
+   "status": "scheduled",
+   "detail": "Game today: Sarnia Sting @ Flint Firebirds",
+   "upcoming": [
+    {
+     "id": "29067",
+     "date": "2026-10-10",
+     "iso": "2026-10-10T19:00:00-04:00",
+     "status": "scheduled",
+     "home": "Flint Firebirds",
+     "away": "Sarnia Sting",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/ohl/logos/13.png",
+     "al": "https://assets.leaguestat.com/ohl/logos/15.png"
+    },
+    {
+     "id": "29085",
+     "date": "2026-10-16",
+     "iso": "2026-10-16T19:07:00-04:00",
+     "status": "scheduled",
+     "home": "Guelph Storm",
+     "away": "Flint Firebirds",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/ohl/logos/9.png",
+     "al": "https://assets.leaguestat.com/ohl/logos/13.png"
+    },
+    {
+     "id": "29093",
+     "date": "2026-10-17",
+     "iso": "2026-10-17T19:00:00-04:00",
+     "status": "scheduled",
+     "home": "Flint Firebirds",
+     "away": "Owen Sound Attack",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/ohl/logos/13.png",
+     "al": "https://assets.leaguestat.com/ohl/logos/11.png"
+    },
+    {
+     "id": "29113",
+     "date": "2026-10-23",
+     "iso": "2026-10-23T19:05:00-04:00",
+     "status": "scheduled",
+     "home": "Saginaw Spirit",
+     "away": "Flint Firebirds",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/ohl/logos/34.png",
+     "al": "https://assets.leaguestat.com/ohl/logos/13.png"
+    },
+    {
+     "id": "29118",
+     "date": "2026-10-24",
+     "iso": "2026-10-24T19:00:00-04:00",
+     "status": "scheduled",
+     "home": "Flint Firebirds",
+     "away": "Saginaw Spirit",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/ohl/logos/13.png",
+     "al": "https://assets.leaguestat.com/ohl/logos/34.png"
+    }
+   ],
+   "recent": []
+  },
+  {
+   "name": "Gavin Betts",
+   "league": "OHL",
+   "team": "Frontenacs",
+   "logo": "logos/assets_leaguestat_com_ohl_logos_2_png.png",
+   "status": "scheduled",
+   "detail": "Game today: Kingston Frontenacs @ Brantford Bulldogs",
+   "upcoming": [
+    {
+     "id": "29065",
+     "date": "2026-10-10",
+     "iso": "2026-10-10T16:00:00-04:00",
+     "status": "scheduled",
+     "home": "Brantford Bulldogs",
+     "away": "Kingston Frontenacs",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/ohl/logos/1.png",
+     "al": "https://assets.leaguestat.com/ohl/logos/2.png"
+    },
+    {
+     "id": "29086",
+     "date": "2026-10-16",
+     "iso": "2026-10-16T19:05:00-04:00",
+     "status": "scheduled",
+     "home": "Kingston Frontenacs",
+     "away": "Oshawa Generals",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/ohl/logos/2.png",
+     "al": "https://assets.leaguestat.com/ohl/logos/4.png"
+    },
+    {
+     "id": "29091",
+     "date": "2026-10-17",
+     "iso": "2026-10-17T19:00:00-04:00",
+     "status": "scheduled",
+     "home": "Brampton Steelheads",
+     "away": "Kingston Frontenacs",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/ohl/logos/18.png",
+     "al": "https://assets.leaguestat.com/ohl/logos/2.png"
+    },
+    {
+     "id": "29108",
+     "date": "2026-10-23",
+     "iso": "2026-10-23T19:05:00-04:00",
+     "status": "scheduled",
+     "home": "Kingston Frontenacs",
+     "away": "Ottawa 67's",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/ohl/logos/2.png",
+     "al": "https://assets.leaguestat.com/ohl/logos/5.png"
+    },
+    {
+     "id": "29125",
+     "date": "2026-10-25",
+     "iso": "2026-10-25T15:00:00-04:00",
+     "status": "scheduled",
+     "home": "Ottawa 67's",
+     "away": "Kingston Frontenacs",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/ohl/logos/5.png",
+     "al": "https://assets.leaguestat.com/ohl/logos/2.png"
+    }
+   ],
+   "recent": []
+  },
+  {
+   "name": "Colin Ellsworth",
+   "league": "OHL",
+   "team": "Storm",
+   "logo": "logos/assets_leaguestat_com_ohl_logos_9_png.png",
+   "status": "scheduled",
+   "detail": "Game today: Guelph Storm @ Owen Sound Attack",
+   "upcoming": [
+    {
+     "id": "29069",
+     "date": "2026-10-10",
+     "iso": "2026-10-10T19:00:00-04:00",
+     "status": "scheduled",
+     "home": "Owen Sound Attack",
+     "away": "Guelph Storm",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/ohl/logos/11.png",
+     "al": "https://assets.leaguestat.com/ohl/logos/9.png"
+    },
+    {
+     "id": "29078",
+     "date": "2026-10-14",
+     "iso": "2026-10-14T19:05:00-04:00",
+     "status": "scheduled",
+     "home": "Sarnia Sting",
+     "away": "Guelph Storm",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/ohl/logos/15.png",
+     "al": "https://assets.leaguestat.com/ohl/logos/9.png"
+    },
+    {
+     "id": "29085",
+     "date": "2026-10-16",
+     "iso": "2026-10-16T19:07:00-04:00",
+     "status": "scheduled",
+     "home": "Guelph Storm",
+     "away": "Flint Firebirds",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/ohl/logos/9.png",
+     "al": "https://assets.leaguestat.com/ohl/logos/13.png"
+    },
+    {
+     "id": "29098",
+     "date": "2026-10-18",
+     "iso": "2026-10-18T14:07:00-04:00",
+     "status": "scheduled",
+     "home": "Guelph Storm",
+     "away": "Sudbury Wolves",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/ohl/logos/9.png",
+     "al": "https://assets.leaguestat.com/ohl/logos/12.png"
+    },
+    {
+     "id": "29109",
+     "date": "2026-10-23",
+     "iso": "2026-10-23T19:00:00-04:00",
+     "status": "scheduled",
+     "home": "Kitchener Rangers",
+     "away": "Guelph Storm",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/ohl/logos/10.png",
+     "al": "https://assets.leaguestat.com/ohl/logos/9.png"
+    }
+   ],
+   "recent": [
+    {
+     "date": "2026-09-19",
+     "opp": "Brantford Bulldogs",
+     "ha": "@",
+     "result": "L",
+     "score": "0-6",
+     "stats": {
+      "saves": 39,
+      "sa": 45,
+      "ga": 6,
+      "svpct": ".867",
+      "shutout": false
+     }
+    },
+    {
+     "date": "2026-09-18",
+     "opp": "Erie Otters",
+     "ha": "vs",
+     "result": "L",
+     "score": "1-5",
+     "stats": {
+      "saves": 27,
+      "sa": 32,
+      "ga": 5,
+      "svpct": ".844",
+      "shutout": false
+     }
+    }
+   ]
+  },
+  {
+   "name": "Jayden Kraus",
+   "league": "WHL",
+   "team": "Silvertips",
+   "logo": "logos/assets_leaguestat_com_whl_logos_226_png.png",
+   "status": "scheduled",
+   "detail": "Game today: Everett Silvertips @ Spokane Chiefs",
+   "upcoming": [
+    {
+     "id": "1023157",
+     "date": "2026-10-10",
+     "iso": "2026-10-10T18:05:00-07:00",
+     "status": "scheduled",
+     "home": "Spokane Chiefs",
+     "away": "Everett Silvertips",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/whl/logos/215.png",
+     "al": "https://assets.leaguestat.com/whl/logos/226.png"
+    },
+    {
+     "id": "1023167",
+     "date": "2026-10-13",
+     "iso": "2026-10-13T19:05:00-07:00",
+     "status": "scheduled",
+     "home": "Spokane Chiefs",
+     "away": "Everett Silvertips",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/whl/logos/215.png",
+     "al": "https://assets.leaguestat.com/whl/logos/226.png"
+    },
+    {
+     "id": "1023177",
+     "date": "2026-10-16",
+     "iso": "2026-10-16T19:05:00-07:00",
+     "status": "scheduled",
+     "home": "Tri-City Americans",
+     "away": "Everett Silvertips",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/whl/logos/217.png",
+     "al": "https://assets.leaguestat.com/whl/logos/226.png"
+    },
+    {
+     "id": "1023187",
+     "date": "2026-10-17",
+     "iso": "2026-10-17T18:05:00-07:00",
+     "status": "scheduled",
+     "home": "Tri-City Americans",
+     "away": "Everett Silvertips",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/whl/logos/217.png",
+     "al": "https://assets.leaguestat.com/whl/logos/226.png"
+    },
+    {
+     "id": "1023198",
+     "date": "2026-10-21",
+     "iso": "2026-10-21T18:30:00-06:00",
+     "status": "scheduled",
+     "home": "Saskatoon Blades",
+     "away": "Everett Silvertips",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/whl/logos/213.png",
+     "al": "https://assets.leaguestat.com/whl/logos/226.png"
+    }
+   ],
+   "recent": [
+    {
+     "date": "2026-10-04",
+     "opp": "Spokane Chiefs",
+     "ha": "vs",
+     "result": "L",
+     "score": "1-3",
+     "stats": {
+      "saves": 30,
+      "sa": 33,
+      "ga": 3,
+      "svpct": ".909",
+      "shutout": false
+     }
+    },
+    {
+     "date": "2026-10-03",
+     "opp": "Wenatchee Wild",
+     "ha": "vs",
+     "result": "L",
+     "score": "2-3",
+     "stats": {
+      "saves": 26,
+      "sa": 28,
+      "ga": 2,
+      "svpct": ".929",
+      "shutout": false
+     }
+    },
+    {
+     "date": "2026-09-25",
+     "opp": "Wenatchee Wild",
+     "ha": "vs",
+     "result": "W",
+     "score": "3-2",
+     "stats": {
+      "saves": 32,
+      "sa": 34,
+      "ga": 2,
+      "svpct": ".941",
+      "shutout": false
+     }
+    },
+    {
+     "date": "2026-09-19",
+     "opp": "Portland Winterhawks",
+     "ha": "vs",
+     "result": "L",
+     "score": "2-3",
+     "stats": {
+      "saves": 28,
+      "sa": 31,
+      "ga": 3,
+      "svpct": ".903",
+      "shutout": false
+     }
+    }
+   ]
+  },
+  {
+   "name": "Jake Pilon",
+   "league": "WHL",
+   "team": "Royals",
+   "logo": "logos/assets_leaguestat_com_whl_logos_227_png.png",
+   "status": "scheduled",
+   "detail": "Game today: Victoria Royals @ Medicine Hat Tigers",
+   "upcoming": [
+    {
+     "id": "1023154",
+     "date": "2026-10-10",
+     "iso": "2026-10-10T19:00:00-06:00",
+     "status": "scheduled",
+     "home": "Medicine Hat Tigers",
+     "away": "Victoria Royals",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/whl/logos/206.png",
+     "al": "https://assets.leaguestat.com/whl/logos/227.png"
+    },
+    {
+     "id": "1023163",
+     "date": "2026-10-12",
+     "iso": "2026-10-12T13:00:00-06:00",
+     "status": "scheduled",
+     "home": "Calgary Hitmen",
+     "away": "Victoria Royals",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/whl/logos/202.png",
+     "al": "https://assets.leaguestat.com/whl/logos/227.png"
+    },
+    {
+     "id": "1023168",
+     "date": "2026-10-14",
+     "iso": "2026-10-14T19:00:00-06:00",
+     "status": "scheduled",
+     "home": "Lethbridge Hurricanes",
+     "away": "Victoria Royals",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/whl/logos/205.png",
+     "al": "https://assets.leaguestat.com/whl/logos/227.png"
+    },
+    {
+     "id": "1023173",
+     "date": "2026-10-16",
+     "iso": "2026-10-16T19:00:00-06:00",
+     "status": "scheduled",
+     "home": "Red Deer Rebels",
+     "away": "Victoria Royals",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/whl/logos/211.png",
+     "al": "https://assets.leaguestat.com/whl/logos/227.png"
+    },
+    {
+     "id": "1023190",
+     "date": "2026-10-18",
+     "iso": "2026-10-18T16:00:00-06:00",
+     "status": "scheduled",
+     "home": "Edmonton Oil Kings",
+     "away": "Victoria Royals",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/whl/logos/228.png",
+     "al": "https://assets.leaguestat.com/whl/logos/227.png"
+    }
+   ],
+   "recent": []
+  },
+  {
+   "name": "Taylor Tabashuik",
+   "league": "WHL",
+   "team": "Pats",
+   "logo": "logos/assets_leaguestat_com_whl_logos_212_png.png",
+   "status": "scheduled",
+   "detail": "Game today: Regina Pats @ Saskatoon Blades",
+   "upcoming": [
+    {
+     "id": "1023156",
+     "date": "2026-10-10",
+     "iso": "2026-10-10T19:00:00-06:00",
+     "status": "scheduled",
+     "home": "Saskatoon Blades",
+     "away": "Regina Pats",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/whl/logos/213.png",
+     "al": "https://assets.leaguestat.com/whl/logos/212.png"
+    },
+    {
+     "id": "1023174",
+     "date": "2026-10-16",
+     "iso": "2026-10-16T19:00:00-06:00",
+     "status": "scheduled",
+     "home": "Regina Pats",
+     "away": "Medicine Hat Tigers",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/whl/logos/212.png",
+     "al": "https://assets.leaguestat.com/whl/logos/206.png"
+    },
+    {
+     "id": "1023186",
+     "date": "2026-10-17",
+     "iso": "2026-10-17T18:00:00-06:00",
+     "status": "scheduled",
+     "home": "Swift Current Broncos",
+     "away": "Regina Pats",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/whl/logos/216.png",
+     "al": "https://assets.leaguestat.com/whl/logos/212.png"
+    },
+    {
+     "id": "1023197",
+     "date": "2026-10-21",
+     "iso": "2026-10-21T19:00:00-06:00",
+     "status": "scheduled",
+     "home": "Regina Pats",
+     "away": "Seattle Thunderbirds",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/whl/logos/212.png",
+     "al": "https://assets.leaguestat.com/whl/logos/214.png"
+    },
+    {
+     "id": "1023207",
+     "date": "2026-10-23",
+     "iso": "2026-10-23T19:00:00-06:00",
+     "status": "scheduled",
+     "home": "Regina Pats",
+     "away": "Moose Jaw Warriors",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/whl/logos/212.png",
+     "al": "https://assets.leaguestat.com/whl/logos/207.png"
+    }
+   ],
+   "recent": []
+  },
+  {
+   "name": "Matthew Kondro",
+   "league": "WHL",
+   "team": "Rebels",
+   "logo": "logos/assets_leaguestat_com_whl_logos_211_png.png",
+   "status": "no_game",
+   "detail": "No game today",
+   "upcoming": [
+    {
+     "id": "1023165",
+     "date": "2026-10-12",
+     "iso": "2026-10-12T14:00:00-06:00",
+     "status": "scheduled",
+     "home": "Red Deer Rebels",
+     "away": "Edmonton Oil Kings",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/whl/logos/211.png",
+     "al": "https://assets.leaguestat.com/whl/logos/228.png"
+    },
+    {
+     "id": "1023173",
+     "date": "2026-10-16",
+     "iso": "2026-10-16T19:00:00-06:00",
+     "status": "scheduled",
+     "home": "Red Deer Rebels",
+     "away": "Victoria Royals",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/whl/logos/211.png",
+     "al": "https://assets.leaguestat.com/whl/logos/227.png"
+    },
+    {
+     "id": "1023180",
+     "date": "2026-10-17",
+     "iso": "2026-10-17T13:00:00-06:00",
+     "status": "scheduled",
+     "home": "Calgary Hitmen",
+     "away": "Red Deer Rebels",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/whl/logos/202.png",
+     "al": "https://assets.leaguestat.com/whl/logos/211.png"
+    },
+    {
+     "id": "1023206",
+     "date": "2026-10-23",
+     "iso": "2026-10-23T19:00:00-06:00",
+     "status": "scheduled",
+     "home": "Red Deer Rebels",
+     "away": "Penticton Vees",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/whl/logos/211.png",
+     "al": "https://assets.leaguestat.com/whl/logos/277.png"
+    },
+    {
+     "id": "1023213",
+     "date": "2026-10-24",
+     "iso": "2026-10-24T18:00:00-06:00",
+     "status": "scheduled",
+     "home": "Red Deer Rebels",
+     "away": "Lethbridge Hurricanes",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/whl/logos/211.png",
+     "al": "https://assets.leaguestat.com/whl/logos/205.png"
+    }
+   ],
+   "recent": [
+    {
+     "date": "2026-10-09",
+     "opp": "Calgary Hitmen",
+     "ha": "vs",
+     "result": "W",
+     "score": "8-5",
+     "stats": {
+      "saves": 22,
+      "sa": 27,
+      "ga": 5,
+      "svpct": ".815",
+      "shutout": false
+     }
+    },
+    {
+     "date": "2026-10-02",
+     "opp": "Saskatoon Blades",
+     "ha": "@",
+     "result": "W",
+     "score": "4-2",
+     "stats": {
+      "saves": 27,
+      "sa": 29,
+      "ga": 2,
+      "svpct": ".931",
+      "shutout": false
+     }
+    },
+    {
+     "date": "2026-09-30",
+     "opp": "Prince Albert Raiders",
+     "ha": "@",
+     "result": "L",
+     "score": "1-4",
+     "stats": {
+      "saves": 34,
+      "sa": 37,
+      "ga": 3,
+      "svpct": ".919",
+      "shutout": false
+     }
+    },
+    {
+     "date": "2026-09-26",
+     "opp": "Medicine Hat Tigers",
+     "ha": "vs",
+     "result": "W",
+     "score": "3-1",
+     "stats": {
+      "saves": 28,
+      "sa": 29,
+      "ga": 1,
+      "svpct": ".966",
+      "shutout": false
+     }
+    },
+    {
+     "date": "2026-09-19",
+     "opp": "Edmonton Oil Kings",
+     "ha": "vs",
+     "result": "L",
+     "score": "1-3",
+     "stats": {
+      "saves": 23,
+      "sa": 25,
+      "ga": 2,
+      "svpct": ".920",
+      "shutout": false
+     }
+    }
+   ]
+  },
+  {
+   "name": "Ryley Budd",
+   "league": "WHL",
+   "team": "Wheat Kings",
+   "logo": "logos/assets_leaguestat_com_whl_logos_201_png.png",
+   "status": "scheduled",
+   "detail": "Game today: Brandon Wheat Kings @ Kelowna Rockets",
+   "upcoming": [
+    {
+     "id": "1023153",
+     "date": "2026-10-10",
+     "iso": "2026-10-10T18:05:00-07:00",
+     "status": "scheduled",
+     "home": "Kelowna Rockets",
+     "away": "Brandon Wheat Kings",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/whl/logos/204.png",
+     "al": "https://assets.leaguestat.com/whl/logos/201.png"
+    },
+    {
+     "id": "1023179",
+     "date": "2026-10-17",
+     "iso": "2026-10-17T18:00:00-05:00",
+     "status": "scheduled",
+     "home": "Brandon Wheat Kings",
+     "away": "Medicine Hat Tigers",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/whl/logos/201.png",
+     "al": "https://assets.leaguestat.com/whl/logos/206.png"
+    },
+    {
+     "id": "1023189",
+     "date": "2026-10-18",
+     "iso": "2026-10-18T16:00:00-05:00",
+     "status": "scheduled",
+     "home": "Brandon Wheat Kings",
+     "away": "Prince Albert Raiders",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/whl/logos/201.png",
+     "al": "https://assets.leaguestat.com/whl/logos/209.png"
+    },
+    {
+     "id": "1023199",
+     "date": "2026-10-23",
+     "iso": "2026-10-23T19:00:00-05:00",
+     "status": "scheduled",
+     "home": "Brandon Wheat Kings",
+     "away": "Seattle Thunderbirds",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/whl/logos/201.png",
+     "al": "https://assets.leaguestat.com/whl/logos/214.png"
+    },
+    {
+     "id": "1023217",
+     "date": "2026-10-25",
+     "iso": "2026-10-25T16:00:00-05:00",
+     "status": "scheduled",
+     "home": "Brandon Wheat Kings",
+     "away": "Everett Silvertips",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/whl/logos/201.png",
+     "al": "https://assets.leaguestat.com/whl/logos/226.png"
+    }
+   ],
+   "recent": [
+    {
+     "date": "2026-10-07",
+     "opp": "Kamloops Blazers",
+     "ha": "@",
+     "result": "W",
+     "score": "3-1",
+     "stats": {
+      "saves": 29,
+      "sa": 30,
+      "ga": 1,
+      "svpct": ".967",
+      "shutout": false
+     }
+    },
+    {
+     "date": "2026-09-25",
+     "opp": "Regina Pats",
+     "ha": "vs",
+     "result": "W",
+     "score": "3-2",
+     "stats": {
+      "saves": 40,
+      "sa": 42,
+      "ga": 2,
+      "svpct": ".952",
+      "shutout": false
+     }
+    },
+    {
+     "date": "2026-09-18",
+     "opp": "Saskatoon Blades",
+     "ha": "vs",
+     "result": "W",
+     "score": "5-4",
+     "stats": {
+      "saves": 42,
+      "sa": 46,
+      "ga": 4,
+      "svpct": ".913",
+      "shutout": false
+     }
+    }
+   ]
+  },
+  {
+   "name": "Marek Schlenker",
+   "league": "WHL",
+   "team": "Pats",
+   "logo": "logos/assets_leaguestat_com_whl_logos_212_png.png",
+   "status": "scheduled",
+   "detail": "Game today: Regina Pats @ Saskatoon Blades",
+   "upcoming": [
+    {
+     "id": "1023156",
+     "date": "2026-10-10",
+     "iso": "2026-10-10T19:00:00-06:00",
+     "status": "scheduled",
+     "home": "Saskatoon Blades",
+     "away": "Regina Pats",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/whl/logos/213.png",
+     "al": "https://assets.leaguestat.com/whl/logos/212.png"
+    },
+    {
+     "id": "1023174",
+     "date": "2026-10-16",
+     "iso": "2026-10-16T19:00:00-06:00",
+     "status": "scheduled",
+     "home": "Regina Pats",
+     "away": "Medicine Hat Tigers",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/whl/logos/212.png",
+     "al": "https://assets.leaguestat.com/whl/logos/206.png"
+    },
+    {
+     "id": "1023186",
+     "date": "2026-10-17",
+     "iso": "2026-10-17T18:00:00-06:00",
+     "status": "scheduled",
+     "home": "Swift Current Broncos",
+     "away": "Regina Pats",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/whl/logos/216.png",
+     "al": "https://assets.leaguestat.com/whl/logos/212.png"
+    },
+    {
+     "id": "1023197",
+     "date": "2026-10-21",
+     "iso": "2026-10-21T19:00:00-06:00",
+     "status": "scheduled",
+     "home": "Regina Pats",
+     "away": "Seattle Thunderbirds",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/whl/logos/212.png",
+     "al": "https://assets.leaguestat.com/whl/logos/214.png"
+    },
+    {
+     "id": "1023207",
+     "date": "2026-10-23",
+     "iso": "2026-10-23T19:00:00-06:00",
+     "status": "scheduled",
+     "home": "Regina Pats",
+     "away": "Moose Jaw Warriors",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/whl/logos/212.png",
+     "al": "https://assets.leaguestat.com/whl/logos/207.png"
+    }
+   ],
+   "recent": []
+  },
+  {
+   "name": "Nathan Kam",
+   "league": "WHL",
+   "team": "Rockets",
+   "logo": "logos/assets_leaguestat_com_whl_logos_204_png.png",
+   "status": "scheduled",
+   "detail": "Game today: Brandon Wheat Kings @ Kelowna Rockets",
+   "upcoming": [
+    {
+     "id": "1023153",
+     "date": "2026-10-10",
+     "iso": "2026-10-10T18:05:00-07:00",
+     "status": "scheduled",
+     "home": "Kelowna Rockets",
+     "away": "Brandon Wheat Kings",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/whl/logos/204.png",
+     "al": "https://assets.leaguestat.com/whl/logos/201.png"
+    },
+    {
+     "id": "1023171",
+     "date": "2026-10-16",
+     "iso": "2026-10-16T19:05:00-07:00",
+     "status": "scheduled",
+     "home": "Kelowna Rockets",
+     "away": "Portland Winterhawks",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/whl/logos/204.png",
+     "al": "https://assets.leaguestat.com/whl/logos/208.png"
+    },
+    {
+     "id": "1023181",
+     "date": "2026-10-17",
+     "iso": "2026-10-17T18:05:00-07:00",
+     "status": "scheduled",
+     "home": "Kelowna Rockets",
+     "away": "Prince George Cougars",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/whl/logos/204.png",
+     "al": "https://assets.leaguestat.com/whl/logos/210.png"
+    },
+    {
+     "id": "1023195",
+     "date": "2026-10-21",
+     "iso": "2026-10-21T19:05:00-07:00",
+     "status": "scheduled",
+     "home": "Kelowna Rockets",
+     "away": "Portland Winterhawks",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/whl/logos/204.png",
+     "al": "https://assets.leaguestat.com/whl/logos/208.png"
+    },
+    {
+     "id": "1023209",
+     "date": "2026-10-23",
+     "iso": "2026-10-23T19:05:00-07:00",
+     "status": "scheduled",
+     "home": "Victoria Royals",
+     "away": "Kelowna Rockets",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/whl/logos/227.png",
+     "al": "https://assets.leaguestat.com/whl/logos/204.png"
+    }
+   ],
+   "recent": []
+  },
+  {
+   "name": "Koen Cleaver",
+   "league": "WHL",
+   "team": "Hurricanes",
+   "logo": "logos/assets_leaguestat_com_whl_logos_205_png.png",
+   "status": "scheduled",
+   "detail": "Game today: Lethbridge Hurricanes @ Wenatchee Wild",
+   "upcoming": [
+    {
+     "id": "1023160",
+     "date": "2026-10-10",
+     "iso": "2026-10-10T18:00:00-07:00",
+     "status": "scheduled",
+     "home": "Wenatchee Wild",
+     "away": "Lethbridge Hurricanes",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/whl/logos/222.png",
+     "al": "https://assets.leaguestat.com/whl/logos/205.png"
+    },
+    {
+     "id": "1023168",
+     "date": "2026-10-14",
+     "iso": "2026-10-14T19:00:00-06:00",
+     "status": "scheduled",
+     "home": "Lethbridge Hurricanes",
+     "away": "Victoria Royals",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/whl/logos/205.png",
+     "al": "https://assets.leaguestat.com/whl/logos/227.png"
+    },
+    {
+     "id": "1023170",
+     "date": "2026-10-16",
+     "iso": "2026-10-16T19:00:00-06:00",
+     "status": "scheduled",
+     "home": "Calgary Hitmen",
+     "away": "Lethbridge Hurricanes",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/whl/logos/202.png",
+     "al": "https://assets.leaguestat.com/whl/logos/205.png"
+    },
+    {
+     "id": "1023182",
+     "date": "2026-10-17",
+     "iso": "2026-10-17T18:00:00-06:00",
+     "status": "scheduled",
+     "home": "Lethbridge Hurricanes",
+     "away": "Edmonton Oil Kings",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/whl/logos/205.png",
+     "al": "https://assets.leaguestat.com/whl/logos/228.png"
+    },
+    {
+     "id": "1023203",
+     "date": "2026-10-23",
+     "iso": "2026-10-23T19:00:00-06:00",
+     "status": "scheduled",
+     "home": "Lethbridge Hurricanes",
+     "away": "Swift Current Broncos",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/whl/logos/205.png",
+     "al": "https://assets.leaguestat.com/whl/logos/216.png"
+    }
+   ],
+   "recent": [
+    {
+     "date": "2026-10-03",
+     "opp": "Calgary Hitmen",
+     "ha": "vs",
+     "result": "L",
+     "score": "4-7",
+     "stats": {
+      "saves": 26,
+      "sa": 32,
+      "ga": 6,
+      "svpct": ".812",
+      "shutout": false
+     }
+    },
+    {
+     "date": "2026-09-18",
+     "opp": "Medicine Hat Tigers",
+     "ha": "vs",
+     "result": "L",
+     "score": "2-5",
+     "stats": {
+      "saves": 31,
+      "sa": 35,
+      "ga": 4,
+      "svpct": ".886",
+      "shutout": false
+     }
+    }
+   ]
+  },
+  {
+   "name": "Cash Christie",
+   "league": "WHL",
+   "team": "Tigers",
+   "logo": "logos/assets_leaguestat_com_whl_logos_206_png.png",
+   "status": "scheduled",
+   "detail": "Game today: Victoria Royals @ Medicine Hat Tigers",
+   "upcoming": [
+    {
+     "id": "1023154",
+     "date": "2026-10-10",
+     "iso": "2026-10-10T19:00:00-06:00",
+     "status": "scheduled",
+     "home": "Medicine Hat Tigers",
+     "away": "Victoria Royals",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/whl/logos/206.png",
+     "al": "https://assets.leaguestat.com/whl/logos/227.png"
+    },
+    {
+     "id": "1023174",
+     "date": "2026-10-16",
+     "iso": "2026-10-16T19:00:00-06:00",
+     "status": "scheduled",
+     "home": "Regina Pats",
+     "away": "Medicine Hat Tigers",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/whl/logos/212.png",
+     "al": "https://assets.leaguestat.com/whl/logos/206.png"
+    },
+    {
+     "id": "1023179",
+     "date": "2026-10-17",
+     "iso": "2026-10-17T18:00:00-05:00",
+     "status": "scheduled",
+     "home": "Brandon Wheat Kings",
+     "away": "Medicine Hat Tigers",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/whl/logos/201.png",
+     "al": "https://assets.leaguestat.com/whl/logos/206.png"
+    },
+    {
+     "id": "1023200",
+     "date": "2026-10-23",
+     "iso": "2026-10-23T19:00:00-06:00",
+     "status": "scheduled",
+     "home": "Calgary Hitmen",
+     "away": "Medicine Hat Tigers",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/whl/logos/202.png",
+     "al": "https://assets.leaguestat.com/whl/logos/206.png"
+    },
+    {
+     "id": "1023210",
+     "date": "2026-10-24",
+     "iso": "2026-10-24T19:00:00-06:00",
+     "status": "scheduled",
+     "home": "Medicine Hat Tigers",
+     "away": "Calgary Hitmen",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/whl/logos/206.png",
+     "al": "https://assets.leaguestat.com/whl/logos/202.png"
+    }
+   ],
+   "recent": [
+    {
+     "date": "2026-10-09",
+     "opp": "Edmonton Oil Kings",
+     "ha": "vs",
+     "result": "L",
+     "score": "3-4",
+     "stats": {
+      "saves": 24,
+      "sa": 27,
+      "ga": 3,
+      "svpct": ".889",
+      "shutout": false
+     }
+    },
+    {
+     "date": "2026-09-27",
+     "opp": "Edmonton Oil Kings",
+     "ha": "@",
+     "result": "W",
+     "score": "5-2",
+     "stats": {
+      "saves": 24,
+      "sa": 26,
+      "ga": 2,
+      "svpct": ".923",
+      "shutout": false
+     }
+    }
+   ]
+  },
+  {
+   "name": "Carter Esler",
+   "league": "WHL",
+   "team": "Chiefs",
+   "logo": "logos/assets_leaguestat_com_whl_logos_215_png.png",
+   "status": "scheduled",
+   "detail": "Game today: Everett Silvertips @ Spokane Chiefs",
+   "upcoming": [
+    {
+     "id": "1023157",
+     "date": "2026-10-10",
+     "iso": "2026-10-10T18:05:00-07:00",
+     "status": "scheduled",
+     "home": "Spokane Chiefs",
+     "away": "Everett Silvertips",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/whl/logos/215.png",
+     "al": "https://assets.leaguestat.com/whl/logos/226.png"
+    },
+    {
+     "id": "1023167",
+     "date": "2026-10-13",
+     "iso": "2026-10-13T19:05:00-07:00",
+     "status": "scheduled",
+     "home": "Spokane Chiefs",
+     "away": "Everett Silvertips",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/whl/logos/215.png",
+     "al": "https://assets.leaguestat.com/whl/logos/226.png"
+    },
+    {
+     "id": "1023185",
+     "date": "2026-10-17",
+     "iso": "2026-10-17T18:05:00-07:00",
+     "status": "scheduled",
+     "home": "Seattle Thunderbirds",
+     "away": "Spokane Chiefs",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/whl/logos/214.png",
+     "al": "https://assets.leaguestat.com/whl/logos/215.png"
+    },
+    {
+     "id": "1023208",
+     "date": "2026-10-23",
+     "iso": "2026-10-23T19:05:00-07:00",
+     "status": "scheduled",
+     "home": "Spokane Chiefs",
+     "away": "Portland Winterhawks",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/whl/logos/215.png",
+     "al": "https://assets.leaguestat.com/whl/logos/208.png"
+    },
+    {
+     "id": "1023214",
+     "date": "2026-10-24",
+     "iso": "2026-10-24T18:05:00-07:00",
+     "status": "scheduled",
+     "home": "Spokane Chiefs",
+     "away": "Portland Winterhawks",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/whl/logos/215.png",
+     "al": "https://assets.leaguestat.com/whl/logos/208.png"
+    }
+   ],
+   "recent": [
+    {
+     "date": "2026-10-04",
+     "opp": "Everett Silvertips",
+     "ha": "@",
+     "result": "W",
+     "score": "3-1",
+     "stats": {
+      "saves": 23,
+      "sa": 24,
+      "ga": 1,
+      "svpct": ".958",
+      "shutout": false
+     }
+    },
+    {
+     "date": "2026-10-02",
+     "opp": "Portland Winterhawks",
+     "ha": "@",
+     "result": "W",
+     "score": "6-1",
+     "stats": {
+      "saves": 26,
+      "sa": 27,
+      "ga": 1,
+      "svpct": ".963",
+      "shutout": false
+     }
+    },
+    {
+     "date": "2026-09-26",
+     "opp": "Tri-City Americans",
+     "ha": "vs",
+     "result": "W",
+     "score": "3-2",
+     "stats": {
+      "saves": 21,
+      "sa": 23,
+      "ga": 2,
+      "svpct": ".913",
+      "shutout": false
+     }
+    },
+    {
+     "date": "2026-09-19",
+     "opp": "Tri-City Americans",
+     "ha": "@",
+     "result": "W",
+     "score": "3-2",
+     "stats": {
+      "saves": 17,
+      "sa": 19,
+      "ga": 2,
+      "svpct": ".895",
+      "shutout": false
+     }
+    }
+   ]
+  },
+  {
+   "name": "Grayson Malinoski",
+   "league": "WHL",
+   "team": "Thunderbirds",
+   "logo": "logos/assets_leaguestat_com_whl_logos_214_png.png",
+   "status": "scheduled",
+   "detail": "Game today: Seattle Thunderbirds @ Vancouver Giants",
+   "upcoming": [
+    {
+     "id": "1023159",
+     "date": "2026-10-10",
+     "iso": "2026-10-10T19:00:00-07:00",
+     "status": "scheduled",
+     "home": "Vancouver Giants",
+     "away": "Seattle Thunderbirds",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/whl/logos/223.png",
+     "al": "https://assets.leaguestat.com/whl/logos/214.png"
+    },
+    {
+     "id": "1023166",
+     "date": "2026-10-13",
+     "iso": "2026-10-13T19:05:00-07:00",
+     "status": "scheduled",
+     "home": "Seattle Thunderbirds",
+     "away": "Vancouver Giants",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/whl/logos/214.png",
+     "al": "https://assets.leaguestat.com/whl/logos/223.png"
+    },
+    {
+     "id": "1023175",
+     "date": "2026-10-16",
+     "iso": "2026-10-16T19:05:00-07:00",
+     "status": "scheduled",
+     "home": "Seattle Thunderbirds",
+     "away": "Kamloops Blazers",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/whl/logos/214.png",
+     "al": "https://assets.leaguestat.com/whl/logos/203.png"
+    },
+    {
+     "id": "1023185",
+     "date": "2026-10-17",
+     "iso": "2026-10-17T18:05:00-07:00",
+     "status": "scheduled",
+     "home": "Seattle Thunderbirds",
+     "away": "Spokane Chiefs",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/whl/logos/214.png",
+     "al": "https://assets.leaguestat.com/whl/logos/215.png"
+    },
+    {
+     "id": "1023197",
+     "date": "2026-10-21",
+     "iso": "2026-10-21T19:00:00-06:00",
+     "status": "scheduled",
+     "home": "Regina Pats",
+     "away": "Seattle Thunderbirds",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/whl/logos/212.png",
+     "al": "https://assets.leaguestat.com/whl/logos/214.png"
+    }
+   ],
+   "recent": [
+    {
+     "date": "2026-10-09",
+     "opp": "Vancouver Giants",
+     "ha": "vs",
+     "result": "L",
+     "score": "3-6",
+     "stats": {
+      "saves": 17,
+      "sa": 23,
+      "ga": 6,
+      "svpct": ".739",
+      "shutout": false
+     }
+    },
+    {
+     "date": "2026-09-26",
+     "opp": "Prince George Cougars",
+     "ha": "vs",
+     "result": "W",
+     "score": "8-0",
+     "stats": {
+      "saves": 32,
+      "sa": 32,
+      "ga": 0,
+      "svpct": "1.000",
+      "shutout": true
+     }
+    },
+    {
+     "date": "2026-09-19",
+     "opp": "Wenatchee Wild",
+     "ha": "@",
+     "result": "W",
+     "score": "1-0",
+     "stats": {
+      "saves": 31,
+      "sa": 31,
+      "ga": 0,
+      "svpct": "1.000",
+      "shutout": true
+     }
+    }
+   ]
+  },
+  {
+   "name": "Burke Hood",
+   "league": "WHL",
+   "team": "Giants",
+   "logo": "logos/assets_leaguestat_com_whl_logos_223_png.png",
+   "status": "scheduled",
+   "detail": "Game today: Seattle Thunderbirds @ Vancouver Giants",
+   "upcoming": [
+    {
+     "id": "1023159",
+     "date": "2026-10-10",
+     "iso": "2026-10-10T19:00:00-07:00",
+     "status": "scheduled",
+     "home": "Vancouver Giants",
+     "away": "Seattle Thunderbirds",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/whl/logos/223.png",
+     "al": "https://assets.leaguestat.com/whl/logos/214.png"
+    },
+    {
+     "id": "1023166",
+     "date": "2026-10-13",
+     "iso": "2026-10-13T19:05:00-07:00",
+     "status": "scheduled",
+     "home": "Seattle Thunderbirds",
+     "away": "Vancouver Giants",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/whl/logos/214.png",
+     "al": "https://assets.leaguestat.com/whl/logos/223.png"
+    },
+    {
+     "id": "1023183",
+     "date": "2026-10-17",
+     "iso": "2026-10-17T18:05:00-07:00",
+     "status": "scheduled",
+     "home": "Penticton Vees",
+     "away": "Vancouver Giants",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/whl/logos/277.png",
+     "al": "https://assets.leaguestat.com/whl/logos/223.png"
+    },
+    {
+     "id": "1023192",
+     "date": "2026-10-20",
+     "iso": "2026-10-20T19:00:00-07:00",
+     "status": "scheduled",
+     "home": "Prince George Cougars",
+     "away": "Vancouver Giants",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/whl/logos/210.png",
+     "al": "https://assets.leaguestat.com/whl/logos/223.png"
+    },
+    {
+     "id": "1023196",
+     "date": "2026-10-21",
+     "iso": "2026-10-21T19:00:00-07:00",
+     "status": "scheduled",
+     "home": "Prince George Cougars",
+     "away": "Vancouver Giants",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/whl/logos/210.png",
+     "al": "https://assets.leaguestat.com/whl/logos/223.png"
+    }
+   ],
+   "recent": [
+    {
+     "date": "2026-10-09",
+     "opp": "Seattle Thunderbirds",
+     "ha": "@",
+     "result": "W",
+     "score": "6-3",
+     "stats": {
+      "saves": 27,
+      "sa": 30,
+      "ga": 3,
+      "svpct": ".900",
+      "shutout": false
+     }
+    },
+    {
+     "date": "2026-10-06",
+     "opp": "Brandon Wheat Kings",
+     "ha": "vs",
+     "result": "L",
+     "score": "1-2",
+     "stats": {
+      "saves": 29,
+      "sa": 30,
+      "ga": 1,
+      "svpct": ".967",
+      "shutout": false
+     }
+    },
+    {
+     "date": "2026-09-27",
+     "opp": "Prince George Cougars",
+     "ha": "vs",
+     "result": "W",
+     "score": "4-2",
+     "stats": {
+      "saves": 32,
+      "sa": 34,
+      "ga": 2,
+      "svpct": ".941",
+      "shutout": false
+     }
+    },
+    {
+     "date": "2026-09-26",
+     "opp": "Victoria Royals",
+     "ha": "@",
+     "result": "L",
+     "score": "1-4",
+     "stats": {
+      "saves": 27,
+      "sa": 30,
+      "ga": 3,
+      "svpct": ".900",
+      "shutout": false
+     }
+    }
+   ]
+  },
+  {
+   "name": "Charlie Larocque",
+   "league": "QMJHL",
+   "team": "Olympiques",
+   "logo": "logos/assets_leaguestat_com_lhjmq_logos_12_png.png",
+   "status": "no_game",
+   "detail": "No game today",
+   "upcoming": [
+    {
+     "id": "32848",
+     "date": "2026-10-11",
+     "iso": "2026-10-11T15:00:00-04:00",
+     "status": "scheduled",
+     "home": "Gatineau Olympiques",
+     "away": "Val-d'Or Foreurs",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/lhjmq/logos/12.png",
+     "al": "https://assets.leaguestat.com/lhjmq/logos/15.png"
+    },
+    {
+     "id": "32849",
+     "date": "2026-10-12",
+     "iso": "2026-10-12T14:00:00-04:00",
+     "status": "scheduled",
+     "home": "Gatineau Olympiques",
+     "away": "Chicoutimi Saguen\u00e9ens",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/lhjmq/logos/12.png",
+     "al": "https://assets.leaguestat.com/lhjmq/logos/10.png"
+    },
+    {
+     "id": "32979",
+     "date": "2026-10-16",
+     "iso": "2026-10-16T19:00:00-04:00",
+     "status": "scheduled",
+     "home": "Qu\u00e9bec Remparts",
+     "away": "Gatineau Olympiques",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/lhjmq/logos/9.png",
+     "al": "https://assets.leaguestat.com/lhjmq/logos/12.png"
+    },
+    {
+     "id": "33010",
+     "date": "2026-10-17",
+     "iso": "2026-10-17T16:00:00-04:00",
+     "status": "scheduled",
+     "home": "Rimouski Oc\u00e9anic",
+     "away": "Gatineau Olympiques",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/lhjmq/logos/18.png",
+     "al": "https://assets.leaguestat.com/lhjmq/logos/12.png"
+    },
+    {
+     "id": "32850",
+     "date": "2026-10-23",
+     "iso": "2026-10-23T19:00:00-04:00",
+     "status": "scheduled",
+     "home": "Gatineau Olympiques",
+     "away": "Saint John Sea Dogs",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/lhjmq/logos/12.png",
+     "al": "https://assets.leaguestat.com/lhjmq/logos/8.png"
+    }
+   ],
+   "recent": []
+  },
+  {
+   "name": "Finn Moffett",
+   "league": "QMJHL",
+   "team": "Olympiques",
+   "logo": "logos/assets_leaguestat_com_lhjmq_logos_12_png.png",
+   "status": "no_game",
+   "detail": "No game today",
+   "upcoming": [
+    {
+     "id": "32848",
+     "date": "2026-10-11",
+     "iso": "2026-10-11T15:00:00-04:00",
+     "status": "scheduled",
+     "home": "Gatineau Olympiques",
+     "away": "Val-d'Or Foreurs",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/lhjmq/logos/12.png",
+     "al": "https://assets.leaguestat.com/lhjmq/logos/15.png"
+    },
+    {
+     "id": "32849",
+     "date": "2026-10-12",
+     "iso": "2026-10-12T14:00:00-04:00",
+     "status": "scheduled",
+     "home": "Gatineau Olympiques",
+     "away": "Chicoutimi Saguen\u00e9ens",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/lhjmq/logos/12.png",
+     "al": "https://assets.leaguestat.com/lhjmq/logos/10.png"
+    },
+    {
+     "id": "32979",
+     "date": "2026-10-16",
+     "iso": "2026-10-16T19:00:00-04:00",
+     "status": "scheduled",
+     "home": "Qu\u00e9bec Remparts",
+     "away": "Gatineau Olympiques",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/lhjmq/logos/9.png",
+     "al": "https://assets.leaguestat.com/lhjmq/logos/12.png"
+    },
+    {
+     "id": "33010",
+     "date": "2026-10-17",
+     "iso": "2026-10-17T16:00:00-04:00",
+     "status": "scheduled",
+     "home": "Rimouski Oc\u00e9anic",
+     "away": "Gatineau Olympiques",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/lhjmq/logos/18.png",
+     "al": "https://assets.leaguestat.com/lhjmq/logos/12.png"
+    },
+    {
+     "id": "32850",
+     "date": "2026-10-23",
+     "iso": "2026-10-23T19:00:00-04:00",
+     "status": "scheduled",
+     "home": "Gatineau Olympiques",
+     "away": "Saint John Sea Dogs",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/lhjmq/logos/12.png",
+     "al": "https://assets.leaguestat.com/lhjmq/logos/8.png"
+    }
+   ],
+   "recent": [
+    {
+     "date": "2026-10-09",
+     "opp": "Baie-Comeau Drakkar",
+     "ha": "vs",
+     "result": "W",
+     "score": "4-3",
+     "stats": {
+      "saves": 11,
+      "sa": 11,
+      "ga": 0,
+      "svpct": "1.000",
+      "shutout": true
+     }
+    },
+    {
+     "date": "2026-10-04",
+     "opp": "Val-d'Or Foreurs",
+     "ha": "@",
+     "result": "W",
+     "score": "5-4",
+     "stats": {
+      "saves": 24,
+      "sa": 28,
+      "ga": 4,
+      "svpct": ".857",
+      "shutout": false
+     }
+    },
+    {
+     "date": "2026-09-27",
+     "opp": "Victoriaville Tigres",
+     "ha": "@",
+     "result": "L",
+     "score": "5-7",
+     "stats": {
+      "saves": 9,
+      "sa": 11,
+      "ga": 2,
+      "svpct": ".818",
+      "shutout": false
+     }
+    }
+   ]
+  },
+  {
+   "name": "Rafael Courchesne",
+   "league": "QMJHL",
+   "team": "Sea Dogs",
+   "logo": "logos/assets_leaguestat_com_lhjmq_logos_8_png.png",
+   "status": "scheduled",
+   "detail": "Game today: Charlottetown Islanders @ Saint John Sea Dogs",
+   "upcoming": [
+    {
+     "id": "33074",
+     "date": "2026-10-10",
+     "iso": "2026-10-10T16:00:00-03:00",
+     "status": "scheduled",
+     "home": "Saint John Sea Dogs",
+     "away": "Charlottetown Islanders",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/lhjmq/logos/8.png",
+     "al": "https://assets.leaguestat.com/lhjmq/logos/7.png"
+    },
+    {
+     "id": "33075",
+     "date": "2026-10-12",
+     "iso": "2026-10-12T15:00:00-03:00",
+     "status": "scheduled",
+     "home": "Saint John Sea Dogs",
+     "away": "Drummondville Voltigeurs",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/lhjmq/logos/8.png",
+     "al": "https://assets.leaguestat.com/lhjmq/logos/14.png"
+    },
+    {
+     "id": "33076",
+     "date": "2026-10-17",
+     "iso": "2026-10-17T16:00:00-03:00",
+     "status": "scheduled",
+     "home": "Saint John Sea Dogs",
+     "away": "Cape Breton Eagles",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/lhjmq/logos/8.png",
+     "al": "https://assets.leaguestat.com/lhjmq/logos/3.png"
+    },
+    {
+     "id": "33077",
+     "date": "2026-10-18",
+     "iso": "2026-10-18T15:00:00-03:00",
+     "status": "scheduled",
+     "home": "Saint John Sea Dogs",
+     "away": "Val-d'Or Foreurs",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/lhjmq/logos/8.png",
+     "al": "https://assets.leaguestat.com/lhjmq/logos/15.png"
+    },
+    {
+     "id": "32850",
+     "date": "2026-10-23",
+     "iso": "2026-10-23T19:00:00-04:00",
+     "status": "scheduled",
+     "home": "Gatineau Olympiques",
+     "away": "Saint John Sea Dogs",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/lhjmq/logos/12.png",
+     "al": "https://assets.leaguestat.com/lhjmq/logos/8.png"
+    }
+   ],
+   "recent": [
+    {
+     "date": "2026-09-26",
+     "opp": "Cape Breton Eagles",
+     "ha": "vs",
+     "result": "L",
+     "score": "4-5",
+     "stats": {
+      "saves": 22,
+      "sa": 27,
+      "ga": 5,
+      "svpct": ".815",
+      "shutout": false
+     }
+    },
+    {
+     "date": "2026-09-19",
+     "opp": "Newfoundland Regiment",
+     "ha": "@",
+     "result": "L",
+     "score": "2-4",
+     "stats": {
+      "saves": 19,
+      "sa": 22,
+      "ga": 3,
+      "svpct": ".864",
+      "shutout": false
+     }
+    }
+   ]
+  },
+  {
+   "name": "Arseni Radkov",
+   "league": "QMJHL",
+   "team": "Foreurs",
+   "logo": "logos/assets_leaguestat_com_lhjmq_logos_15_png.png",
+   "status": "no_game",
+   "detail": "No game today",
+   "upcoming": [
+    {
+     "id": "32848",
+     "date": "2026-10-11",
+     "iso": "2026-10-11T15:00:00-04:00",
+     "status": "scheduled",
+     "home": "Gatineau Olympiques",
+     "away": "Val-d'Or Foreurs",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/lhjmq/logos/12.png",
+     "al": "https://assets.leaguestat.com/lhjmq/logos/15.png"
+    },
+    {
+     "id": "32751",
+     "date": "2026-10-14",
+     "iso": "2026-10-14T19:00:00-03:00",
+     "status": "scheduled",
+     "home": "Charlottetown Islanders",
+     "away": "Val-d'Or Foreurs",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/lhjmq/logos/7.png",
+     "al": "https://assets.leaguestat.com/lhjmq/logos/15.png"
+    },
+    {
+     "id": "32878",
+     "date": "2026-10-16",
+     "iso": "2026-10-16T19:00:00-03:00",
+     "status": "scheduled",
+     "home": "Halifax Mooseheads",
+     "away": "Val-d'Or Foreurs",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/lhjmq/logos/5.png",
+     "al": "https://assets.leaguestat.com/lhjmq/logos/15.png"
+    },
+    {
+     "id": "32913",
+     "date": "2026-10-17",
+     "iso": "2026-10-17T19:00:00-03:00",
+     "status": "scheduled",
+     "home": "Moncton Wildcats",
+     "away": "Val-d'Or Foreurs",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/lhjmq/logos/1.png",
+     "al": "https://assets.leaguestat.com/lhjmq/logos/15.png"
+    },
+    {
+     "id": "33077",
+     "date": "2026-10-18",
+     "iso": "2026-10-18T15:00:00-03:00",
+     "status": "scheduled",
+     "home": "Saint John Sea Dogs",
+     "away": "Val-d'Or Foreurs",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/lhjmq/logos/8.png",
+     "al": "https://assets.leaguestat.com/lhjmq/logos/15.png"
+    }
+   ],
+   "recent": [
+    {
+     "date": "2026-10-03",
+     "opp": "Gatineau Olympiques",
+     "ha": "vs",
+     "result": "W",
+     "score": "3-2",
+     "stats": {
+      "saves": 22,
+      "sa": 24,
+      "ga": 2,
+      "svpct": ".917",
+      "shutout": false
+     }
+    },
+    {
+     "date": "2026-09-27",
+     "opp": "Rouyn-Noranda Huskies",
+     "ha": "@",
+     "result": "L",
+     "score": "1-2",
+     "stats": {
+      "saves": 18,
+      "sa": 20,
+      "ga": 2,
+      "svpct": ".900",
+      "shutout": false
+     }
+    },
+    {
+     "date": "2026-09-26",
+     "opp": "Drummondville Voltigeurs",
+     "ha": "vs",
+     "result": "W",
+     "score": "5-1",
+     "stats": {
+      "saves": 22,
+      "sa": 23,
+      "ga": 1,
+      "svpct": ".957",
+      "shutout": false
+     }
+    },
+    {
+     "date": "2026-09-18",
+     "opp": "Victoriaville Tigres",
+     "ha": "@",
+     "result": "W",
+     "score": "4-3",
+     "stats": {
+      "saves": 19,
+      "sa": 22,
+      "ga": 3,
+      "svpct": ".864",
+      "shutout": false
+     }
+    }
+   ]
+  },
+  {
+   "name": "Dayton Kitchener",
+   "league": "QMJHL",
+   "team": "Oceanic",
+   "logo": "logos/assets_leaguestat_com_lhjmq_logos_18_png.png",
+   "status": "scheduled",
+   "detail": "Game today: Newfoundland Regiment @ Rimouski Oc\u00e9anic",
+   "upcoming": [
+    {
+     "id": "33009",
+     "date": "2026-10-10",
+     "iso": "2026-10-10T16:00:00-04:00",
+     "status": "scheduled",
+     "home": "Rimouski Oc\u00e9anic",
+     "away": "Newfoundland Regiment",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/lhjmq/logos/18.png",
+     "al": "https://assets.leaguestat.com/lhjmq/logos/2.png"
+    },
+    {
+     "id": "33010",
+     "date": "2026-10-17",
+     "iso": "2026-10-17T16:00:00-04:00",
+     "status": "scheduled",
+     "home": "Rimouski Oc\u00e9anic",
+     "away": "Gatineau Olympiques",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/lhjmq/logos/18.png",
+     "al": "https://assets.leaguestat.com/lhjmq/logos/12.png"
+    },
+    {
+     "id": "33011",
+     "date": "2026-10-18",
+     "iso": "2026-10-18T15:00:00-04:00",
+     "status": "scheduled",
+     "home": "Rimouski Oc\u00e9anic",
+     "away": "Chicoutimi Saguen\u00e9ens",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/lhjmq/logos/18.png",
+     "al": "https://assets.leaguestat.com/lhjmq/logos/10.png"
+    },
+    {
+     "id": "32690",
+     "date": "2026-10-23",
+     "iso": "2026-10-23T19:00:00-04:00",
+     "status": "scheduled",
+     "home": "Blainville-Boisbriand Armada",
+     "away": "Rimouski Oc\u00e9anic",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/lhjmq/logos/19.png",
+     "al": "https://assets.leaguestat.com/lhjmq/logos/18.png"
+    },
+    {
+     "id": "33103",
+     "date": "2026-10-24",
+     "iso": "2026-10-24T16:00:00-04:00",
+     "status": "scheduled",
+     "home": "Shawinigan Cataractes",
+     "away": "Rimouski Oc\u00e9anic",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/lhjmq/logos/13.png",
+     "al": "https://assets.leaguestat.com/lhjmq/logos/18.png"
+    }
+   ],
+   "recent": []
+  },
+  {
+   "name": "Seth Ronan",
+   "league": "QMJHL",
+   "team": "Islanders",
+   "logo": "logos/assets_leaguestat_com_lhjmq_logos_7_png.png",
+   "status": "scheduled",
+   "detail": "Game today: Charlottetown Islanders @ Saint John Sea Dogs",
+   "upcoming": [
+    {
+     "id": "33074",
+     "date": "2026-10-10",
+     "iso": "2026-10-10T16:00:00-03:00",
+     "status": "scheduled",
+     "home": "Saint John Sea Dogs",
+     "away": "Charlottetown Islanders",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/lhjmq/logos/8.png",
+     "al": "https://assets.leaguestat.com/lhjmq/logos/7.png"
+    },
+    {
+     "id": "32750",
+     "date": "2026-10-12",
+     "iso": "2026-10-12T14:00:00-03:00",
+     "status": "scheduled",
+     "home": "Charlottetown Islanders",
+     "away": "Rouyn-Noranda Huskies",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/lhjmq/logos/7.png",
+     "al": "https://assets.leaguestat.com/lhjmq/logos/11.png"
+    },
+    {
+     "id": "32751",
+     "date": "2026-10-14",
+     "iso": "2026-10-14T19:00:00-03:00",
+     "status": "scheduled",
+     "home": "Charlottetown Islanders",
+     "away": "Val-d'Or Foreurs",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/lhjmq/logos/7.png",
+     "al": "https://assets.leaguestat.com/lhjmq/logos/15.png"
+    },
+    {
+     "id": "32752",
+     "date": "2026-10-17",
+     "iso": "2026-10-17T19:00:00-03:00",
+     "status": "scheduled",
+     "home": "Charlottetown Islanders",
+     "away": "Shawinigan Cataractes",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/lhjmq/logos/7.png",
+     "al": "https://assets.leaguestat.com/lhjmq/logos/13.png"
+    },
+    {
+     "id": "32881",
+     "date": "2026-10-24",
+     "iso": "2026-10-24T19:00:00-03:00",
+     "status": "scheduled",
+     "home": "Halifax Mooseheads",
+     "away": "Charlottetown Islanders",
+     "hs": "0",
+     "as_": "0",
+     "hl": "https://assets.leaguestat.com/lhjmq/logos/5.png",
+     "al": "https://assets.leaguestat.com/lhjmq/logos/7.png"
+    }
+   ],
+   "recent": [
+    {
+     "date": "2026-10-09",
+     "opp": "Drummondville Voltigeurs",
+     "ha": "vs",
+     "result": "W",
+     "score": "5-1",
+     "stats": {
+      "saves": 36,
+      "sa": 37,
+      "ga": 1,
+      "svpct": ".973",
+      "shutout": false
+     }
+    },
+    {
+     "date": "2026-10-01",
+     "opp": "Chicoutimi Saguen\u00e9ens",
+     "ha": "@",
+     "result": "W",
+     "score": "5-4",
+     "stats": {
+      "saves": 25,
+      "sa": 29,
+      "ga": 4,
+      "svpct": ".862",
+      "shutout": false
+     }
+    }
+   ]
+  },
+  {
+   "name": "Christian Kirsch",
+   "league": "NCAA",
+   "team": "Quinnipiac",
+   "logo": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/quinnipiac.svg",
+   "status": "scheduled",
+   "detail": "Game today: Quinnipiac @ Maine",
+   "upcoming": [
+    {
+     "id": "6643468",
+     "date": "2026-10-10",
+     "iso": "2026-10-10",
+     "status": "scheduled",
+     "home": "Maine",
+     "away": "Quinnipiac",
+     "hs": "",
+     "as_": "",
+     "hk": "mainemainemaine",
+     "ak": "quinnquinnipiacquinnipiac",
+     "hl": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/maine.svg",
+     "al": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/quinnipiac.svg",
+     "mine": "away"
+    },
+    {
+     "id": "6643548",
+     "date": "2026-10-16",
+     "iso": "2026-10-16",
+     "status": "scheduled",
+     "home": "Penn St.",
+     "away": "Quinnipiac",
+     "hs": "",
+     "as_": "",
+     "hk": "pennstpennstpennst",
+     "ak": "quinnquinnipiacquinnipiac",
+     "hl": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/penn-st.svg",
+     "al": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/quinnipiac.svg",
+     "mine": "away"
+    },
+    {
+     "id": "6643001",
+     "date": "2026-10-23",
+     "iso": "2026-10-23",
+     "status": "scheduled",
+     "home": "Quinnipiac",
+     "away": "Army West Point",
+     "hs": "",
+     "as_": "",
+     "hk": "quinnquinnipiacquinnipiac",
+     "ak": "armyarmywestpointarmy",
+     "hl": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/quinnipiac.svg",
+     "al": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/army.svg",
+     "mine": "home"
+    }
+   ],
+   "recent": [
+    {
+     "date": "2026-10-09",
+     "opp": "Maine",
+     "ha": "@",
+     "result": "W",
+     "score": "2-1",
+     "stats": {
+      "saves": 33,
+      "sa": 34,
+      "ga": 1,
+      "svpct": ".971",
+      "shutout": false
+     }
+    },
+    {
+     "date": "2026-10-02",
+     "opp": "New Hampshire",
+     "ha": "vs",
+     "result": "W",
+     "score": "10-2",
+     "stats": {
+      "saves": 21,
+      "sa": 23,
+      "ga": 2,
+      "svpct": ".913",
+      "shutout": false
+     }
+    }
+   ]
+  },
+  {
+   "name": "Joey Costanzo",
+   "league": "NCAA",
+   "team": "Michigan Tech",
+   "logo": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/michigan-tech.svg",
+   "status": "scheduled",
+   "detail": "Game today: Michigan Tech @ St. Cloud St.",
+   "upcoming": [
+    {
+     "id": "6642690",
+     "date": "2026-10-10",
+     "iso": "2026-10-10",
+     "status": "scheduled",
+     "home": "St. Cloud St.",
+     "away": "Michigan Tech",
+     "hs": "",
+     "as_": "",
+     "hk": "scsustcloudststcloudst",
+     "ak": "mitechmichigantechmichigantech",
+     "hl": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/st-cloud-st.svg",
+     "al": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/michigan-tech.svg",
+     "mine": "away"
+    },
+    {
+     "id": "6642691",
+     "date": "2026-10-16",
+     "iso": "2026-10-16",
+     "status": "scheduled",
+     "home": "Michigan Tech",
+     "away": "Alas. Fairbanks",
+     "hs": "",
+     "as_": "",
+     "hk": "mitechmichigantechmichigantech",
+     "ak": "akfbkalasfairbanksalasfairbanks",
+     "hl": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/michigan-tech.svg",
+     "al": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/alas-fairbanks.svg",
+     "mine": "home"
+    },
+    {
+     "id": "6642692",
+     "date": "2026-10-17",
+     "iso": "2026-10-17",
+     "status": "scheduled",
+     "home": "Michigan Tech",
+     "away": "Alas. Fairbanks",
+     "hs": "",
+     "as_": "",
+     "hk": "mitechmichigantechmichigantech",
+     "ak": "akfbkalasfairbanksalasfairbanks",
+     "hl": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/michigan-tech.svg",
+     "al": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/alas-fairbanks.svg",
+     "mine": "home"
+    },
+    {
+     "id": "6642693",
+     "date": "2026-10-23",
+     "iso": "2026-10-23",
+     "status": "scheduled",
+     "home": "Ferris St.",
+     "away": "Michigan Tech",
+     "hs": "",
+     "as_": "",
+     "hk": "ferrisferrisstferrisst",
+     "ak": "mitechmichigantechmichigantech",
+     "hl": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/ferris-st.svg",
+     "al": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/michigan-tech.svg",
+     "mine": "away"
+    },
+    {
+     "id": "6642694",
+     "date": "2026-10-24",
+     "iso": "2026-10-24",
+     "status": "scheduled",
+     "home": "Ferris St.",
+     "away": "Michigan Tech",
+     "hs": "",
+     "as_": "",
+     "hk": "ferrisferrisstferrisst",
+     "ak": "mitechmichigantechmichigantech",
+     "hl": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/ferris-st.svg",
+     "al": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/michigan-tech.svg",
+     "mine": "away"
+    }
+   ],
+   "recent": []
+  },
+  {
+   "name": "Easton Rye",
+   "league": "NCAA",
+   "team": "Bentley",
+   "logo": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/bentley.svg",
+   "status": "scheduled",
+   "detail": "Game today: Northeastern @ Bentley",
+   "upcoming": [
+    {
+     "id": "6643087",
+     "date": "2026-10-10",
+     "iso": "2026-10-10",
+     "status": "scheduled",
+     "home": "Bentley",
+     "away": "Northeastern",
+     "hs": "",
+     "as_": "",
+     "hk": "bentlybentleybentley",
+     "ak": "noeastnortheasternnortheastern",
+     "hl": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/bentley.svg",
+     "al": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/northeastern.svg",
+     "mine": "home"
+    },
+    {
+     "id": "6643205",
+     "date": "2026-10-16",
+     "iso": "2026-10-16",
+     "status": "scheduled",
+     "home": "North Dakota",
+     "away": "Bentley",
+     "hs": "",
+     "as_": "",
+     "hk": "nodaknorthdakotanorthdakota",
+     "ak": "bentlybentleybentley",
+     "hl": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/north-dakota.svg",
+     "al": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/bentley.svg",
+     "mine": "away"
+    },
+    {
+     "id": "6643206",
+     "date": "2026-10-17",
+     "iso": "2026-10-17",
+     "status": "scheduled",
+     "home": "North Dakota",
+     "away": "Bentley",
+     "hs": "",
+     "as_": "",
+     "hk": "nodaknorthdakotanorthdakota",
+     "ak": "bentlybentleybentley",
+     "hl": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/north-dakota.svg",
+     "al": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/bentley.svg",
+     "mine": "away"
+    },
+    {
+     "id": "6643559",
+     "date": "2026-10-23",
+     "iso": "2026-10-23",
+     "status": "scheduled",
+     "home": "Bentley",
+     "away": "Robert Morris",
+     "hs": "",
+     "as_": "",
+     "hk": "bentlybentleybentley",
+     "ak": "robmorrobertmorrisrobertmorris",
+     "hl": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/bentley.svg",
+     "al": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/robert-morris.svg",
+     "mine": "home"
+    },
+    {
+     "id": "6643560",
+     "date": "2026-10-24",
+     "iso": "2026-10-24",
+     "status": "scheduled",
+     "home": "Bentley",
+     "away": "Robert Morris",
+     "hs": "",
+     "as_": "",
+     "hk": "bentlybentleybentley",
+     "ak": "robmorrobertmorrisrobertmorris",
+     "hl": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/bentley.svg",
+     "al": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/robert-morris.svg",
+     "mine": "home"
+    }
+   ],
+   "recent": []
+  },
+  {
+   "name": "Josh Ravensbergen",
+   "league": "NCAA",
+   "team": "Michigan State",
+   "logo": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/michigan-st.svg",
+   "status": "no_game",
+   "detail": "No game today",
+   "upcoming": [
+    {
+     "id": "6642622",
+     "date": "2026-10-11",
+     "iso": "2026-10-11",
+     "status": "scheduled",
+     "home": "Michigan St.",
+     "away": "Northern Mich.",
+     "hs": "",
+     "as_": "",
+     "hk": "michstmichiganstmichiganst",
+     "ak": "nmichnorthernmichnorthernmich",
+     "hl": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/michigan-st.svg",
+     "al": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/northern-mich.svg",
+     "mine": "home"
+    },
+    {
+     "id": "6643248",
+     "date": "2026-10-17",
+     "iso": "2026-10-17",
+     "status": "scheduled",
+     "home": "RIT",
+     "away": "Michigan St.",
+     "hs": "",
+     "as_": "",
+     "hk": "ritritrochesterinst",
+     "ak": "michstmichiganstmichiganst",
+     "hl": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/rochester-inst.svg",
+     "al": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/michigan-st.svg",
+     "mine": "away"
+    },
+    {
+     "id": "6643498",
+     "date": "2026-10-23",
+     "iso": "2026-10-23",
+     "status": "scheduled",
+     "home": "New Hampshire",
+     "away": "Michigan St.",
+     "hs": "",
+     "as_": "",
+     "hk": "unhnewhampshirenewhampshire",
+     "ak": "michstmichiganstmichiganst",
+     "hl": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/new-hampshire.svg",
+     "al": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/michigan-st.svg",
+     "mine": "away"
+    },
+    {
+     "id": "6643499",
+     "date": "2026-10-24",
+     "iso": "2026-10-24",
+     "status": "scheduled",
+     "home": "New Hampshire",
+     "away": "Michigan St.",
+     "hs": "",
+     "as_": "",
+     "hk": "unhnewhampshirenewhampshire",
+     "ak": "michstmichiganstmichiganst",
+     "hl": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/new-hampshire.svg",
+     "al": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/michigan-st.svg",
+     "mine": "away"
+    }
+   ],
+   "recent": [
+    {
+     "date": "2026-10-09",
+     "opp": "Northern Mich.",
+     "ha": "vs",
+     "result": "W",
+     "score": "6-2",
+     "stats": {
+      "saves": 16,
+      "sa": 18,
+      "ga": 2,
+      "svpct": ".889",
+      "shutout": false
+     }
+    }
+   ]
+  },
+  {
+   "name": "Austin Elliott",
+   "league": "NCAA",
+   "team": "UMass Lowell",
+   "logo": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/umass-lowell.svg",
+   "status": "scheduled",
+   "detail": "Game today: St. Lawrence @ UMass Lowell",
+   "upcoming": [
+    {
+     "id": "6642940",
+     "date": "2026-10-10",
+     "iso": "2026-10-10",
+     "status": "scheduled",
+     "home": "UMass Lowell",
+     "away": "St. Lawrence",
+     "hs": "",
+     "as_": "",
+     "hk": "umasslumasslowellumasslowell",
+     "ak": "stlawstlawrencestlawrence",
+     "hl": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/umass-lowell.svg",
+     "al": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/st-lawrence.svg",
+     "mine": "home"
+    },
+    {
+     "id": "6642941",
+     "date": "2026-10-16",
+     "iso": "2026-10-16",
+     "status": "scheduled",
+     "home": "UMass Lowell",
+     "away": "Arizona St.",
+     "hs": "",
+     "as_": "",
+     "hk": "umasslumasslowellumasslowell",
+     "ak": "azstarizonastarizonast",
+     "hl": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/umass-lowell.svg",
+     "al": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/arizona-st.svg",
+     "mine": "home"
+    },
+    {
+     "id": "6642942",
+     "date": "2026-10-17",
+     "iso": "2026-10-17",
+     "status": "scheduled",
+     "home": "UMass Lowell",
+     "away": "Arizona St.",
+     "hs": "",
+     "as_": "",
+     "hk": "umasslumasslowellumasslowell",
+     "ak": "azstarizonastarizonast",
+     "hl": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/umass-lowell.svg",
+     "al": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/arizona-st.svg",
+     "mine": "home"
+    },
+    {
+     "id": "6642943",
+     "date": "2026-10-23",
+     "iso": "2026-10-23",
+     "status": "scheduled",
+     "home": "UMass Lowell",
+     "away": "Providence",
+     "hs": "",
+     "as_": "",
+     "hk": "umasslumasslowellumasslowell",
+     "ak": "provprovidenceprovidence",
+     "hl": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/umass-lowell.svg",
+     "al": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/providence.svg",
+     "mine": "home"
+    },
+    {
+     "id": "6642944",
+     "date": "2026-10-24",
+     "iso": "2026-10-24",
+     "status": "scheduled",
+     "home": "Providence",
+     "away": "UMass Lowell",
+     "hs": "",
+     "as_": "",
+     "hk": "provprovidenceprovidence",
+     "ak": "umasslumasslowellumasslowell",
+     "hl": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/providence.svg",
+     "al": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/umass-lowell.svg",
+     "mine": "away"
+    }
+   ],
+   "recent": [
+    {
+     "date": "2026-10-09",
+     "opp": "Clarkson",
+     "ha": "vs",
+     "result": "L",
+     "score": "2-3",
+     "stats": {
+      "saves": 17,
+      "sa": 20,
+      "ga": 3,
+      "svpct": ".850",
+      "shutout": false
+     }
+    },
+    {
+     "date": "2026-10-02",
+     "opp": "Concordia-Montreal",
+     "ha": "vs",
+     "result": "W",
+     "score": "5-3",
+     "stats": {
+      "saves": 6,
+      "sa": 7,
+      "ga": 1,
+      "svpct": ".857",
+      "shutout": false
+     }
+    }
+   ]
+  },
+  {
+   "name": "Josh Fleming",
+   "league": "NCAA",
+   "team": "Penn State",
+   "logo": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/penn-st.svg",
+   "status": "scheduled",
+   "detail": "Game today: Penn St. @ Sacred Heart",
+   "upcoming": [
+    {
+     "id": "6642878",
+     "date": "2026-10-10",
+     "iso": "2026-10-10",
+     "status": "scheduled",
+     "home": "Sacred Heart",
+     "away": "Penn St.",
+     "hs": "",
+     "as_": "",
+     "hk": "sachrtsacredheartsacredheart",
+     "ak": "pennstpennstpennst",
+     "hl": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/sacred-heart.svg",
+     "al": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/penn-st.svg",
+     "mine": "away"
+    },
+    {
+     "id": "6643548",
+     "date": "2026-10-16",
+     "iso": "2026-10-16",
+     "status": "scheduled",
+     "home": "Penn St.",
+     "away": "Quinnipiac",
+     "hs": "",
+     "as_": "",
+     "hk": "pennstpennstpennst",
+     "ak": "quinnquinnipiacquinnipiac",
+     "hl": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/penn-st.svg",
+     "al": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/quinnipiac.svg",
+     "mine": "home"
+    },
+    {
+     "id": "6643558",
+     "date": "2026-10-20",
+     "iso": "2026-10-20",
+     "status": "scheduled",
+     "home": "Penn St.",
+     "away": "Robert Morris",
+     "hs": "",
+     "as_": "",
+     "hk": "pennstpennstpennst",
+     "ak": "robmorrobertmorrisrobertmorris",
+     "hl": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/penn-st.svg",
+     "al": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/robert-morris.svg",
+     "mine": "home"
+    },
+    {
+     "id": "6643065",
+     "date": "2026-10-23",
+     "iso": "2026-10-23",
+     "status": "scheduled",
+     "home": "Penn St.",
+     "away": "Canisius",
+     "hs": "",
+     "as_": "",
+     "hk": "pennstpennstpennst",
+     "ak": "canisicanisiuscanisius",
+     "hl": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/penn-st.svg",
+     "al": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/canisius.svg",
+     "mine": "home"
+    },
+    {
+     "id": "6643066",
+     "date": "2026-10-24",
+     "iso": "2026-10-24",
+     "status": "scheduled",
+     "home": "Penn St.",
+     "away": "Canisius",
+     "hs": "",
+     "as_": "",
+     "hk": "pennstpennstpennst",
+     "ak": "canisicanisiuscanisius",
+     "hl": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/penn-st.svg",
+     "al": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/canisius.svg",
+     "mine": "home"
+    }
+   ],
+   "recent": [
+    {
+     "date": "2026-10-09",
+     "opp": "UConn",
+     "ha": "@",
+     "result": "L",
+     "score": "1-3",
+     "stats": {
+      "saves": 22,
+      "sa": 24,
+      "ga": 2,
+      "svpct": ".917",
+      "shutout": false
+     }
+    }
+   ]
+  },
+  {
+   "name": "Michael Polston",
+   "league": "NCAA",
+   "team": "Western Michigan",
+   "logo": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/western-mich.svg",
+   "status": "no_game",
+   "detail": "No game today",
+   "upcoming": [
+    {
+     "id": "6642753",
+     "date": "2026-10-16",
+     "iso": "2026-10-16",
+     "status": "scheduled",
+     "home": "Western Mich.",
+     "away": "Notre Dame",
+     "hs": "",
+     "as_": "",
+     "hk": "wmichwesternmichwesternmich",
+     "ak": "ndamenotredamenotredame",
+     "hl": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/western-mich.svg",
+     "al": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/notre-dame.svg",
+     "mine": "home"
+    },
+    {
+     "id": "6642754",
+     "date": "2026-10-17",
+     "iso": "2026-10-17",
+     "status": "scheduled",
+     "home": "Notre Dame",
+     "away": "Western Mich.",
+     "hs": "",
+     "as_": "",
+     "hk": "ndamenotredamenotredame",
+     "ak": "wmichwesternmichwesternmich",
+     "hl": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/notre-dame.svg",
+     "al": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/western-mich.svg",
+     "mine": "away"
+    },
+    {
+     "id": "6642755",
+     "date": "2026-10-23",
+     "iso": "2026-10-23",
+     "status": "scheduled",
+     "home": "Michigan",
+     "away": "Western Mich.",
+     "hs": "",
+     "as_": "",
+     "hk": "michmichiganmichigan",
+     "ak": "wmichwesternmichwesternmich",
+     "hl": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/michigan.svg",
+     "al": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/western-mich.svg",
+     "mine": "away"
+    },
+    {
+     "id": "6642756",
+     "date": "2026-10-29",
+     "iso": "2026-10-29",
+     "status": "scheduled",
+     "home": "Western Mich.",
+     "away": "LIU",
+     "hs": "",
+     "as_": "",
+     "hk": "wmichwesternmichwesternmich",
+     "ak": "liuliulongisland",
+     "hl": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/western-mich.svg",
+     "al": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/long-island.svg",
+     "mine": "home"
+    },
+    {
+     "id": "6642757",
+     "date": "2026-10-30",
+     "iso": "2026-10-30",
+     "status": "scheduled",
+     "home": "Western Mich.",
+     "away": "LIU",
+     "hs": "",
+     "as_": "",
+     "hk": "wmichwesternmichwesternmich",
+     "ak": "liuliulongisland",
+     "hl": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/western-mich.svg",
+     "al": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/long-island.svg",
+     "mine": "home"
+    }
+   ],
+   "recent": []
+  },
+  {
+   "name": "Cole Sheffield",
+   "league": "NCAA",
+   "team": "Minnesota Duluth",
+   "logo": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/minn-duluth.svg",
+   "status": "scheduled",
+   "detail": "Game today: Minn. Duluth @ Augustana (SD)",
+   "upcoming": [
+    {
+     "id": "6642638",
+     "date": "2026-10-10",
+     "iso": "2026-10-10",
+     "status": "scheduled",
+     "home": "Augustana (SD)",
+     "away": "Minn. Duluth",
+     "hs": "",
+     "as_": "",
+     "hk": "augsdaugustanasdaugustanasd",
+     "ak": "mndulminnduluthminnduluth",
+     "hl": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/augustana-sd.svg",
+     "al": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/minn-duluth.svg",
+     "mine": "away"
+    },
+    {
+     "id": "6642809",
+     "date": "2026-10-16",
+     "iso": "2026-10-16",
+     "status": "scheduled",
+     "home": "Minn. Duluth",
+     "away": "Minnesota",
+     "hs": "",
+     "as_": "",
+     "hk": "mndulminnduluthminnduluth",
+     "ak": "minnminnesotaminnesota",
+     "hl": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/minn-duluth.svg",
+     "al": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/minnesota.svg",
+     "mine": "home"
+    },
+    {
+     "id": "6642810",
+     "date": "2026-10-17",
+     "iso": "2026-10-17",
+     "status": "scheduled",
+     "home": "Minn. Duluth",
+     "away": "Minnesota",
+     "hs": "",
+     "as_": "",
+     "hk": "mndulminnduluthminnduluth",
+     "ak": "minnminnesotaminnesota",
+     "hl": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/minn-duluth.svg",
+     "al": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/minnesota.svg",
+     "mine": "home"
+    },
+    {
+     "id": "6642811",
+     "date": "2026-10-23",
+     "iso": "2026-10-23",
+     "status": "scheduled",
+     "home": "Minn. Duluth",
+     "away": "Bemidji St.",
+     "hs": "",
+     "as_": "",
+     "hk": "mndulminnduluthminnduluth",
+     "ak": "bemdjibemidjistbemidjist",
+     "hl": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/minn-duluth.svg",
+     "al": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/bemidji-st.svg",
+     "mine": "home"
+    },
+    {
+     "id": "6642812",
+     "date": "2026-10-24",
+     "iso": "2026-10-24",
+     "status": "scheduled",
+     "home": "Bemidji St.",
+     "away": "Minn. Duluth",
+     "hs": "",
+     "as_": "",
+     "hk": "bemdjibemidjistbemidjist",
+     "ak": "mndulminnduluthminnduluth",
+     "hl": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/bemidji-st.svg",
+     "al": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/minn-duluth.svg",
+     "mine": "away"
+    }
+   ],
+   "recent": []
+  },
+  {
+   "name": "Kristoffer Eberly",
+   "league": "NCAA",
+   "team": "Ohio State",
+   "logo": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/ohio-st.svg",
+   "status": "scheduled",
+   "detail": "Game today: Ohio St. @ Rensselaer",
+   "upcoming": [
+    {
+     "id": "6643553",
+     "date": "2026-10-10",
+     "iso": "2026-10-10",
+     "status": "scheduled",
+     "home": "Rensselaer",
+     "away": "Ohio St.",
+     "hs": "",
+     "as_": "",
+     "hk": "rpirensselaerrensselaer",
+     "ak": "ohiostohiostohiost",
+     "hl": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/rensselaer.svg",
+     "al": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/ohio-st.svg",
+     "mine": "away"
+    },
+    {
+     "id": "6642879",
+     "date": "2026-10-16",
+     "iso": "2026-10-16",
+     "status": "scheduled",
+     "home": "Sacred Heart",
+     "away": "Ohio St.",
+     "hs": "",
+     "as_": "",
+     "hk": "sachrtsacredheartsacredheart",
+     "ak": "ohiostohiostohiost",
+     "hl": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/sacred-heart.svg",
+     "al": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/ohio-st.svg",
+     "mine": "away"
+    },
+    {
+     "id": "6642880",
+     "date": "2026-10-17",
+     "iso": "2026-10-17",
+     "status": "scheduled",
+     "home": "Sacred Heart",
+     "away": "Ohio St.",
+     "hs": "",
+     "as_": "",
+     "hk": "sachrtsacredheartsacredheart",
+     "ak": "ohiostohiostohiost",
+     "hl": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/sacred-heart.svg",
+     "al": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/ohio-st.svg",
+     "mine": "away"
+    },
+    {
+     "id": "6642641",
+     "date": "2026-10-23",
+     "iso": "2026-10-23",
+     "status": "scheduled",
+     "home": "Ohio St.",
+     "away": "Augustana (SD)",
+     "hs": "",
+     "as_": "",
+     "hk": "ohiostohiostohiost",
+     "ak": "augsdaugustanasdaugustanasd",
+     "hl": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/ohio-st.svg",
+     "al": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/augustana-sd.svg",
+     "mine": "home"
+    },
+    {
+     "id": "6642642",
+     "date": "2026-10-24",
+     "iso": "2026-10-24",
+     "status": "scheduled",
+     "home": "Ohio St.",
+     "away": "Augustana (SD)",
+     "hs": "",
+     "as_": "",
+     "hk": "ohiostohiostohiost",
+     "ak": "augsdaugustanasdaugustanasd",
+     "hl": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/ohio-st.svg",
+     "al": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/augustana-sd.svg",
+     "mine": "home"
+    }
+   ],
+   "recent": [
+    {
+     "date": "2026-10-09",
+     "opp": "Rensselaer",
+     "ha": "@",
+     "result": "L",
+     "score": "0-3",
+     "stats": {
+      "saves": 17,
+      "sa": 19,
+      "ga": 2,
+      "svpct": ".895",
+      "shutout": false
+     }
+    }
+   ]
+  },
+  {
+   "name": "Kolby Hay",
+   "league": "NCAA",
+   "team": "Canisius",
+   "logo": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/canisius.svg",
+   "status": "scheduled",
+   "detail": "Game today: Canisius @ LIU",
+   "upcoming": [
+    {
+     "id": "6643064",
+     "date": "2026-10-10",
+     "iso": "2026-10-10",
+     "status": "scheduled",
+     "home": "LIU",
+     "away": "Canisius",
+     "hs": "",
+     "as_": "",
+     "hk": "liuliulongisland",
+     "ak": "canisicanisiuscanisius",
+     "hl": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/long-island.svg",
+     "al": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/canisius.svg",
+     "mine": "away"
+    },
+    {
+     "id": "6642781",
+     "date": "2026-10-16",
+     "iso": "2026-10-16",
+     "status": "scheduled",
+     "home": "Clarkson",
+     "away": "Canisius",
+     "hs": "",
+     "as_": "",
+     "hk": "clarksclarksonclarkson",
+     "ak": "canisicanisiuscanisius",
+     "hl": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/clarkson.svg",
+     "al": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/canisius.svg",
+     "mine": "away"
+    },
+    {
+     "id": "6642779",
+     "date": "2026-10-17",
+     "iso": "2026-10-17",
+     "status": "scheduled",
+     "home": "Clarkson",
+     "away": "Canisius",
+     "hs": "",
+     "as_": "",
+     "hk": "clarksclarksonclarkson",
+     "ak": "canisicanisiuscanisius",
+     "hl": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/clarkson.svg",
+     "al": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/canisius.svg",
+     "mine": "away"
+    },
+    {
+     "id": "6643065",
+     "date": "2026-10-23",
+     "iso": "2026-10-23",
+     "status": "scheduled",
+     "home": "Penn St.",
+     "away": "Canisius",
+     "hs": "",
+     "as_": "",
+     "hk": "pennstpennstpennst",
+     "ak": "canisicanisiuscanisius",
+     "hl": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/penn-st.svg",
+     "al": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/canisius.svg",
+     "mine": "away"
+    },
+    {
+     "id": "6643066",
+     "date": "2026-10-24",
+     "iso": "2026-10-24",
+     "status": "scheduled",
+     "home": "Penn St.",
+     "away": "Canisius",
+     "hs": "",
+     "as_": "",
+     "hk": "pennstpennstpennst",
+     "ak": "canisicanisiuscanisius",
+     "hl": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/penn-st.svg",
+     "al": "https://www.ncaa.com/sites/default/files/images/logos/schools/bgd/canisius.svg",
+     "mine": "away"
+    }
+   ],
+   "recent": [
+    {
+     "date": "2026-10-03",
+     "opp": "Ferris St.",
+     "ha": "vs",
+     "result": "T",
+     "score": "5-5",
+     "stats": {
+      "saves": 19,
+      "sa": 24,
+      "ga": 5,
+      "svpct": ".792",
+      "shutout": false
+     }
+    }
+   ]
+  }
+ ]
+}
