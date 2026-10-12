@@ -19,11 +19,11 @@ except ImportError:
 # For NHL the third value is the team code; for NCAA it is the school's ncaa.com slug(s), "|"-separated.
 ROSTER = {
  "NHL": [("Jakub Dobeš","Montréal Canadiens","MTL"),("Arvid Söderblom","Chicago Blackhawks","CHI")],
+ "PWHL":[("Callie Shanahan","New York Sirens","Sirens")],
  "AHL": [("Domenic DiVincentiis","Manitoba Moose","Moose"),("Carter George","Ontario Reign","Reign"),
          ("Mads Søgaard","Syracuse Crunch","Crunch"),("Damian Clara","San Diego Gulls","Gulls")],
  "ECHL":[("Logan Terness","Kansas City Mavericks","Mavericks"),("Owen Flores","Greenville Swamp Rabbits","Swamp Rabbits")],
  "SPHL":[("Alex Aslanidis","Roanoke Rail Yard Dawgs","Rail Yard Dawgs")],
- "PWHL":[("Callie Shanahan","New York Sirens","Sirens")],
  "Liiga":[("Rastislav Eliáš","HIFK","HIFK")],
  "NCAA D1":[("Michael Polston","Western Michigan","western-mich"),("Cole Sheffield","Minnesota Duluth","minn-duluth"),
             ("Austin Elliott","UMass Lowell","umass-lowell"),("Easton Rye","Bentley","bentley"),

@@ -22,6 +22,13 @@ nav button{font:700 16px "Barlow Condensed",sans-serif;letter-spacing:.5px;text-
 nav button:hover{border-color:var(--red)}
 nav button[aria-pressed=true]{background:var(--red);border-color:var(--red);color:#fff}
 nav button:focus-visible{outline:3px solid var(--red2);outline-offset:2px}
+nav .sel{position:relative;margin-left:auto}
+nav select{appearance:none;-webkit-appearance:none;font:700 16px "Barlow Condensed",sans-serif;letter-spacing:.5px;text-transform:uppercase;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:6px 38px 6px 16px;cursor:pointer}
+nav select:hover{border-color:var(--red)}
+nav select:focus-visible{outline:3px solid var(--red2);outline-offset:2px}
+nav select.on{border-color:var(--red);color:#fff;background:#2a0b0c}
+nav .sel::after{content:"";position:absolute;right:16px;top:50%;width:7px;height:7px;border-right:2px solid var(--red2);border-bottom:2px solid var(--red2);transform:translateY(-70%) rotate(45deg);pointer-events:none}
+@media(max-width:560px){nav .sel{margin-left:0;width:100%}nav select{width:100%}}
 main{max-width:1100px;margin:auto;padding:12px 20px 60px}
 h2{font:800 26px "Barlow Condensed",sans-serif;text-transform:uppercase;letter-spacing:1px;margin:28px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--red)}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
@@ -56,6 +63,9 @@ details{margin-top:6px}
 .gl .r{font-weight:700}.gl .rW{color:#fff}.gl .rW::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--red2);margin-right:5px;vertical-align:middle}
 .gl .rL,.gl .rT{color:var(--ash)}
 .gl .num{text-align:right}
+.yd{background:rgba(227,38,43,.10);border:1px solid rgba(227,38,43,.35);border-radius:4px;padding:7px 9px;font-size:14px;margin:8px 0;color:#eee}
+.yd b{color:#fff}.yd .res{font:700 15px "Barlow Condensed",sans-serif;letter-spacing:.5px;margin-right:6px}
+.yd .resW{color:var(--red2)}.yd .resL,.yd .resT{color:var(--ash)}
 code{background:#222;padding:1px 5px;border-radius:3px}
 .err{background:var(--card);border:1px solid var(--red);padding:16px;border-radius:6px}
 @media(max-width:560px){h1{font-size:32px}h1 span{font-size:20px}.logo{height:64px}#meta{text-align:left}}
@@ -68,7 +78,9 @@ const LABEL={in_net:"In net",scheduled:"Game today",played:"Played today",not_pl
 const ORDER={in_net:0,live_unknown:1,scheduled:2,played:3,result_only:4,not_playing:5,no_game:6,unsupported:7,error:8};
 const badge=p=>p.status=="played"&&p.result?({W:"Win",L:"Loss",T:"Tie"}[p.result]||"Played"):(LABEL[p.status]||p.status);
 const statLine=s=>`${s.saves??"?"} saves on ${s.sa??"?"} shots, ${s.ga??"?"} against${s.svpct?`, ${s.svpct} SV%`:""}${s.shutout?", shutout":""}`;
-let D,filter="All";
+let D,filter="All",league="";
+const LEAGUE_ORDER=["NHL","PWHL","AHL","ECHL","SPHL","Liiga","NCAA D1","NCAA D3","OHL","QMJHL","WHL","USHL","BCHL","AJHL","SJHL","MJHL","OJHL","GOJHL"];
+const TODAY_ST=["in_net","live_unknown","scheduled","played","result_only","not_playing"];
 const logoAlts=u=>{const m=String(u||"").match(/^(.*\/logos\/)(\d+)\.png$/);return m?[m[1]+"50x50/"+m[2]+".png",m[1]+m[2]+".jpg",m[1]+m[2]+".gif"]:[]};
 function nextLogo(i){const a=(i.dataset.alts||"").split("|").filter(Boolean);if(a.length){i.src=a.shift();i.dataset.alts=a.join("|")}else i.parentNode.remove()}
 const shortDate=d=>{try{return new Date(d+"T12:00").toLocaleDateString([],{month:"short",day:"numeric"})}catch(e){return d}};
@@ -80,18 +92,28 @@ const pastTable=r=>`<details class="past"><summary>Last ${r.length} game${r.leng
  r.map(g=>`<tr><td>${esc(shortDate(g.date))}</td><td class="opp">${esc(g.ha)} ${esc(g.opp)}</td><td class="r r${esc(g.result||"")}">${esc(g.result||"–")} ${esc(g.score||"")}</td><td class="num">${g.stats?`${g.stats.saves??"?"}/${g.stats.sa??"?"}`:"–"}</td><td class="num">${g.stats?.svpct?esc(g.stats.svpct)+(g.stats.shutout?" SO":""):"–"}</td></tr>`).join("")
 }</tbody></table></details>`;
 const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const yday=()=>new Date(Date.now()-864e5).toLocaleDateString("en-CA",{timeZone:"America/New_York"});
+const ydGame=p=>(p.recent||[]).find(r=>r.date==yday());
+const ydLine=r=>`<div class="yd"><span class="res res${esc(r.result||"")}">${esc({W:"WIN",L:"LOSS",T:"TIE"}[r.result]||"PLAYED")} ${esc(r.score||"")}</span>${esc(r.ha)} ${esc(r.opp)}${r.stats?`<br><b>${r.stats.saves??"?"}</b> saves on ${r.stats.sa??"?"} shots, ${r.stats.ga??"?"} against${r.stats.svpct?`, <b>${esc(r.stats.svpct)}</b> SV%`:""}${r.stats.shutout?", <b>shutout</b>":""}`:""}</div>`;
 function render(){
- const leagues=[...new Set(D.players.map(p=>p.league))];
- f.innerHTML=["All","Live now",...leagues].map(l=>`<button aria-pressed="${l==filter}" data-l="${l}">${l}</button>`).join("");
+ const rank=l=>{const i=LEAGUE_ORDER.indexOf(l);return i<0?99:i};
+ const leagues=[...new Set(D.players.map(p=>p.league))].sort((a,b)=>rank(a)-rank(b));
+ const Y=filter=="Yesterday";
+ if(league&&!leagues.includes(league))league="";
+ f.innerHTML=["All","Live now","Today","Yesterday"].map(l=>`<button aria-pressed="${l==filter}" data-l="${l}">${l}</button>`).join("")+
+  `<span class="sel"><select id="lg" aria-label="League" class="${league?"on":""}"><option value="">All leagues</option>${leagues.map(l=>`<option value="${esc(l)}"${l==league?" selected":""}>${esc(l)}</option>`).join("")}</select></span>`;
  f.querySelectorAll("button").forEach(b=>b.onclick=()=>{filter=b.dataset.l;render()});
- let ps=D.players; if(filter=="Live now")ps=ps.filter(p=>p.status=="in_net"); else if(filter!="All")ps=ps.filter(p=>p.league==filter);
- const nIn=D.players.filter(p=>p.status=="in_net").length;
- meta.innerHTML=`<b>${nIn} in net now</b><br>Updated ${new Date(D.updated).toLocaleString()}`;
+ lg.onchange=e=>{league=e.target.value;render()};
+ let ps=D.players; if(filter=="Live now")ps=ps.filter(p=>p.status=="in_net"); else if(filter=="Today")ps=ps.filter(p=>TODAY_ST.includes(p.status)); else if(Y)ps=ps.filter(ydGame);
+ if(league)ps=ps.filter(p=>p.league==league);
+ const nIn=D.players.filter(p=>p.status=="in_net").length, nY=D.players.filter(ydGame).length;
+ const nT=D.players.filter(p=>TODAY_ST.includes(p.status)).length;
+ meta.innerHTML=`<b>${nIn} in net now</b> · ${nT} with games today · ${nY} played yesterday<br>Updated ${new Date(D.updated).toLocaleString()}`;
  let html="";
  for(const lg of leagues){const g=ps.filter(p=>p.league==lg).sort((a,b)=>ORDER[a.status]-ORDER[b.status]);if(!g.length)continue;
-  html+=`<h2>${lg}</h2><div class="grid">`+g.map(p=>`<div class="card ${p.status} ${p.result||''}"><div class="top"><div class="who">${p.logo?`<span class="tl"><img src="${esc(p.logo)}" data-alts="${esc(logoAlts(p.logo).join("|"))}" alt="${esc(p.team)} logo" loading="lazy" onerror="nextLogo(this)"></span>`:""}<div><div class="nm">${esc(p.name)}</div><div class="tm">${esc(p.team)}</div></div></div><span class="badge">${badge(p)}</span></div>
-  <div class="det">${esc(p.detail)}</div>${p.stats?`<div class="det">${statLine(p.stats)}</div>`:""}${p.recent?.length?pastTable(p.recent):""}${p.upcoming?.length?`<details><summary>Next ${p.upcoming.length} games</summary><ul>${p.upcoming.map(u=>`<li>${esc(u.date)}: ${esc(u.away)} at ${esc(u.home)}</li>`).join("")}</ul></details>`:""}</div>`).join("")+`</div>`;}
- m.innerHTML=html||"No goalies match this filter.";
+  html+=`<h2>${lg}</h2><div class="grid">`+g.map(p=>{const r=Y?ydGame(p):null;return `<div class="card ${r?"played "+(r.result||""):p.status+" "+(p.result||"")}"><div class="top"><div class="who">${p.logo?`<span class="tl"><img src="${esc(p.logo)}" data-alts="${esc(logoAlts(p.logo).join("|"))}" alt="${esc(p.team)} logo" loading="lazy" onerror="nextLogo(this)"></span>`:""}<div><div class="nm">${esc(p.name)}</div><div class="tm">${esc(p.team)}</div></div></div><span class="badge">${r?({W:"Win",L:"Loss",T:"Tie"}[r.result]||"Played"):badge(p)}</span></div>
+  ${r?ydLine(r):""}<div class="det">${esc(p.detail)}</div>${p.stats?`<div class="det">${statLine(p.stats)}</div>`:""}${p.recent?.length?pastTable(p.recent):""}${p.upcoming?.length?`<details><summary>Next ${p.upcoming.length} games</summary><ul>${p.upcoming.map(u=>`<li>${esc(u.date)}: ${esc(u.away)} at ${esc(u.home)}</li>`).join("")}</ul></details>`:""}</div>`}).join("")+`</div>`;}
+ m.innerHTML=html||(Y?"None of your clients played yesterday.":filter=="Today"?"None of your clients have a game today.":"No goalies match this filter.");
 }
 async function load(){try{D=await (await fetch("data.json?"+Date.now())).json();render()}catch(e){m.innerHTML=`<div class="err">Couldn't load data.json. Run <code>python3 goalie_tracker.py --serve</code> and open this page from <code>http://localhost:8000</code>, not by double-clicking the file.</div>`}}
 load();setInterval(load,60000);
