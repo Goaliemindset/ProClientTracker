@@ -1,5 +1,5 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="noindex, nofollow">
 <title>Goalie Mindset Pro Client Tracker</title>
 <link rel="icon" href="logo.png">
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
@@ -61,11 +61,11 @@ code{background:#222;padding:1px 5px;border-radius:3px}
 @media(max-width:560px){h1{font-size:32px}h1 span{font-size:20px}.logo{height:64px}#meta{text-align:left}}
 </style></head><body>
 <div class="stripe"></div>
-<header><div class="brand"><div class="logo"><img src="logo.png?v=8415" alt="Goalie Mindset Pro logo" onerror="this.parentNode.remove()"></div><h1>Goalie Mindset<span>Pro Client Tracker</span></h1></div><div id="meta"></div></header>
+<header><div class="brand"><div class="logo"><img src="logo.png?v=2" alt="Goalie Mindset Pro logo" onerror="this.parentNode.remove()"></div><h1>Goalie Mindset<span>Pro Client Tracker</span></h1></div><div id="meta"></div></header>
 <nav id="f" aria-label="Filter"></nav><main id="m">Loading…</main>
 <script>
-const LABEL={in_net:"In net",scheduled:"Game today",played:"Played today",not_playing:"Not playing",no_game:"No game",live_unknown:"Game on",unsupported:"No feed",error:"Feed error"};
-const ORDER={in_net:0,live_unknown:1,scheduled:2,played:3,not_playing:4,no_game:5,unsupported:6,error:7};
+const LABEL={in_net:"In net",scheduled:"Game today",played:"Played today",not_playing:"Not playing",result_only:"Final",no_game:"No game",live_unknown:"Game on",unsupported:"No feed",error:"Feed error"};
+const ORDER={in_net:0,live_unknown:1,scheduled:2,played:3,result_only:4,not_playing:5,no_game:6,unsupported:7,error:8};
 const badge=p=>p.status=="played"&&p.result?({W:"Win",L:"Loss",T:"Tie"}[p.result]||"Played"):(LABEL[p.status]||p.status);
 const statLine=s=>`${s.saves??"?"} saves on ${s.sa??"?"} shots, ${s.ga??"?"} against${s.svpct?`, ${s.svpct} SV%`:""}${s.shutout?", shutout":""}`;
 let D,filter="All";

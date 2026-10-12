@@ -102,23 +102,24 @@ def ncaa_box_with_team(gid):
     t.CACHE["box"][k] = out
     return out
 
-try:
-    today = dt.datetime.now(t.ET).date(); day = dt.date(today.year, 10, 1); n = 0
-    while day < today:
-        try:
-            d = t.get(f"{t.NCAA_API}/scoreboard/icehockey-men/d1/{day:%Y/%m/%d}/all-conf").json()
-            for x in d.get("games", []):
-                x = x["game"]
-                if (x.get("gameState") or "").lower() != "final": continue
-                for p in ncaa_box_with_team(x["gameID"]):
-                    hit(p["name"], f'NCAA {p["team"]}', p["played"])
-                n += 1
-        except Exception as e:
-            print(f"NCAA {day} skipped: {e}")
-        day += dt.timedelta(days=1); time.sleep(0.25)
-    print(f"NCAA: {n} finished games checked")
-except Exception as e:
-    print("NCAA check failed:", e)
+for lgname, div in t.NCAA_DIV.items():
+    try:
+        today = dt.datetime.now(t.ET).date(); day = dt.date(today.year if today.month >= 8 else today.year - 1, 10, 1); n = 0
+        while day < today:
+            try:
+                d = t.get(f"{t.NCAA_API}/scoreboard/icehockey-men/{div}/{day:%Y/%m/%d}/all-conf").json()
+                for x in d.get("games", []):
+                    x = x["game"]
+                    if (x.get("gameState") or "").lower() != "final": continue
+                    for p in ncaa_box_with_team(x["gameID"]):
+                        hit(p["name"], f'{lgname} {p["team"]}', p["played"])
+                    n += 1
+            except Exception as e:
+                print(f"{lgname} {day} skipped: {e}")
+            day += dt.timedelta(days=1); time.sleep(0.25)
+        print(f"{lgname}: {n} finished games checked")
+    except Exception as e:
+        print(f"{lgname} check failed:", e)
 t.save_cache()
 
 # ---- report ----
@@ -127,7 +128,7 @@ for n, (lg, team, abbr) in NAMES.items():
     where = seen.get(n, {})
     found = "; ".join(f"{w} (dressed {d}, played {p})" if "roster" not in w else w for w, (d, p) in where.items())
     key = lambda x: t.norm(x.replace(" St.", " State"))
-    match = any(key(team) in key(w) or (abbr and f" {abbr} " in w) for w in where)
+    match = any(key(team) in key(w) or (abbr and f" {abbr} " in w) or any(t.norm(m) and t.norm(m) in t.norm(w) for m in str(abbr).split("|")) for w in where)
     tag = "OK      " if match else ("CHECK   " if where else "NO DATA ")
     lines.append(f"{tag}{n} | listed: {lg} {team} | found: {found or 'nothing yet this season'}")
 order = {"CHECK": 0, "NO": 1, "OK": 2}

@@ -14,47 +14,68 @@ try:
 except ImportError:
     requests = None
 
-# ---------- ROSTER (edit freely; team = nickname as it appears in the league's team name) ----------
+# ---------- ROSTER ----------
+# Each goalie: (name, team as shown on the site, how to find the team in that league's feed).
+# For NHL the third value is the team code; for NCAA it is the school's ncaa.com slug(s), "|"-separated.
 ROSTER = {
- "NHL": [("Jakub Dobes","Canadiens","MTL"),("Arvid Soderblom","Blackhawks","CHI")],
- "AHL": [("Carter George","Reign",""),("Mads Sogaard","Crunch",""),("Logan Terness","Firebirds",""),
-         ("Damian Clara","Gulls",""),("Owen Flores","Reign",""),("Jiri Patera","Bruins",""),
-         ("Jackson Parsons","Senators",""),("Dom Divincentiis","Moose",""),
-         ("Carson Bjarnason","Phantoms",""),("Cal Petersen","Bears","")],
- "ECHL":[("Tyriq Outen","Everblades",""),("Alex Aslanidis","Mavericks",""),("Evan Cormier","Pirates","")],
- "OHL": [("Trenten Bennett","Firebirds",""),("Gavin Betts","Frontenacs",""),("Colin Ellsworth","Storm","")],
- "WHL": [("Jayden Kraus","Silvertips",""),("Jake Pilon","Royals",""),("Taylor Tabashuik","Pats",""),
-         ("Matthew Kondro","Rebels",""),("Ryley Budd","Wheat Kings",""),("Marek Schlenker","Pats",""),
-         ("Nathan Kam","Rockets",""),("Koen Cleaver","Hurricanes",""),("Cash Christie","Tigers",""),
-         ("Carter Esler","Chiefs",""),("Grayson Malinoski","Thunderbirds",""),("Burke Hood","Giants","")],
- "QMJHL":[("Charlie Larocque","Olympiques",""),("Finn Moffett","Olympiques",""),
-          ("Rafael Courchesne","Sea Dogs",""),("Arseni Radkov","Foreurs",""),("Dayton Kitchener","Oceanic",""),
-          ("Seth Ronan","Islanders","")],
- "NCAA":[(n,t,"") for n,t in [("Christian Kirsch","Quinnipiac"),("Joey Costanzo","Michigan Tech"),
-         ("Easton Rye","Bentley"),("Josh Ravensbergen","Michigan State"),("Austin Elliott","UMass Lowell"),
-         ("Josh Fleming","Penn State"),("Michael Polston","Western Michigan"),
-         ("Cole Sheffield","Minnesota Duluth"),("Kristoffer Eberly","Ohio State"),("Kolby Hay","Canisius")]],
+ "NHL": [("Jakub Dobeš","Montréal Canadiens","MTL"),("Arvid Söderblom","Chicago Blackhawks","CHI")],
+ "AHL": [("Domenic DiVincentiis","Manitoba Moose","Moose"),("Carter George","Ontario Reign","Reign"),
+         ("Mads Søgaard","Syracuse Crunch","Crunch"),("Damian Clara","San Diego Gulls","Gulls")],
+ "ECHL":[("Logan Terness","Kansas City Mavericks","Mavericks"),("Owen Flores","Greenville Swamp Rabbits","Swamp Rabbits")],
+ "SPHL":[("Alex Aslanidis","Roanoke Rail Yard Dawgs","Rail Yard Dawgs")],
+ "PWHL":[("Callie Shanahan","New York Sirens","Sirens")],
+ "Liiga":[("Rastislav Eliáš","HIFK","HIFK")],
+ "NCAA D1":[("Michael Polston","Western Michigan","western-mich"),("Cole Sheffield","Minnesota Duluth","minn-duluth"),
+            ("Austin Elliott","UMass Lowell","umass-lowell"),("Easton Rye","Bentley","bentley"),
+            ("Joshua Ravensbergen","Michigan State","michigan-st"),("Tyler Roesel","Delaware","delaware"),
+            ("Dylan Silverstein","Vermont","vermont"),("Xander Miceli","Wisconsin","wisconsin"),
+            ("Luca Di Pasquo","Minnesota","minnesota"),("Christian Kirsch","Quinnipiac","quinnipiac")],
+ "NCAA D3":[("Aiden McKenna","SUNY Oswego","oswego-st|suny-oswego"),("Dylan Eliason","Adrian College","adrian")],
+ "OHL": [("Cruz Reznik","Oshawa Generals","Generals"),("William Camputaro","Soo Greyhounds","Greyhounds")],
+ "QMJHL":[("Finn Moffett","Gatineau Olympiques","Olympiques"),("Seth Ronan","Charlottetown Islanders","Islanders"),
+          ("Arseni Radkov","Val-d'Or Foreurs","Foreurs"),("Justin Lee","Chicoutimi Saguenéens","Saguenéens")],
+ "WHL": [("Peyton Shore","Prince George Cougars","Cougars"),("Taylor Tabashniuk","Regina Pats","Pats"),
+         ("Carter Esler","Spokane Chiefs","Chiefs"),("Matthew Kondro","Red Deer Rebels","Rebels"),
+         ("Cash Christie","Medicine Hat Tigers","Tigers"),("Taye Timmerman","Saskatoon Blades","Blades"),
+         ("Cruz Chase","Portland Winterhawks","Winterhawks")],
+ "USHL":[("Nate Chizik","U.S. National U18 Team (NTDP)","NTDP")],
+ "BCHL":[("Dayton Kitchener","Alberni Valley Bulldogs","Alberni Valley Bulldogs"),("Colten Scott","Spruce Grove Saints","Spruce Grove Saints")],
+ "AJHL":[("Berney Weston","Fort McMurray Oil Barons","Oil Barons")],
+ "SJHL":[("Noah Martin","Flin Flon Bombers","Bombers"),("Brady Low","Yorkton Terriers","Terriers"),
+         ("Mattias Radke","Kindersley Klippers","Klippers")],
+ "MJHL":[("Stefan Kostin","Selkirk Steelers","Steelers")],
+ "OJHL":[("Jonathan Frattaroli","St. Michael's Buzzers","Buzzers"),("Hudson Cicchelli","Stouffville Spirit","Spirit"),
+         ("James Meredith","Mississauga Chargers","Chargers")],
+ "GOJHL":[("Brogan Colquhoun","St. Marys Lincolns","Lincolns"),("Gio Scally","Strathroy Rockets","Strathroy Rockets")],
 }
-# HockeyTech public feed keys. UNVERIFIED: confirm in your browser's network tab on each league's
-# stats site (look for "lscluster.hockeytech.com/feed" requests) and fix if a league returns errors.
+# HockeyTech public feed keys (the ones each league's own website uses). Where two keys are known,
+# the second is tried if the first stops working.
 HT = {
- "AHL":  {"client": "ahl",   "key": "ccb91f29d6744675"},
- "ECHL": {"client": "echl",  "key": "2c2b89ea7345cae8"},
- "OHL":  {"client": "ohl",   "key": "2976319eb44abe94"},
- "WHL":  {"client": "whl",   "key": "41b145a848f4bd67"},
- "QMJHL":{"client": "lhjmq", "key": "f322673b6bcae299"},
+ "AHL":  {"client": "ahl",   "keys": ["ccb91f29d6744675"]},
+ "ECHL": {"client": "echl",  "keys": ["2c2b89ea7345cae8"]},
+ "SPHL": {"client": "sphl",  "keys": ["8fa10d218c49ec96"]},
+ "PWHL": {"client": "pwhl",  "keys": ["446521baf8c38984", "694cfeed58c932ee"]},
+ "OHL":  {"client": "ohl",   "keys": ["2976319eb44abe94", "f1aa699db3d81487"]},
+ "WHL":  {"client": "whl",   "keys": ["41b145a848f4bd67", "f1aa699db3d81487"]},
+ "QMJHL":{"client": "lhjmq", "keys": ["f322673b6bcae299", "f1aa699db3d81487"]},
+ "USHL": {"client": "ushl",  "keys": ["e828f89b243dc43f"]},
+ "BCHL": {"client": "bchl",  "keys": ["f3ed30007ad2124e", "ca4e9e599d4dae55"]},
+ "AJHL": {"client": "ajhl",  "keys": ["cbe60a1d91c44ade"]},
+ "SJHL": {"client": "sjhl",  "keys": ["2fb5c2e84bf3e4a8"]},
+ "MJHL": {"client": "mjhl",  "keys": ["f894c324fe5fd8f0"]},
+ "OJHL": {"client": "ojhl",  "keys": ["cce66dd6bebf4790", "77a0bd73d9d363d3"]},
+ "GOJHL":{"client": "gojhl", "keys": ["34b10d4d34d7b59a"]},
 }
 HT_URL = "https://lscluster.hockeytech.com/feed/index.php"
 NHL = "https://api-web.nhle.com/v1"
+LIIGA = "https://liiga.fi/api/v2"
 UPCOMING = 5        # upcoming games shown per goalie
 RECENT = 5          # past games played shown per goalie
 SCAN = 20           # how many of the team's most recent finished games to check for each goalie
 NCAA_LOOKBACK = 35  # days of past NCAA scoreboards to check
 ET = ZoneInfo("America/New_York")
 NCAA_API = "https://ncaa-api.henrygd.me"
-NCAA_ALIASES = {"Quinnipiac":["quinnipiac"],"Michigan Tech":["michigantech"],"Bentley":["bentley"],
- "Michigan State":["michiganst"],"UMass Lowell":["umasslowell","massachusettslowell"],"Penn State":["pennst"],
- "Western Michigan":["westernmich"],"Minnesota Duluth":["minnesotaduluth","minnduluth","duluth"],"Ohio State":["ohiost"],"Canisius":["canisius"]}
+NCAA_DIV = {"NCAA D1": "d1", "NCAA D3": "d3"}
 
 # ---------- cache of finished games (saved to cache.json so old box scores are fetched only once) ----------
 CACHE_PATH = "cache.json"
@@ -65,7 +86,7 @@ def load_cache():
     try:
         c = json.load(open(CACHE_PATH))
         box = {k: v for k, v in c.get("box", {}).items() if not k.startswith("NCAA:")}  # old NCAA lookups were misread
-        CACHE = {"box": box, "ncaa_days": c.get("ncaa_days", {}), "logos": c.get("logos", {})}
+        CACHE = {"box": box, "ncaa_days": c.get("ncaa_days", {}), "logos": c.get("logos", {}), "liiga_logos": c.get("liiga_logos", {})}
     except Exception:
         CACHE = {"box": {}, "ncaa_days": {}, "logos": {}}
 
@@ -133,14 +154,25 @@ def get(url, **params):
     return r
 
 def ht_json(league, **params):
-    c = HT[league]
-    p = dict(key=c["key"], client_code=c["client"], fmt="json", lang="en", site_id=0, **params)
-    txt = get(HT_URL, **p).text.strip()
-    txt = re.sub(r"^[^{\[]*\(", "", txt).rstrip(");") if not txt.startswith(("{", "[")) else txt  # strip JSONP
-    return json.loads(txt)
+    c = HT[league]; last = None
+    for key in c["keys"]:
+        try:
+            p = dict(key=key, client_code=c["client"], fmt="json", lang="en", site_id=0, **params)
+            txt = get(HT_URL, **p).text.strip()
+            txt = re.sub(r"^[^{\[]*\(", "", txt).rstrip(");") if not txt.startswith(("{", "[")) else txt  # strip JSONP
+            d = json.loads(txt)
+            if isinstance(d, dict) and (d.get("error") or (d.get("SiteKit") or {}).get("error")) :
+                raise RuntimeError(str(d.get("error") or d["SiteKit"]["error"])[:120])
+            if key != c["keys"][0]: c["keys"].remove(key); c["keys"].insert(0, key)  # remember the one that works
+            return d
+        except Exception as e:
+            last = e
+    raise last
 
-def norm(s):  # "Océanic" -> "oceanic": drop accents first, then everything but letters
-    s = unicodedata.normalize("NFKD", str(s or "")).encode("ascii", "ignore").decode()
+_TRANSLIT = str.maketrans({"ø": "o", "Ø": "O", "æ": "ae", "Æ": "AE", "ß": "ss", "ł": "l", "Ł": "L", "đ": "d", "Đ": "D", "œ": "oe"})
+
+def norm(s):  # "Océanic" -> "oceanic", "Søgaard" -> "sogaard": drop accents, then everything but letters
+    s = unicodedata.normalize("NFKD", str(s or "").translate(_TRANSLIT)).encode("ascii", "ignore").decode()
     return re.sub(r"[^a-z]", "", s.lower())
 
 # ---------------- HockeyTech leagues ----------------
@@ -152,20 +184,25 @@ def ht_status(g):
     if n == "2" or any(k in t for k in ("period", "intermission", "progress", "1st", "2nd", "3rd")): return "live"
     return "scheduled"
 
+SKIP_SEASONS = ("all-star", "all star", "prospect", "combine", "special event", "showcase", "skills")
+
 def ht_schedule(league):
-    """Default schedule (can be preseason only) plus the newest regular season, merged."""
+    """Default schedule plus every season running around now (preseason, regular season, playoffs)."""
     gid = lambda g: str(g.get("id") or g.get("game_id"))
     sched = ht_json(league, feed="modulekit", view="schedule")["SiteKit"]["Schedule"]
+    have = {gid(g) for g in sched}
     try:
-        seasons = ht_json(league, feed="modulekit", view="seasons")["SiteKit"]["Seasons"]
-        reg = [x for x in seasons if str(x.get("playoff", "0")) == "0" and "regular" in str(x.get("season_name", "")).lower()]
-        if reg:
-            sid = max(reg, key=lambda x: int(x.get("season_id") or 0))["season_id"]
-            have = {gid(g) for g in sched}
-            more = ht_json(league, feed="modulekit", view="schedule", season_id=sid)["SiteKit"]["Schedule"]
-            sched = sched + [g for g in more if gid(g) not in have]
+        today = dt.datetime.now(ET).date()
+        lo, hi = (today - dt.timedelta(days=75)).isoformat(), (today + dt.timedelta(days=45)).isoformat()
+        for x in ht_json(league, feed="modulekit", view="seasons")["SiteKit"]["Seasons"]:
+            name = str(x.get("season_name", "")).lower()
+            if any(w in name for w in SKIP_SEASONS): continue
+            start, end = str(x.get("start_date") or "")[:10], str(x.get("end_date") or "")[:10]
+            if not start or start > hi or (end and end < lo): continue
+            more = ht_json(league, feed="modulekit", view="schedule", season_id=x["season_id"])["SiteKit"]["Schedule"]
+            sched += [g for g in more if gid(g) not in have]; have |= {gid(g) for g in more}
     except Exception as e:
-        print(f"[{league}] regular-season schedule lookup failed: {e}")
+        print(f"[{league}] season schedule lookup failed: {e}")
     return sched
 
 def ht_league(league, players):
@@ -183,9 +220,9 @@ def ht_league(league, players):
             hs=g.get("home_goal_count"), as_=g.get("visiting_goal_count"),
             hl=ht_logo(league, g, "home"), al=ht_logo(league, g, "visiting")))
     cache = {}
-    for name, team, _ in players:
-        mine = [g for g in games if norm(team) in norm(g["home"]) or norm(team) in norm(g["away"])]
-        out.append(build_player(league, name, team, mine, lambda gid: ht_goalies(league, gid, cache)))
+    for name, team, match in players:
+        mine = [g for g in games if norm(match) in norm(g["home"]) or norm(match) in norm(g["away"])]
+        out.append(build_player(league, name, team, mine, lambda gid: ht_goalies(league, gid, cache), match))
     return out
 
 def ht_logo(league, g, side):
@@ -205,7 +242,7 @@ def ht_goalies(league, gid, cache):
                 nm = f'{info.get("firstName","")} {info.get("lastName","")}'.strip()
                 toi = str(st.get("timeOnIce") or st.get("toi") or "0")
                 res.append(dict(name=nm, played=bool(toi.strip("0:") ) or str(st.get("shotsAgainst","0")) not in ("0","", "None"),
-                                started=bool(gl.get("starting") or info.get("starting")),
+                                started=truthy(gl.get("starting")) or truthy(info.get("starting")),
                                 stats=mk_stats(first(st, ("saves",)), first(st, ("shotsAgainst",)), first(st, ("goalsAgainst",))), raw=gl, side=side))
     except Exception as e:
         res = [dict(error=str(e))]
@@ -230,7 +267,7 @@ def nhl_league(players):
                       hs=g["homeTeam"].get("score"), as_=g["awayTeam"].get("score"),
                       hl=nhl_logo(g["homeTeam"]), al=nhl_logo(g["awayTeam"]))
                  for g in sch if g.get("gameType", 2) != 1]  # skip preseason
-        out.append(build_player("NHL", name, team, games, lambda gid: nhl_goalies(gid)))
+        out.append(build_player("NHL", name, team, games, lambda gid: nhl_goalies(gid), team))
     return out
 
 def nhl_logo(t):
@@ -246,6 +283,9 @@ def nhl_goalies(gid):
         return [dict(error=str(e))]
 
 # ---------------- helpers for stats ----------------
+def truthy(v):
+    return str(v).strip().lower() in ("1", "true", "yes", "y")
+
 def first(p, keys):
     for k in keys:
         if k in p and p[k] not in (None, ""): return p[k]
@@ -268,39 +308,41 @@ def mk_stats(saves, sa, ga):
     return dict(saves=f(saves), sa=f(sa), ga=f(ga), svpct=(f"{pct:.3f}".lstrip("0") if pct is not None else None),
                 shutout=bool(ga == 0 and sa))
 
-# ---------------- NCAA (NCAA.com data via ncaa-api.henrygd.me) ----------------
-def ncaa_league(players):
+# ---------------- NCAA D1 / D3 (NCAA.com data via ncaa-api.henrygd.me) ----------------
+def ncaa_league(league, players):
+    div = NCAA_DIV[league]
     a = dt.datetime.now(ET).date(); games = {}; ok = 0; last_err = None
     for i in range(-NCAA_LOOKBACK, 21):  # past weeks (for results) + next 3 weeks (for schedule)
-        day = a + dt.timedelta(days=i); key = day.isoformat()
-        if key in CACHE["ncaa_days"]:   # old days never change, so they come from cache.json
-            for g in CACHE["ncaa_days"][key]: games[g["id"]] = g
+        day = a + dt.timedelta(days=i); key = day.isoformat(); ckey = f"{div}v2:{key}"
+        if ckey in CACHE["ncaa_days"]:   # old days never change, so they come from cache.json
+            for g in CACHE["ncaa_days"][ckey]: games[g["id"]] = g
             ok += 1; continue
         try:
-            d = get(f"{NCAA_API}/scoreboard/icehockey-men/d1/{day:%Y/%m/%d}/all-conf").json()
+            d = get(f"{NCAA_API}/scoreboard/icehockey-men/{div}/{day:%Y/%m/%d}/all-conf").json()
             day_games = []
             for x in d.get("games", []):
-                x = x["game"]; nm = lambda t: "".join(str(v) for v in x[t]["names"].values())
+                x = x["game"]
                 st = (x.get("gameState") or "").lower()
                 day_games.append(dict(id=x["gameID"], date=key, iso=key,
                     status={"live":"live","final":"final"}.get(st, "scheduled"),
                     home=x["home"]["names"].get("short",""), away=x["away"]["names"].get("short",""),
-                    hs=x["home"].get("score"), as_=x["away"].get("score"), hk=norm(nm("home")), ak=norm(nm("away")),
+                    hs=x["home"].get("score"), as_=x["away"].get("score"),
+                    hseo=x["home"]["names"].get("seo",""), aseo=x["away"]["names"].get("seo",""),
                     hl=ncaa_logo(x["home"]), al=ncaa_logo(x["away"])))
             for g in day_games: games[g["id"]] = g
-            if i <= -2: CACHE["ncaa_days"][key] = day_games
+            if i <= -2: CACHE["ncaa_days"][ckey] = day_games
             ok += 1
         except Exception as e:
             last_err = e
         time.sleep(0.25)
     if not ok: raise RuntimeError(f"NCAA scoreboard unreachable: {last_err}")
     out = []
-    for name, school, _ in players:
-        al = NCAA_ALIASES.get(school, [norm(school)]); mine = []
+    for name, school, slugs in players:
+        slugs = slugs.split("|"); mine = []
         for g in games.values():
-            side = "home" if any(k in g["hk"] for k in al) else "away" if any(k in g["ak"] for k in al) else None
+            side = "home" if g["hseo"] in slugs else "away" if g["aseo"] in slugs else None
             if side: mine.append({**g, "mine": side})
-        out.append(build_player("NCAA", name, school, mine, ncaa_goalies))
+        out.append(build_player(league, name, school, mine, ncaa_goalies, school))
     return out
 
 def ncaa_logo(t):
@@ -323,17 +365,79 @@ def ncaa_goalies(gid):
     except Exception as e:
         return [dict(error=str(e))]
 
+# ---------------- Liiga (Finland, liiga.fi) ----------------
+def liiga_season():
+    t = dt.datetime.now(ET).date()
+    return t.year + 1 if t.month >= 7 else t.year   # 2026-27 season is "2027"
+
+def liiga_league(players):
+    season = liiga_season()
+    sched = get(f"{LIIGA}/schedule", season=season, tournament="runkosarja").json()
+    games = []
+    for g in sched:
+        start = g.get("start") or ""
+        try: local = dt.datetime.fromisoformat(start.replace("Z", "+00:00")).astimezone(ET)
+        except Exception: local = None
+        games.append(dict(id=g["id"], date=local.date().isoformat() if local else start[:10], iso=start,
+                          status="final" if g.get("ended") else "live" if g.get("started") else "scheduled",
+                          home=g.get("homeTeamName", ""), away=g.get("awayTeamName", ""),
+                          hs=g.get("homeTeamGoals"), as_=g.get("awayTeamGoals"), hl="", al=""))
+    out = []
+    for name, team, match in players:
+        mine = [g for g in games if norm(match) in (norm(g["home"]), norm(g["away"]))]
+        p = build_player("Liiga", name, team, mine, lambda gid: liiga_goalies(season, gid), match)
+        if not p.get("logo"): p["logo"] = CACHE.setdefault("liiga_logos", {}).get(norm(match), "")
+        out.append(p)
+    return out
+
+def liiga_goalies(season, gid):
+    try:
+        d = get(f"{LIIGA}/games/{season}/{gid}").json()
+        game = d.get("game", {})
+        for side in ("homeTeam", "awayTeam"):
+            t = game.get(side, {}) or {}
+            logo = (t.get("logos") or {}).get("darkBg") or (t.get("logos") or {}).get("lightBg")
+            if logo: CACHE.setdefault("liiga_logos", {})[norm(t.get("teamName"))] = logo
+        stats = {}
+        try:
+            st = get(f"{LIIGA}/games/stats/{season}/{gid}").json()
+            for side in ("homeTeam", "awayTeam"):
+                for per in st.get(side, []) or []:
+                    for gp in per.get("goaliePeriodStats", []) or []:
+                        s = stats.setdefault(gp.get("playerId"), dict(toi=0, saves=0, ga=0))
+                        pr = gp.get("period") or {}
+                        s["toi"] += pr.get("timeofice") or 0; s["saves"] += pr.get("saves") or 0; s["ga"] += pr.get("goalsAllowed") or 0
+        except Exception:
+            pass
+        res = []
+        for key in ("homeTeamPlayers", "awayTeamPlayers"):
+            for p in d.get(key, []) or []:
+                if p.get("role") != "GOALIE" and p.get("roleCode") != "MV": continue
+                if p.get("line") is None: continue       # not dressed
+                s = stats.get(p.get("id"))
+                starter = p.get("line") == 1
+                played = (s["toi"] > 0 or s["saves"] > 0 or s["ga"] > 0) if s else starter
+                res.append(dict(name=f'{p.get("firstName","")} {p.get("lastName","")}'.strip(), played=played, started=starter,
+                                stats=mk_stats(s["saves"], None, s["ga"]) if (s and played) else None))
+        return res
+    except Exception as e:
+        return [dict(error=str(e))]
+
 # ---------------- shared logic ----------------
 def is_live(s): return s.lower() in ("2","3","live","in progress","1st period","2nd period","3rd period","ot","so")
 def is_final(s): return s.lower().startswith(("4","final")) or s.lower() in ("final","final ot","final so")
 def is_sched(s): return s in ("1","") or s.lower() in ("scheduled","not started","pre-game")
 
-def team_side(g, team):
-    return g.get("mine") or ("home" if norm(team) in norm(g["home"]) else "away")
+def team_side(g, match):
+    return g.get("mine") or ("home" if norm(match) in norm(g["home"]) else "away")
 
 def find_me(gs, name):
-    last_name = norm(name.split()[-1])
-    return next((x for x in gs if "error" not in x and norm(x.get("name")).endswith(last_name)), None)
+    """Find a goalie by last name; if several share it, use the first name to pick the right one."""
+    parts = name.split(); last_name = norm(parts[-1]); first_name = norm(parts[0])
+    cands = [x for x in gs if "error" not in x and norm(x.get("name")).endswith(last_name)]
+    if len(cands) > 1:
+        cands = [x for x in cands if norm(x.get("name")).startswith(first_name[:3])] or cands
+    return cands[0] if cands else None
 
 def game_result(g, side, me):
     try:
@@ -343,7 +447,7 @@ def game_result(g, side, me):
     dec = {"W":"W","L":"L","O":"L","OTL":"L"}.get(str((me or {}).get("decision") or "").upper())
     return dec or res, score
 
-def past_games(league, name, team, games, goalies_fn, today):
+def past_games(league, name, match, games, goalies_fn, today):
     """The goalie's most recent finished games where he actually played, newest first."""
     finished = [g for g in games if g["date"] <= today and is_final(g["status"])][-SCAN:]
     out = []
@@ -351,19 +455,20 @@ def past_games(league, name, team, games, goalies_fn, today):
         if len(out) >= RECENT: break
         me = find_me(cached_goalies(league, g["id"], goalies_fn), name)
         if not (me and me.get("played")): continue
-        side = team_side(g, team)
+        side = team_side(g, match)
         res, score = game_result(g, side, me)
         out.append(dict(date=g["date"], opp=g["away"] if side == "home" else g["home"],
                         ha="vs" if side == "home" else "@", result=res, score=score, stats=me.get("stats")))
     return out
 
-def build_player(league, name, team, games, goalies_fn):
+def build_player(league, name, team, games, goalies_fn, match=None):
+    match = match or team
     today = dt.datetime.now(ET).date().isoformat()
     games = sorted([g for g in games if g["date"]], key=lambda g: g["iso"] or g["date"])
     upcoming = [g for g in games if g["date"] >= today and not is_final(g["status"])][:UPCOMING]
     status, detail, extra = "no_game", "No game today", {}
     for g in [g for g in games if g["date"] == today]:
-        side = team_side(g, team)
+        side = team_side(g, match)
         opp = f'{g["away"]} @ {g["home"]}'
         if is_live(g["status"]) or is_final(g["status"]):
             gs = [x for x in goalies_fn(g["id"]) if "error" not in x]
@@ -380,14 +485,18 @@ def build_player(league, name, team, games, goalies_fn):
                 extra["raw"] = me.get("raw")
             elif gs:
                 status, detail = "not_playing", f"Other goalie in net: {opp}"
+            elif is_final(g["status"]):
+                res, score = game_result(g, side, None)
+                status = "result_only"
+                detail = f'Final {score or ""}: {opp} (league does not publish who played in net)'.replace("  ", " ")
             else:
                 status, detail = "live_unknown", f"Game on, goalie not confirmed: {opp}"
         else:
             status, detail = "scheduled", f"Game today: {opp}"
         break
-    logo = next((lg for lg in ((g.get("hl") if team_side(g, team) == "home" else g.get("al")) for g in reversed(games)) if lg), "")
+    logo = next((lg for lg in ((g.get("hl") if team_side(g, match) == "home" else g.get("al")) for g in reversed(games)) if lg), "")
     try:
-        recent = past_games(league, name, team, games, goalies_fn, today)
+        recent = past_games(league, name, match, games, goalies_fn, today)
     except Exception as e:
         print(f"[{league}] past games for {name} failed: {e}"); recent = []
     return dict(name=name, league=league, team=team, logo=logo, status=status, detail=detail,
@@ -400,7 +509,8 @@ def run_once(path="data.json"):
     for lg, plist in ROSTER.items():
         try:
             if lg == "NHL": players += nhl_league(plist)
-            elif lg == "NCAA": players += ncaa_league(plist)
+            elif lg in NCAA_DIV: players += ncaa_league(lg, plist)
+            elif lg == "Liiga": players += liiga_league(plist)
             else: players += ht_league(lg, plist)
         except Exception as e:
             print(f"[{lg}] failed: {e}")
@@ -428,7 +538,7 @@ def demo(path="data.json"):
     write(ps, path)
 
 def write(players, path):
-    json.dump(dict(updated=dt.datetime.now().isoformat(timespec="seconds"), players=players), open(path, "w"), indent=1)
+    json.dump(dict(updated=dt.datetime.now(ET).isoformat(timespec="seconds"), players=players), open(path, "w"), indent=1)
     print("wrote", path, len(players), "goalies")
 
 def serve(port=8000, every=300):
