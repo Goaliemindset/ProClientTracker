@@ -27,10 +27,10 @@ ROSTER = {
  "Liiga":[("Rastislav Eliáš","HIFK","HIFK")],
  "NCAA D1":[("Michael Polston","Western Michigan","western-mich"),("Cole Sheffield","Minnesota Duluth","minn-duluth"),
             ("Austin Elliott","UMass Lowell","umass-lowell"),("Easton Rye","Bentley","bentley"),
-            ("Joshua Ravensbergen","Michigan State","michigan-st"),("Tyler Roesel","Delaware","delaware"),
+            ("Joshua Ravensbergen","Michigan State","michigan-st"),
             ("Dylan Silverstein","Vermont","vermont"),("Xander Miceli","Wisconsin","wisconsin"),
             ("Luca Di Pasquo","Minnesota","minnesota"),("Christian Kirsch","Quinnipiac","quinnipiac")],
- "NCAA D3":[("Aiden McKenna","SUNY Oswego","oswego-st|suny-oswego"),("Dylan Eliason","Adrian College","adrian")],
+ "NCAA D3":[("Aiden McKenna","SUNY Oswego","oswego-st|suny-oswego")],
  "OHL": [("Cruz Reznik","Oshawa Generals","Generals"),("William Camputaro","Soo Greyhounds","Greyhounds")],
  "QMJHL":[("Finn Moffett","Gatineau Olympiques","Olympiques"),("Seth Ronan","Charlottetown Islanders","Islanders"),
           ("Arseni Radkov","Val-d'Or Foreurs","Foreurs"),("Justin Lee","Chicoutimi Saguenéens","Saguenéens")],
@@ -47,6 +47,11 @@ ROSTER = {
  "OJHL":[("Jonathan Frattaroli","St. Michael's Buzzers","Buzzers"),("Hudson Cicchelli","Stouffville Spirit","Spirit"),
          ("James Meredith","Mississauga Chargers","Chargers")],
  "GOJHL":[("Brogan Colquhoun","St. Marys Lincolns","Lincolns"),("Gio Scally","Strathroy Rockets","Strathroy Rockets")],
+}
+# Goalies who can move between two teams (e.g. an AHL contract assigned to the ECHL affiliate).
+# The tracker watches these extra teams too and shows whichever one he is playing for.
+ALSO_TRACK = {
+ "Logan Terness": [("AHL", "Coachella Valley Firebirds", "Firebirds")],
 }
 # HockeyTech public feed keys (the ones each league's own website uses). Where two keys are known,
 # the second is tried if the first stops working.
@@ -502,11 +507,43 @@ def build_player(league, name, team, games, goalies_fn, match=None):
     return dict(name=name, league=league, team=team, logo=logo, status=status, detail=detail,
                 upcoming=upcoming, recent=recent, **extra)
 
+ST_RANK = {"in_net": 0, "live_unknown": 1, "played": 2, "result_only": 3, "scheduled": 4, "not_playing": 5, "no_game": 6, "error": 7}
+
+def merge_alternates(players, alt_keys):
+    """One card per goalie: combine his main team with any ALSO_TRACK teams."""
+    by_name, order = {}, []
+    for p in players:
+        if p["name"] not in by_name: by_name[p["name"]] = []; order.append(p["name"])
+        by_name[p["name"]].append(p)
+    out = []
+    for name in order:
+        group = by_name[name]
+        main = next((p for p in group if (p["league"], p["name"]) not in alt_keys), group[0])
+        alts = [p for p in group if p is not main]
+        if not alts: out.append(main); continue
+        card = dict(main)
+        for a in alts:
+            # he played (or is playing) for the other team today -> show that game
+            if a["status"] in ("in_net", "played") and main["status"] not in ("in_net", "played"):
+                for k in ("status", "detail", "stats", "result", "score"):
+                    if k in a: card[k] = a[k]
+                card["detail"] = f'{a["team"]} ({a["league"]}): {a["detail"]}'
+        games = {(r["date"], r.get("opp")): r for p in group for r in p.get("recent", [])}
+        card["recent"] = sorted(games.values(), key=lambda r: r["date"], reverse=True)[:RECENT]
+        card["also"] = ", ".join(f'{a["team"]} ({a["league"]})' for a in alts)
+        out.append(card)
+    return out
+
 def run_once(path="data.json"):
     if requests is None: raise SystemExit("pip install requests")
     load_cache()
     players = []
-    for lg, plist in ROSTER.items():
+    roster = {lg: list(pl) for lg, pl in ROSTER.items()}
+    alt_keys = set()
+    for name, extra in ALSO_TRACK.items():
+        for lg, team, match in extra:
+            roster.setdefault(lg, []).append((name, team, match)); alt_keys.add((lg, name))
+    for lg, plist in roster.items():
         try:
             if lg == "NHL": players += nhl_league(plist)
             elif lg in NCAA_DIV: players += ncaa_league(lg, plist)
@@ -516,6 +553,7 @@ def run_once(path="data.json"):
             print(f"[{lg}] failed: {e}")
             players += [dict(name=n, league=lg, team=t, status="error", detail=f"{lg} feed error: {e}"[:140], upcoming=[]) for n,t,_ in plist]
         save_cache()
+    players = merge_alternates(players, alt_keys)
     for p in players: p["logo"] = local_logo(p.get("logo"))
     save_cache()
     write(players, path)
