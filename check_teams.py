@@ -102,12 +102,12 @@ def ncaa_box_with_team(gid):
     t.CACHE["box"][k] = out
     return out
 
-for lgname, div in t.NCAA_DIV.items():
+for lgname, (sport, div) in t.NCAA_DIV.items():
     try:
         today = dt.datetime.now(t.ET).date(); day = dt.date(today.year if today.month >= 8 else today.year - 1, 10, 1); n = 0
         while day < today:
             try:
-                d = t.get(f"{t.NCAA_API}/scoreboard/icehockey-men/{div}/{day:%Y/%m/%d}/all-conf").json()
+                d = t.get(f"{t.NCAA_API}/scoreboard/{sport}/{div}/{day:%Y/%m/%d}/all-conf").json()
                 for x in d.get("games", []):
                     x = x["game"]
                     if (x.get("gameState") or "").lower() != "final": continue

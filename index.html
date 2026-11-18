@@ -63,6 +63,22 @@ details{margin-top:6px}
 .gl .r{font-weight:700}.gl .rW{color:#fff}.gl .rW::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--red2);margin-right:5px;vertical-align:middle}
 .gl .rL,.gl .rT{color:var(--ash)}
 .gl .num{text-align:right}
+.wk-head{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:baseline;justify-content:space-between;margin:20px 0 10px}
+.wk-head h2{margin:0;border:0;padding:0}.wk-head .rng{color:var(--ash);font-size:14px}
+.wk-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:6px;background:var(--card)}
+.wk{width:100%;border-collapse:collapse;font-size:15px;min-width:640px}
+.wk th,.wk td{padding:9px 10px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}
+.wk th{font:700 13px "Barlow Condensed",sans-serif;letter-spacing:.8px;text-transform:uppercase;color:var(--ash);background:#111;position:sticky;top:0}
+.wk th button{all:unset;cursor:pointer}.wk th button:hover,.wk th button:focus-visible{color:#fff}.wk th.on button{color:var(--red2)}
+.wk th button:focus-visible{outline:2px solid var(--red2);outline-offset:2px}
+.wk td.n,.wk th.n{text-align:right;font-variant-numeric:tabular-nums}
+.wk tr:last-child td{border-bottom:0}
+.wk .rk{color:var(--ash);width:28px}
+.wk .who{display:flex;align-items:center;gap:10px}
+.wk .who img{width:28px;height:28px;object-fit:contain}
+.wk .nm2{font:700 18px "Barlow Condensed",sans-serif;line-height:1.1}.wk .sub{color:var(--ash);font-size:12px}
+.wk tr.top1 td{background:rgba(227,38,43,.10)}.wk tr.top1 .rk{color:var(--red2);font-weight:700}
+.wk .sv{font-weight:700;color:#fff}
 .yd{background:rgba(227,38,43,.10);border:1px solid rgba(227,38,43,.35);border-radius:4px;padding:7px 9px;font-size:14px;margin:8px 0;color:#eee}
 .yd b{color:#fff}.yd .res{font:700 15px "Barlow Condensed",sans-serif;letter-spacing:.5px;margin-right:6px}
 .yd .resW{color:var(--red2)}.yd .resL,.yd .resT{color:var(--ash)}
@@ -79,7 +95,23 @@ const ORDER={in_net:0,live_unknown:1,scheduled:2,played:3,result_only:4,not_play
 const badge=p=>p.status=="played"&&p.result?({W:"Win",L:"Loss",T:"Tie"}[p.result]||"Played"):(LABEL[p.status]||p.status);
 const statLine=s=>`${s.saves??"?"} saves on ${s.sa??"?"} shots, ${s.ga??"?"} against${s.svpct?`, ${s.svpct} SV%`:""}${s.shutout?", shutout":""}`;
 let D,filter="All",league="";
-const LEAGUE_ORDER=["NHL","PWHL","AHL","ECHL","SPHL","Liiga","NCAA D1","NCAA D3","OHL","QMJHL","WHL","USHL","BCHL","AJHL","SJHL","MJHL","OJHL","GOJHL"];
+const LEAGUE_ORDER=["NHL","PWHL","AHL","ECHL","SPHL","Liiga","NCAA D1","NCAA D3","NCAA Women","OHL","QMJHL","WHL","USHL","BCHL","AJHL","SJHL","MJHL","OJHL","GOJHL"];
+let wkSort="svpct";
+const isoDay=n=>new Date(Date.now()-n*864e5).toLocaleDateString("en-CA",{timeZone:"America/New_York"});
+const fmtDay=d=>new Date(d+"T12:00").toLocaleDateString([],{month:"short",day:"numeric"});
+function weekRows(ps){const lo=isoDay(6),hi=isoDay(0);
+ return ps.map(p=>{const gs=(p.recent||[]).filter(r=>r.date>=lo&&r.date<=hi);if(!gs.length)return null;
+  let w=0,l=0,t=0,sv=0,sa=0,ga=0,so=0;gs.forEach(r=>{if(r.result=="W")w++;else if(r.result=="L")l++;else if(r.result=="T")t++;
+   if(r.stats){sv+=r.stats.saves||0;sa+=r.stats.sa||0;ga+=r.stats.ga||0;if(r.stats.shutout)so++}});
+  return {p,gp:gs.length,w,l,t,sv,sa,ga,so,pct:sa?sv/sa:null,gaa:ga/gs.length}}).filter(Boolean)}
+const WK_SORT={svpct:(a,b)=>(b.pct??-1)-(a.pct??-1)||b.sv-a.sv,w:(a,b)=>b.w-a.w||(b.pct??-1)-(a.pct??-1),ga:(a,b)=>a.gaa-b.gaa||(b.pct??-1)-(a.pct??-1),sv:(a,b)=>b.sv-a.sv,gp:(a,b)=>b.gp-a.gp||(b.pct??-1)-(a.pct??-1)};
+function weekTable(ps){const rows=weekRows(ps).sort(WK_SORT[wkSort]);
+ const th=(k,label,n)=>`<th class="${n?"n ":""}${wkSort==k?"on":""}" aria-sort="${wkSort==k?"descending":"none"}"><button data-s="${k}">${label}</button></th>`;
+ const head=`<div class="wk-head"><h2>Goalies of the Week</h2><span class="rng">Last 7 days · ${fmtDay(isoDay(6))} – ${fmtDay(isoDay(0))} · click a column to sort</span></div>`;
+ if(!rows.length)return head+`<p>None of your clients have played in the last 7 days.</p>`;
+ return head+`<div class="wk-wrap"><table class="wk"><thead><tr><th class="rk">#</th><th>Goalie</th>${th("gp","GP",1)}${th("w","W-L",1)}${th("svpct","SV%",1)}${th("ga","GA / game",1)}${th("sv","Saves / shots",1)}<th class="n">SO</th></tr></thead><tbody>${
+  rows.map((r,i)=>`<tr class="${i==0?"top1":""}"><td class="rk">${i+1}</td><td><div class="who">${r.p.logo?`<img src="${esc(r.p.logo)}" alt="" loading="lazy" onerror="this.remove()">`:""}<div><div class="nm2">${esc(r.p.name)}</div><div class="sub">${esc(r.p.team)} · ${esc(r.p.league)}</div></div></div></td><td class="n">${r.gp}</td><td class="n">${r.w}-${r.l}${r.t?"-"+r.t:""}</td><td class="n sv">${r.pct!=null?r.pct.toFixed(3).replace(/^0/,""):"–"}</td><td class="n">${r.gaa.toFixed(2)} <span class="sub">(${r.ga})</span></td><td class="n">${r.sa?`${r.sv} / ${r.sa}`:"–"}</td><td class="n">${r.so||""}</td></tr>`).join("")
+ }</tbody></table></div>`}
 const TODAY_ST=["in_net","live_unknown","scheduled","played","result_only","not_playing"];
 const logoAlts=u=>{const m=String(u||"").match(/^(.*\/logos\/)(\d+)\.png$/);return m?[m[1]+"50x50/"+m[2]+".png",m[1]+m[2]+".jpg",m[1]+m[2]+".gif"]:[]};
 function nextLogo(i){const a=(i.dataset.alts||"").split("|").filter(Boolean);if(a.length){i.src=a.shift();i.dataset.alts=a.join("|")}else i.parentNode.remove()}
@@ -100,7 +132,7 @@ function render(){
  const leagues=[...new Set(D.players.map(p=>p.league))].sort((a,b)=>rank(a)-rank(b));
  const Y=filter=="Yesterday";
  if(league&&!leagues.includes(league))league="";
- f.innerHTML=["All","Live now","Today","Yesterday"].map(l=>`<button aria-pressed="${l==filter}" data-l="${l}">${l}</button>`).join("")+
+ f.innerHTML=["All","Live now","Today","Yesterday","This week"].map(l=>`<button aria-pressed="${l==filter}" data-l="${l}">${l}</button>`).join("")+
   `<span class="sel"><select id="lg" aria-label="League" class="${league?"on":""}"><option value="">All leagues</option>${leagues.map(l=>`<option value="${esc(l)}"${l==league?" selected":""}>${esc(l)}</option>`).join("")}</select></span>`;
  f.querySelectorAll("button").forEach(b=>b.onclick=()=>{filter=b.dataset.l;render()});
  lg.onchange=e=>{league=e.target.value;render()};
@@ -108,8 +140,11 @@ function render(){
  if(league)ps=ps.filter(p=>p.league==league);
  const nIn=D.players.filter(p=>p.status=="in_net").length, nY=D.players.filter(ydGame).length;
  const nT=D.players.filter(p=>TODAY_ST.includes(p.status)).length;
+ if(filter=="This week"){m.innerHTML=weekTable(league?D.players.filter(p=>p.league==league):D.players);
+  m.querySelectorAll(".wk th button").forEach(b=>b.onclick=()=>{wkSort=b.dataset.s;render()});}
  meta.innerHTML=`<b>${nIn} in net now</b> · ${nT} with games today · ${nY} played yesterday<br>Updated ${new Date(D.updated).toLocaleString()}`;
  let html="";
+ if(filter=="This week")return;
  for(const lg of leagues){const g=ps.filter(p=>p.league==lg).sort((a,b)=>ORDER[a.status]-ORDER[b.status]);if(!g.length)continue;
   html+=`<h2>${lg}</h2><div class="grid">`+g.map(p=>{const r=Y?ydGame(p):null;return `<div class="card ${r?"played "+(r.result||""):p.status+" "+(p.result||"")}"><div class="top"><div class="who">${p.logo?`<span class="tl"><img src="${esc(p.logo)}" data-alts="${esc(logoAlts(p.logo).join("|"))}" alt="${esc(p.team)} logo" loading="lazy" onerror="nextLogo(this)"></span>`:""}<div><div class="nm">${esc(p.name)}</div><div class="tm">${esc(p.team)}</div>${p.also?`<div class="tm" style="font-size:12px">Also tracking: ${esc(p.also)}</div>`:""}</div></div><span class="badge">${r?({W:"Win",L:"Loss",T:"Tie"}[r.result]||"Played"):badge(p)}</span></div>
   ${r?ydLine(r):""}<div class="det">${esc(p.detail)}</div>${p.stats?`<div class="det">${statLine(p.stats)}</div>`:""}${p.recent?.length?pastTable(p.recent):""}${p.upcoming?.length?`<details><summary>Next ${p.upcoming.length} games</summary><ul>${p.upcoming.map(u=>`<li>${esc(u.date)}: ${esc(u.away)} at ${esc(u.home)}</li>`).join("")}</ul></details>`:""}</div>`}).join("")+`</div>`;}

@@ -18,20 +18,24 @@ except ImportError:
 # Each goalie: (name, team as shown on the site, how to find the team in that league's feed).
 # For NHL the third value is the team code; for NCAA it is the school's ncaa.com slug(s), "|"-separated.
 ROSTER = {
- "NHL": [("Jakub Dobeš","Montréal Canadiens","MTL"),("Arvid Söderblom","Chicago Blackhawks","CHI")],
+ "NHL": [("Jakub Dobeš","Montréal Canadiens","MTL"),("Arvid Söderblom","New York Rangers","NYR")],
  "PWHL":[("Callie Shanahan","New York Sirens","Sirens")],
  "AHL": [("Domenic DiVincentiis","Manitoba Moose","Moose"),("Carter George","Ontario Reign","Reign"),
          ("Mads Søgaard","Syracuse Crunch","Crunch"),("Damian Clara","San Diego Gulls","Gulls")],
- "ECHL":[("Logan Terness","Kansas City Mavericks","Mavericks"),("Owen Flores","Greenville Swamp Rabbits","Swamp Rabbits")],
+ "ECHL":[("Logan Terness","Kansas City Mavericks","Mavericks"),("Owen Flores","Greenville Swamp Rabbits","Swamp Rabbits"),
+         ("Nathaniel Day","Fort Wayne Komets","Komets")],
  "SPHL":[("Alex Aslanidis","Roanoke Rail Yard Dawgs","Rail Yard Dawgs")],
  "Liiga":[("Rastislav Eliáš","HIFK","HIFK")],
  "NCAA D1":[("Michael Polston","Western Michigan","western-mich"),("Cole Sheffield","Minnesota Duluth","minn-duluth"),
             ("Austin Elliott","UMass Lowell","umass-lowell"),("Easton Rye","Bentley","bentley"),
             ("Joshua Ravensbergen","Michigan State","michigan-st"),
             ("Dylan Silverstein","Vermont","vermont"),("Xander Miceli","Wisconsin","wisconsin"),
-            ("Luca Di Pasquo","Minnesota","minnesota"),("Christian Kirsch","Quinnipiac","quinnipiac")],
+            ("Luca Di Pasquo","Minnesota","minnesota"),("Christian Kirsch","Quinnipiac","quinnipiac"),
+            ("Yegor Yegorov","Miami (Ohio)","miami-oh|miami-ohio|miami"),("Cole Moore","UMass Lowell","umass-lowell")],
  "NCAA D3":[("Aiden McKenna","SUNY Oswego","oswego-st|suny-oswego")],
- "OHL": [("Cruz Reznik","Oshawa Generals","Generals"),("William Camputaro","Soo Greyhounds","Greyhounds")],
+ "NCAA Women":[("Noemi Martinez","New Hampshire","new-hampshire|unh")],
+ "OHL": [("Cruz Reznik","Oshawa Generals","Generals"),("William Camputaro","Soo Greyhounds","Greyhounds"),
+         ("Arvin Jaswal","London Knights","Knights")],
  "QMJHL":[("Finn Moffett","Gatineau Olympiques","Olympiques"),("Seth Ronan","Charlottetown Islanders","Islanders"),
           ("Arseni Radkov","Val-d'Or Foreurs","Foreurs"),("Justin Lee","Chicoutimi Saguenéens","Saguenéens")],
  "WHL": [("Peyton Shore","Prince George Cougars","Cougars"),("Taylor Tabashniuk","Regina Pats","Pats"),
@@ -52,6 +56,8 @@ ROSTER = {
 # The tracker watches these extra teams too and shows whichever one he is playing for.
 ALSO_TRACK = {
  "Logan Terness": [("AHL", "Coachella Valley Firebirds", "Firebirds")],
+ "Arvid Söderblom": [("AHL", "Hartford Wolf Pack", "Wolf Pack")],
+ "Nathaniel Day": [("AHL", "Bakersfield Condors", "Condors")],
 }
 # HockeyTech public feed keys (the ones each league's own website uses). Where two keys are known,
 # the second is tried if the first stops working.
@@ -75,12 +81,12 @@ HT_URL = "https://lscluster.hockeytech.com/feed/index.php"
 NHL = "https://api-web.nhle.com/v1"
 LIIGA = "https://liiga.fi/api/v2"
 UPCOMING = 5        # upcoming games shown per goalie
-RECENT = 5          # past games played shown per goalie
+RECENT = 6          # past games played kept per goalie (covers a full week)
 SCAN = 20           # how many of the team's most recent finished games to check for each goalie
 NCAA_LOOKBACK = 35  # days of past NCAA scoreboards to check
 ET = ZoneInfo("America/New_York")
 NCAA_API = "https://ncaa-api.henrygd.me"
-NCAA_DIV = {"NCAA D1": "d1", "NCAA D3": "d3"}
+NCAA_DIV = {"NCAA D1": ("icehockey-men", "d1"), "NCAA D3": ("icehockey-men", "d3"), "NCAA Women": ("icehockey-women", "d1")}
 
 # ---------- cache of finished games (saved to cache.json so old box scores are fetched only once) ----------
 CACHE_PATH = "cache.json"
@@ -315,15 +321,16 @@ def mk_stats(saves, sa, ga):
 
 # ---------------- NCAA D1 / D3 (NCAA.com data via ncaa-api.henrygd.me) ----------------
 def ncaa_league(league, players):
-    div = NCAA_DIV[league]
+    sport, div = NCAA_DIV[league]
+    tag = div if sport == "icehockey-men" else "w" + div
     a = dt.datetime.now(ET).date(); games = {}; ok = 0; last_err = None
     for i in range(-NCAA_LOOKBACK, 21):  # past weeks (for results) + next 3 weeks (for schedule)
-        day = a + dt.timedelta(days=i); key = day.isoformat(); ckey = f"{div}v2:{key}"
+        day = a + dt.timedelta(days=i); key = day.isoformat(); ckey = f"{tag}v2:{key}"
         if ckey in CACHE["ncaa_days"]:   # old days never change, so they come from cache.json
             for g in CACHE["ncaa_days"][ckey]: games[g["id"]] = g
             ok += 1; continue
         try:
-            d = get(f"{NCAA_API}/scoreboard/icehockey-men/{div}/{day:%Y/%m/%d}/all-conf").json()
+            d = get(f"{NCAA_API}/scoreboard/{sport}/{div}/{day:%Y/%m/%d}/all-conf").json()
             day_games = []
             for x in d.get("games", []):
                 x = x["game"]
@@ -540,7 +547,9 @@ def run_once(path="data.json"):
     players = []
     roster = {lg: list(pl) for lg, pl in ROSTER.items()}
     alt_keys = set()
+    on_roster = {n for pl in ROSTER.values() for n, *_ in pl}
     for name, extra in ALSO_TRACK.items():
+        if name not in on_roster: continue   # only extra teams for goalies still on the main list
         for lg, team, match in extra:
             roster.setdefault(lg, []).append((name, team, match)); alt_keys.add((lg, name))
     for lg, plist in roster.items():
