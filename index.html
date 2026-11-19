@@ -99,7 +99,11 @@ const LEAGUE_ORDER=["NHL","PWHL","AHL","ECHL","SPHL","Liiga","NCAA D1","NCAA D3"
 let wkSort="svpct";
 const isoDay=n=>new Date(Date.now()-n*864e5).toLocaleDateString("en-CA",{timeZone:"America/New_York"});
 const fmtDay=d=>new Date(d+"T12:00").toLocaleDateString([],{month:"short",day:"numeric"});
-function weekRows(ps){const lo=isoDay(6),hi=isoDay(0);
+// Goalies of the Week runs Monday to Sunday (Eastern time) and starts fresh every Monday.
+function weekRange(){const t=isoDay(0),dow=new Date(t+"T12:00:00Z").getUTCDay(),back=(dow+6)%7;
+ const shift=(d,n)=>{const x=new Date(d+"T12:00:00Z");x.setUTCDate(x.getUTCDate()+n);return x.toISOString().slice(0,10)};
+ const mon=shift(t,-back);return [mon,shift(mon,6)]}
+function weekRows(ps){const [lo,hi]=weekRange();
  return ps.map(p=>{const gs=(p.recent||[]).filter(r=>r.date>=lo&&r.date<=hi);if(!gs.length)return null;
   let w=0,l=0,t=0,sv=0,sa=0,ga=0,so=0;gs.forEach(r=>{if(r.result=="W")w++;else if(r.result=="L")l++;else if(r.result=="T")t++;
    if(r.stats){sv+=r.stats.saves||0;sa+=r.stats.sa||0;ga+=r.stats.ga||0;if(r.stats.shutout)so++}});
@@ -107,8 +111,8 @@ function weekRows(ps){const lo=isoDay(6),hi=isoDay(0);
 const WK_SORT={svpct:(a,b)=>(b.pct??-1)-(a.pct??-1)||b.sv-a.sv,w:(a,b)=>b.w-a.w||(b.pct??-1)-(a.pct??-1),ga:(a,b)=>a.gaa-b.gaa||(b.pct??-1)-(a.pct??-1),sv:(a,b)=>b.sv-a.sv,gp:(a,b)=>b.gp-a.gp||(b.pct??-1)-(a.pct??-1)};
 function weekTable(ps){const rows=weekRows(ps).sort(WK_SORT[wkSort]);
  const th=(k,label,n)=>`<th class="${n?"n ":""}${wkSort==k?"on":""}" aria-sort="${wkSort==k?"descending":"none"}"><button data-s="${k}">${label}</button></th>`;
- const head=`<div class="wk-head"><h2>Goalies of the Week</h2><span class="rng">Last 7 days · ${fmtDay(isoDay(6))} – ${fmtDay(isoDay(0))} · click a column to sort</span></div>`;
- if(!rows.length)return head+`<p>None of your clients have played in the last 7 days.</p>`;
+ const head=`<div class="wk-head"><h2>Goalies of the Week</h2><span class="rng">Week of ${fmtDay(weekRange()[0])} – ${fmtDay(weekRange()[1])} (Mon–Sun) · click a column to sort</span></div>`;
+ if(!rows.length)return head+`<p>None of your clients have played yet this week. The week resets every Monday.</p>`;
  return head+`<div class="wk-wrap"><table class="wk"><thead><tr><th class="rk">#</th><th>Goalie</th>${th("gp","GP",1)}${th("w","W-L",1)}${th("svpct","SV%",1)}${th("ga","GA / game",1)}${th("sv","Saves / shots",1)}<th class="n">SO</th></tr></thead><tbody>${
   rows.map((r,i)=>`<tr class="${i==0?"top1":""}"><td class="rk">${i+1}</td><td><div class="who">${r.p.logo?`<img src="${esc(r.p.logo)}" alt="" loading="lazy" onerror="this.remove()">`:""}<div><div class="nm2">${esc(r.p.name)}</div><div class="sub">${esc(r.p.team)} · ${esc(r.p.league)}</div></div></div></td><td class="n">${r.gp}</td><td class="n">${r.w}-${r.l}${r.t?"-"+r.t:""}</td><td class="n sv">${r.pct!=null?r.pct.toFixed(3).replace(/^0/,""):"–"}</td><td class="n">${r.gaa.toFixed(2)} <span class="sub">(${r.ga})</span></td><td class="n">${r.sa?`${r.sv} / ${r.sa}`:"–"}</td><td class="n">${r.so||""}</td></tr>`).join("")
  }</tbody></table></div>`}
