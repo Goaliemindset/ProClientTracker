@@ -64,7 +64,11 @@ details{margin-top:6px}
 .gl .rL,.gl .rT{color:var(--ash)}
 .gl .num{text-align:right}
 .wk-head{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:baseline;justify-content:space-between;margin:20px 0 10px}
-.wk-head h2{margin:0;border:0;padding:0}.wk-head .rng{color:var(--ash);font-size:14px}
+.wk-head h2{margin:0;border:0;padding:0}
+.wk-seg{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;margin-right:auto}
+.wk-seg button{all:unset;cursor:pointer;font:700 15px "Barlow Condensed",sans-serif;letter-spacing:.5px;text-transform:uppercase;padding:5px 14px;color:var(--ash);background:var(--card)}
+.wk-seg button:hover{color:#fff}.wk-seg button[aria-pressed=true]{background:var(--red);color:#fff}
+.wk-seg button:focus-visible{outline:2px solid var(--red2);outline-offset:-2px}.wk-head .rng{color:var(--ash);font-size:14px}
 .wk-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:6px;background:var(--card)}
 .wk{width:100%;border-collapse:collapse;font-size:15px;min-width:640px}
 .wk th,.wk td{padding:9px 10px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}
@@ -96,13 +100,13 @@ const badge=p=>p.status=="played"&&p.result?({W:"Win",L:"Loss",T:"Tie"}[p.result
 const statLine=s=>`${s.saves??"?"} saves on ${s.sa??"?"} shots, ${s.ga??"?"} against${s.svpct?`, ${s.svpct} SV%`:""}${s.shutout?", shutout":""}`;
 let D,filter="All",league="";
 const LEAGUE_ORDER=["NHL","PWHL","AHL","ECHL","SPHL","Liiga","NCAA D1","NCAA D3","NCAA Women","OHL","QMJHL","WHL","USHL","BCHL","AJHL","SJHL","MJHL","OJHL","GOJHL"];
-let wkSort="svpct";
+let wkSort="svpct",wkBack=0;   // wkBack: 0 = this week, 1 = last week
 const isoDay=n=>new Date(Date.now()-n*864e5).toLocaleDateString("en-CA",{timeZone:"America/New_York"});
 const fmtDay=d=>new Date(d+"T12:00").toLocaleDateString([],{month:"short",day:"numeric"});
 // Goalies of the Week runs Monday to Sunday (Eastern time) and starts fresh every Monday.
-function weekRange(){const t=isoDay(0),dow=new Date(t+"T12:00:00Z").getUTCDay(),back=(dow+6)%7;
+function weekRange(back0=wkBack){const t=isoDay(0),dow=new Date(t+"T12:00:00Z").getUTCDay(),back=(dow+6)%7;
  const shift=(d,n)=>{const x=new Date(d+"T12:00:00Z");x.setUTCDate(x.getUTCDate()+n);return x.toISOString().slice(0,10)};
- const mon=shift(t,-back);return [mon,shift(mon,6)]}
+ const mon=shift(t,-back-7*back0);return [mon,shift(mon,6)]}
 function weekRows(ps){const [lo,hi]=weekRange();
  return ps.map(p=>{const gs=(p.recent||[]).filter(r=>r.date>=lo&&r.date<=hi);if(!gs.length)return null;
   let w=0,l=0,t=0,sv=0,sa=0,ga=0,so=0;gs.forEach(r=>{if(r.result=="W")w++;else if(r.result=="L")l++;else if(r.result=="T")t++;
@@ -111,8 +115,9 @@ function weekRows(ps){const [lo,hi]=weekRange();
 const WK_SORT={svpct:(a,b)=>(b.pct??-1)-(a.pct??-1)||b.sv-a.sv,w:(a,b)=>b.w-a.w||(b.pct??-1)-(a.pct??-1),ga:(a,b)=>a.gaa-b.gaa||(b.pct??-1)-(a.pct??-1),sv:(a,b)=>b.sv-a.sv,gp:(a,b)=>b.gp-a.gp||(b.pct??-1)-(a.pct??-1)};
 function weekTable(ps){const rows=weekRows(ps).sort(WK_SORT[wkSort]);
  const th=(k,label,n)=>`<th class="${n?"n ":""}${wkSort==k?"on":""}" aria-sort="${wkSort==k?"descending":"none"}"><button data-s="${k}">${label}</button></th>`;
- const head=`<div class="wk-head"><h2>Goalies of the Week</h2><span class="rng">Week of ${fmtDay(weekRange()[0])} – ${fmtDay(weekRange()[1])} (Mon–Sun) · click a column to sort</span></div>`;
- if(!rows.length)return head+`<p>None of your clients have played yet this week. The week resets every Monday.</p>`;
+ const seg=`<div class="wk-seg" role="group" aria-label="Which week">${["This week","Last week"].map((l,i)=>`<button data-w="${i}" aria-pressed="${wkBack==i}">${l}</button>`).join("")}</div>`;
+ const head=`<div class="wk-head"><h2>Goalies of the Week</h2>${seg}<span class="rng">${fmtDay(weekRange()[0])} – ${fmtDay(weekRange()[1])} (Mon–Sun) · click a column to sort</span></div>`;
+ if(!rows.length)return head+`<p>${wkBack?"None of your clients played last week.":"None of your clients have played yet this week. The week resets every Monday."}</p>`;
  return head+`<div class="wk-wrap"><table class="wk"><thead><tr><th class="rk">#</th><th>Goalie</th>${th("gp","GP",1)}${th("w","W-L",1)}${th("svpct","SV%",1)}${th("ga","GA / game",1)}${th("sv","Saves / shots",1)}<th class="n">SO</th></tr></thead><tbody>${
   rows.map((r,i)=>`<tr class="${i==0?"top1":""}"><td class="rk">${i+1}</td><td><div class="who">${r.p.logo?`<img src="${esc(r.p.logo)}" alt="" loading="lazy" onerror="this.remove()">`:""}<div><div class="nm2">${esc(r.p.name)}</div><div class="sub">${esc(r.p.team)} · ${esc(r.p.league)}</div></div></div></td><td class="n">${r.gp}</td><td class="n">${r.w}-${r.l}${r.t?"-"+r.t:""}</td><td class="n sv">${r.pct!=null?r.pct.toFixed(3).replace(/^0/,""):"–"}</td><td class="n">${r.gaa.toFixed(2)} <span class="sub">(${r.ga})</span></td><td class="n">${r.sa?`${r.sv} / ${r.sa}`:"–"}</td><td class="n">${r.so||""}</td></tr>`).join("")
  }</tbody></table></div>`}
@@ -124,9 +129,9 @@ function summary(r){let w=0,l=0,t=0,sv=0,sa=0,so=0;
  r.forEach(g=>{if(g.result=="W")w++;else if(g.result=="L")l++;else if(g.result=="T")t++;
   if(g.stats){sv+=g.stats.saves||0;sa+=g.stats.sa||0;if(g.stats.shutout)so++}});
  return `<b>${w}-${l}${t?"-"+t:""}</b>${sa?`, ${(sv/sa).toFixed(3).replace(/^0/,"")} SV%`:""}${so?`, ${so} SO`:""}`}
-const pastTable=r=>`<details class="past"><summary>Last ${r.length} game${r.length>1?"s":""} played: ${summary(r)}</summary><table class="gl"><thead><tr><th>Date</th><th>Opp</th><th>Result</th><th class="num">Saves</th><th class="num">SV%</th></tr></thead><tbody>${
+const pastTable=r0=>{const r=r0.slice(0,5);return `<details class="past"><summary>Last ${r.length} game${r.length>1?"s":""} played: ${summary(r)}</summary><table class="gl"><thead><tr><th>Date</th><th>Opp</th><th>Result</th><th class="num">Saves</th><th class="num">SV%</th></tr></thead><tbody>${
  r.map(g=>`<tr><td>${esc(shortDate(g.date))}</td><td class="opp">${esc(g.ha)} ${esc(g.opp)}</td><td class="r r${esc(g.result||"")}">${esc(g.result||"–")} ${esc(g.score||"")}</td><td class="num">${g.stats?`${g.stats.saves??"?"}/${g.stats.sa??"?"}`:"–"}</td><td class="num">${g.stats?.svpct?esc(g.stats.svpct)+(g.stats.shutout?" SO":""):"–"}</td></tr>`).join("")
-}</tbody></table></details>`;
+}</tbody></table></details>`};
 const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const yday=()=>new Date(Date.now()-864e5).toLocaleDateString("en-CA",{timeZone:"America/New_York"});
 const ydGame=p=>(p.recent||[]).find(r=>r.date==yday());
@@ -145,7 +150,8 @@ function render(){
  const nIn=D.players.filter(p=>p.status=="in_net").length, nY=D.players.filter(ydGame).length;
  const nT=D.players.filter(p=>TODAY_ST.includes(p.status)).length;
  if(filter=="This week"){m.innerHTML=weekTable(league?D.players.filter(p=>p.league==league):D.players);
-  m.querySelectorAll(".wk th button").forEach(b=>b.onclick=()=>{wkSort=b.dataset.s;render()});}
+  m.querySelectorAll(".wk th button").forEach(b=>b.onclick=()=>{wkSort=b.dataset.s;render()});
+  m.querySelectorAll(".wk-seg button").forEach(b=>b.onclick=()=>{wkBack=+b.dataset.w;render()});}
  meta.innerHTML=`<b>${nIn} in net now</b> · ${nT} with games today · ${nY} played yesterday<br>Updated ${new Date(D.updated).toLocaleString()}`;
  let html="";
  if(filter=="This week")return;
